@@ -1,4 +1,4 @@
-@extends('index')
+@extends('layouts.index')
 
 <?php
 $pro = \App\Models\ActivateFile::count();

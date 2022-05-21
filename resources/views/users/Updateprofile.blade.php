@@ -1,4 +1,4 @@
-@extends('index')
+@extends('layouts.index')
   @section('content')
   @if(Session::has('Flash44'))
 <script type="text/javascript">

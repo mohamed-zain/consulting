@@ -158,8 +158,8 @@ $(window).load(function() {
 
     <div class="wrapper">
 
-    <?php echo $__env->make('header', \Illuminate\Support\Arr::except(get_defined_vars(), ['__data', '__path']))->render(); ?>
-    <?php echo $__env->make('aside', \Illuminate\Support\Arr::except(get_defined_vars(), ['__data', '__path']))->render(); ?>
+    <?php echo $__env->make('layouts.header', \Illuminate\Support\Arr::except(get_defined_vars(), ['__data', '__path']))->render(); ?>
+    <?php echo $__env->make('layouts.aside', \Illuminate\Support\Arr::except(get_defined_vars(), ['__data', '__path']))->render(); ?>
 
       <div class="content-wrapper" dir="rtl">
         <section class="content margin-50">
@@ -238,7 +238,7 @@ $(window).load(function() {
 
         </section>
     </div>
-          <?php echo $__env->make('footer', \Illuminate\Support\Arr::except(get_defined_vars(), ['__data', '__path']))->render(); ?>
+          <?php echo $__env->make('layouts.footer', \Illuminate\Support\Arr::except(get_defined_vars(), ['__data', '__path']))->render(); ?>
         <aside class="control-sidebar control-sidebar-dark no-print">
             <!-- Create the tabs -->
             <ul class="nav nav-tabs nav-justified control-sidebar-tabs">
@@ -413,4 +413,4 @@ $(window).load(function() {
     </script>
   </body>
 </html>
-<?php /**PATH /Applications/MAMP/htdocs/consulting/resources/views/index.blade.php ENDPATH**/ ?>
+<?php /**PATH /Applications/MAMP/htdocs/consulting/resources/views/layouts/index.blade.php ENDPATH**/ ?>

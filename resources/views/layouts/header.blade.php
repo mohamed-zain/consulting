@@ -1,11 +1,11 @@
 
       <header class="main-header">
         <!-- Logo -->
-        <a href="<?php echo e(url('index')); ?>" class="logo">
+        <a href="{{url('index')}}" class="logo">
           <!-- mini logo for sidebar mini 50x50 pixels -->
           <span class="logo-mini"><b>K</b>O</span>
           <!-- logo for regular state and mobile devices -->
-          <span class="logo-lg"> <img src="<?php echo e(asset('dist/img/koyellow.png')); ?>" class="" alt="User Image" style="height: 30px;"></span>
+          <span class="logo-lg"> <img src="{{ asset('dist/img/koyellow.png') }}" class="" alt="User Image" style="height: 30px;"></span>
         </a>
         <!-- Header Navbar: style can be found in header.less -->
         <nav class="navbar navbar-static-top" role="navigation">
@@ -16,28 +16,45 @@
           <div class="navbar-custom-menu">
             <ul class="nav navbar-nav">
               <!-- Messages: style can be found in dropdown.less-->
-              <?php if(Auth::user()->Level == 2): ?>
+              @if(auth()->user()->roll == 'CO')
 
               <li class="dropdown messages-menu">
                 <a href="#" class="dropdown-toggle" data-toggle="dropdown">
                   <i class="fa fa-envelope-o"></i>
-
-                  <span class="label label-warning">000</span>
+                  اشعارات
+                  <span class="label label-warning">0</span>
                 </a>
                 <ul class="dropdown-menu">
 
                   <li class="header">تنبيهات من ادارة خير عون</li>
                   <li>
                     <!-- inner menu: contains the actual data -->
-                 
+                 {{--   <ul class="menu">
+
+                      @foreach($kkk as $ggggg)
+                      <li>
+                        <a href="{{ url('ReadeUTask') }}/{{ $ggggg->TID }}">
+                          <div class="pull-right">
+                            <img src="{{ asset('dist/img/logo.png') }}" class="img-circle" alt="User Image">
+                          </div>
+
+                          <h4>
+                            {{Str::limit($ggggg->ProName, 30)}}
+                            <small><i class="fa fa-clock-o"></i>
+                              {{ $ggggg->created_at->diffForHumans() }}</small>
+                          </h4>
+
+                          <p>{{Str::limit($ggggg->TaskContent, 30)}}</p>
+                        </a>
+                      </li>
+                     @endforeach
+                    </ul>--}}
                   </li>
-                  <li class="footer"><a href="<?php echo e(url('AllTasks')); ?>">مشاهدة كل المهام</a></li>
+                  <li class="footer"><a href="{{ url('AllTasks') }}">مشاهدة كل المهام</a></li>
                 </ul>
               </li>
-              <?php endif; ?>
-              <li>
-                <a href="<?php echo e(url('Dispatcher')); ?>" >تبديل لإدارة أخرى</a>
-              </li>
+              @endif
+
               <li>
                 <a href="#" data-toggle="control-sidebar">  الاعدادات</a>
               </li>
@@ -46,12 +63,11 @@
               <!-- User Account: style can be found in dropdown.less -->
               <li class="dropdown user user-menu" >
                 <a href="#" class="dropdown-toggle" data-toggle="dropdown">
-                  <img src="<?php echo e(asset('dist/img/logo.png')); ?>" class="user-image" alt="User Image">
+                  <img src="{{ asset('dist/img/logo.png') }}" class="user-image" alt="User Image">
                   <span class="hidden-xs">
-                    <?php if(Auth::check()): ?>
-                  <?php echo e(Auth::user()->name); ?>
-
-                <?php endif; ?></span>
+                    @if(Auth::check())
+                  {{ Auth::user()->name }}
+                @endif</span>
                 </a>
                 <ul class="dropdown-menu">
                   <!-- User image -->
@@ -59,17 +75,16 @@
                     <?php
              //$dtt = DB::table('emplyees')->select('Attached as at')->where('id','=',Auth::user()->EmpiD)->get();
                     ?>
-                    <?php if(isset($dt)): ?>
-                    <img src="<?php echo e($dtt->dt); ?>" class="img-circle" alt="User Image">
-                    <?php else: ?>
-                    <img src="<?php echo e(asset('dist/img/logo.png')); ?>" class="img-circle" alt="User Image">
+                    @if(isset($dt))
+                    <img src="{{$dtt->dt}}" class="img-circle" alt="User Image">
+                    @else
+                    <img src="{{ asset('dist/img/logo.png') }}" class="img-circle" alt="User Image">
 
-                    <?php endif; ?>
+                    @endif
                     <p style="color: #e39548;">
-                     <?php if(Auth::check()): ?>
-                  <?php echo e(Auth::user()->name); ?>
-
-                <?php endif; ?>
+                     @if(Auth::check())
+                  {{ Auth::user()->name }}
+                @endif
                     </p>
                   </li>
 
@@ -78,11 +93,11 @@
                   <!-- Menu Footer-->
                   <li class="user-footer">
                     <div class="pull-right">
-                      <a href="<?php echo e(url('/UpdateProfile')); ?>" class="btn btn-default btn-flat">الملف الشخصي</a>
+                      <a href="{{url('/UpdateProfile')}}" class="btn btn-default btn-flat">الملف الشخصي</a>
                     </div>
                     <div class="pull-left">
-                        <form action="<?php echo e(url('logout')); ?>" method="post">
-                            <?php echo csrf_field(); ?>
+                        <form action="{{ url('logout') }}" method="post">
+                            @csrf
                             <button class="btn btn-default btn-flat">تسجيل الخروج</button>
                         </form>
                     </div>
@@ -95,4 +110,3 @@
           </div>
         </nav>
       </header>
-<?php /**PATH /Applications/MAMP/htdocs/consulting/resources/views/header.blade.php ENDPATH**/ ?>

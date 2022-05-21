@@ -138,7 +138,7 @@ $(window).load(function() {
 });
 </script>
   </head>
-  <body class="hold-transition skin-blue sidebar-mini sidebar-open">
+  <body class="hold-transition sidebar-mini sidebar-open skin-red">
   <?php
       $newNoti = DB::table('notifications')->where('notifiable_id',auth()->user()->id)->get();
   ?>
@@ -161,14 +161,9 @@ $(window).load(function() {
 
     <div class="wrapper">
 
-    @include('header')
-    @include('aside')
-    <?php
-     $count1 = DB::table('projects')->where('State','=','منتهي')->count();
-     $count2 = DB::table('projects')->where('State','=','مغلق')->count();
-     $count3 = DB::table('projects')->where('State','=','مفتوح')->count();
-     $count4 = DB::table('projects')->where('State','=','قيد التنفيذ')->count();
-     ?>
+    @include('layouts.header')
+    @include('layouts.aside')
+
       <div class="content-wrapper" dir="rtl">
         <section class="content margin-50">
 
@@ -177,7 +172,6 @@ $(window).load(function() {
 <div id="Command" class="">
 
      <div class="" id="here">
-         @livewire('project-manager-notification')
          @yield('content')
       </div>
     <div class="modal fade" id="NotificationCenter" role="dialog">
@@ -218,20 +212,9 @@ $(window).load(function() {
                     <h4 class="modal-title">ابحث برقم البينار او كود الملف </h4>
                 </div>
                 <div class="modal-body">
-                    {{ Form::open(array('route'=>'PStages','id'=>'protepssend')) }}
-                    @php $pro = App\Models\ActivateFile::all() @endphp
-                    <div class="form-inline">
-                        <label></label>
-                        <select name="PStages" class="form-control select2" required style="width: 80%">
-                            <option value="">---------إضغط للبحث---------</option>
-                            @foreach($pro as $pros)
-                                <option value="{{ $pros->Bennar }}">{{ $pros->Bennar }} - {{ $pros->FileCode }} - {{ $pros->Name }} - {{ $pros->Country }}</option>
-                            @endforeach
-                        </select>
-                        <button id="Addproteps" class="btn btn-success">بحث</button>
-                    </div>
+                    {{--{{ Form::open(array('route'=>'PStages','id'=>'protepssend')) }}
 
-                    {{ Form::close() }}
+                    {{ Form::close() }}--}}
                 </div>
                 <div class="modal-footer">
 
@@ -263,7 +246,7 @@ $(window).load(function() {
 
         </section>
     </div>
-          @include('footer')
+          @include('layouts.footer')
         <aside class="control-sidebar control-sidebar-dark no-print">
             <!-- Create the tabs -->
             <ul class="nav nav-tabs nav-justified control-sidebar-tabs">

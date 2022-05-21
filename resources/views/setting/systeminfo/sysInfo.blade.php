@@ -1,4 +1,4 @@
- @extends('index')
+ @extends('layouts.index')
 @section('content')
 <?php
 $cont = DB::table('contact_infos')->first();

@@ -1,4 +1,4 @@
- @extends('index')
+ @extends('layouts.index')
 @section('content')
     @php $pack = App\Models\ProjectsSteps::all(); @endphp
 <section class="content-header">

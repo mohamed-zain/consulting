@@ -1,5 +1,5 @@
 
-@extends('index')
+@extends('layouts.index')
 @section('content')
 <div class="">
   <section class="content-header">

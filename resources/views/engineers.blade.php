@@ -1,4 +1,4 @@
-@extends('index')
+@extends('layouts.index')
 <script src="{{ asset('code/highcharts.js') }}"></script>
 <script src="{{ asset('code/modules/exporting.js') }}"></script>
 <script src="{{ asset('code/modules/export-data.js') }}"></script>

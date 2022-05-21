@@ -1,0 +1,215 @@
+html{
+	background-image: url("bag.jpg");
+	background-size: cover;
+  background-repeat: inherit;
+	
+}
+		.container{
+			position: absolute;
+			height: 450px;
+			width: 400px;
+			background-color: rgba(1, 1, 2, 0.5);
+			border: 5px solid rgba(255, 255, 255, 0.4);
+			vertical-align: center;
+			border-radius: 20px;
+			text-align: center;
+			top: 15%;
+ 			left: 35%;
+			//transform: translate(-50% ,-50%);
+			z-index: 2000;
+			font-family: 'Source Sans Pro', sans-serif;
+			box-shadow: 7px 20px 68px -9px rgba(48,135,150,1);
+			-webkit-animation: fadeInRight 1s;
+		}
+		.container a {
+  color: #fff;
+  text-decoration: none;
+  font-size: 50px;
+  transition-duration: 0.5s;
+  transition-timing-function: ease-in-put;
+  font-weight: 500;
+  margin-top: 0;
+  margin-bottom: 0;
+  -webkit-animation: rotateInDownLeft 5s;
+  
+}
+
+.container a:hover {
+  text-shadow: 2px 2px 14px white;
+}
+.container hr{
+  margin-top: 1rem;
+  margin-bottom: 1rem;
+  margin-left: 0;
+  margin-right: 0;
+  border: 0;
+  border-top: 1px solid rgba(0,0,0, 0.2);
+}
+
+.container input {  
+  outline: 0;
+  border: 1px solid rgba(255, 255, 255, 0.4);
+  background-color: rgba(255, 255, 255, 0.2);
+  width: 80%;
+  border-radius: 5px;
+  padding: 10px 15px;
+  margin: 0 auto 10px auto;
+  font-size: 18px;
+  color: white;
+  -webkit-transition-duration: 0.25s;
+  transition-duration: 0.25s;
+  font-weight: 300;
+  text-indent: 0px;
+  -webkit-animation: rotateInDownLeft 1s;
+
+  }
+  .fa-ic { 
+  position: absolute;
+  top: 8px;
+  left: 20px;
+  font-size: 25px;
+  -webkit-animation: rotateInDownLeft 5s;
+
+}
+
+.container input:hover{
+  text-indent: 10px;
+  border: 1px solid rgba(255, 255, 255, 0.4);
+  background-color: rgba(255, 255, 255, 0.3);
+}
+
+.container input:focus{
+  text-indent: 0px;
+  width: 85%;
+  color: black;
+  border: 1px solid rgba(255, 255, 255, 0.5);
+  background-color: rgba(255, 255, 255, 0.7);
+}
+
+.container input::placeholder {
+		color: #f8f8f8;
+    -webkit-transition-duration: 0.25s;
+    transition-duration: 0.25s;
+	}
+
+.container input:focus::placeholder {
+		color: rgba(255, 255, 255, 0);
+	}
+
+.a-link a {
+  color: #fff;
+  font-size: 17px;
+  line-height: 1.5;
+  font-weight: 300;
+  -webkit-transition-duration: 0.20s;
+  -webkit-animation: rotateInDownLeft 5s;
+
+}
+
+.a-link a:hover {
+  line-height: 1.5;
+  font-weight: 300;
+  color: #57F5FF;
+  text-shadow: 1px 1px 10px white;
+}
+
+.container button {
+  -webkit-appearance: none;
+  
+  appearance: none;
+  outline: 0;
+  border: 0;
+  padding: 10px 15px;
+  color: #fff;
+  border-radius: 3px;
+  max-width: 100px;
+  cursor: pointer;
+  font-size: 18px;
+  -webkit-transition-duration: 0.25s;
+ 
+  background-color: #005ce6;
+  border-color: #10707f;
+  border-radius: 13px;
+  width: 90%;
+  height: 40px;
+  -webkit-animation: rotateInDownRight 1.5s;
+
+}
+#resetbtn{
+	-webkit-appearance: none;
+  
+  appearance: none;
+  outline: 0;
+  border: 0;
+  padding: 10px 15px;
+  color: #fff;
+  border-radius: 3px;
+  max-width: 100px;
+  cursor: pointer;
+  font-size: 18px;
+  -webkit-transition-duration: 0.25s;
+ margin-right: 20px;
+  background-color: #005ce6;
+  border-color: #10707f;
+  border-radius: 13px;
+  width: 90%;
+  height: 40px;
+  -webkit-animation: rotateInDownLeft 1.5s;
+
+
+}
+#resetbtn:hover {
+background-color: #0066ff;
+  box-shadow: 2px 3px 10px 2px #9d9692;
+  text-indent: 0px;
+}
+.container button:hover {
+  background-color: #0066ff;
+  box-shadow: 2px 3px 10px 2px #9d9692;
+
+}
+
+.container button:focus {
+  width: 85%;
+  background-color: #0052cc;
+  border-color: #10707f;
+}
+
+
+@keyframes fadeInRight {
+  from {
+    opacity: 0;
+    transform: translate3d(100%, 0, 0);
+  }
+
+  to {
+    opacity: 1;
+    transform: none;
+  }
+}
+@keyframes rotateInDownLeft {
+  from {
+    transform-origin: left bottom;
+    transform: rotate3d(0, 0, 1, -45deg);
+    opacity: 0;
+  }
+
+  to {
+    transform-origin: left bottom;
+    transform: none;
+    opacity: 1;
+  }
+}
+@keyframes rotateInDownRight {
+  from {
+    transform-origin: right bottom;
+    transform: rotate3d(0, 0, 1, 45deg);
+    opacity: 0;
+  }
+
+  to {
+    transform-origin: right bottom;
+    transform: none;
+    opacity: 1;
+  }
+}

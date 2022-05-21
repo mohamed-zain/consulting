@@ -4,8 +4,7 @@ namespace App\Http\Middleware;
 
 use Closure;
 use Auth;
-
-class Adminmiddleware
+class SuperMiddleware
 {
     /**
      * Handle an incoming request.
@@ -16,8 +15,8 @@ class Adminmiddleware
      */
     public function handle($request, Closure $next)
     {
-        if (auth()->check()) {
-            if (auth()->user()->roll == 'CO') {
+       if (auth()->check()) {
+            if (auth()->user()->roll == 'SA') {
                 return $next($request);
             }else{
                 return redirect('redirect');
@@ -25,6 +24,5 @@ class Adminmiddleware
         }else{
             return redirect('login');
         }
-        
     }
 }

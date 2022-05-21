@@ -75,7 +75,7 @@
                   <!-- User image -->
                   <li class="user-header">
                     <?php
-             $dtt = DB::table('emplyees')->select('Attached as at')->where('id','=',Auth::user()->EmpiD)->get();
+             //$dtt = DB::table('emplyees')->select('Attached as at')->where('id','=',Auth::user()->EmpiD)->get();
                     ?>
                     @if(isset($dt))
                     <img src="{{$dtt->dt}}" class="img-circle" alt="User Image">

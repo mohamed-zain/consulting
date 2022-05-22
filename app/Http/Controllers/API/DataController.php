@@ -27,7 +27,7 @@ class DataController extends BaseController
         //dd($request->all());
         //$data = DB::table('activate_files')->where('Bennar',$request->user_pac)->first();
         //dd($data);
-
+        $d = Carbon::now();
         $data = DB::table('orders')->where('number',$request->bennar)->first();
         //dd($data);
         if ($data){

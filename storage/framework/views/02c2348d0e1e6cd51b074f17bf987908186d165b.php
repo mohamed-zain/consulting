@@ -36,6 +36,9 @@
          background-position: top center;
 
      }
+     .login-box-body, .register-box-body{
+         background: #d2d6de !important;
+     }
 
  </style> 
 
@@ -47,7 +50,7 @@ $(window).load(function() {
 });
 </script>
   </head>
-<body class="login-page" style="background-size: cover;background-position: center center;" id="demo-canvas">
+<body class="login-page" style="background-size:contain;background-image:url('public/img/mainbg.jpg');background-position: center center;" id="demo-canvas" >
 
 <audio id="audioSuccess">
     <source class="audio" src="<?php echo e(asset('Notify/success.wav')); ?>" type="audio/mp3">

@@ -19,7 +19,11 @@
         <!-- sidebar menu: : style can be found in sidebar.less -->
         <ul class="sidebar-menu">
             <li class="header">قائمة التحكم</li>
-            <li><a href="{{url('MainPort')}}"><i class="fa fa-tachometer-alt  fa-lg" style="font-size: 30px;"></i> <span>اللوحة الرئيسية</span></a>
+            <li>
+                <a href="{{url('MainPort')}}">
+                    <i class="fa fa-tachometer-alt  fa-lg" style="font-size: 30px;"></i>
+                    <span>اللوحة الرئيسية</span>
+                </a>
             </li>
             <li class="treeview">
                 <a href="#">
@@ -27,12 +31,6 @@
                     <i class="fa fa-angle-left pull-right"></i>
                 </a>
                 <ul class="treeview-menu" style="margin-right: 20px;">
-                   {{-- <li>
-                        <a href="{{ url('projectCreate') }}">
-                            <i class="fa fa-shield  fa-lg"></i>
-                            <span>انشاء مشروع</span>
-                        </a>
-                    </li>--}}
                     <li>
                         <a href="{{url('/Projects')}}" id="" name="projectsList">
                             <i class="fa fa-list-alt  fa-lg"></i>

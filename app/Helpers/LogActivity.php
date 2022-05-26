@@ -24,7 +24,7 @@ class LogActivity
     public static function logActivityLists()
     {
         return LogActivityModel::join('users','users.id','=','log_activities.user_id')
-            ->where('log_activities.user_id','!=',auth()->user()->id)
+            //->where('log_activities.user_id','!=',auth()->user()->id)
             ->orderBy('Date', 'desc')->get();
     }
     public static function logActivityListsByEng($id)

@@ -2,21 +2,19 @@
 <html>
   <head>
     <meta charset="UTF-8">
-    <title>Ko-SATA</title>
+    <title>Ko-Sky</title>
     <meta content="width=device-width, initial-scale=1, maximum-scale=1, user-scalable=no" name="viewport">
-      <meta name="description" content="برنامج ادارة خدمات عملاء خيرعون" />
-      <meta name="keywords" content="برنامج ادارة خدمات عملاء خيرعون" />
-      <meta name="author" content=" خيرعون - الإمارات"/>
+      <meta name="description" content="برنامج ادارة خدمات  المكاتب الاستشارية" />
+      <meta name="keywords" content="برنامج ادارة المكاتب الاستشارية - خيرعون" />
+      <meta name="author" content=" خيرعون - جدة"/>
 
       <!-- Favicon -->
-      <link rel="icon" type="image/png" href="<?php echo e(asset('dist/img/logo.png')); ?>" />
+      <link rel="icon" type="image/png" href="<?php echo e(asset('logo20221.png')); ?>" />
     <meta name="csrf-token" content="<?php echo e(csrf_token()); ?>" />
-    
-      <script
-              src="https://code.jquery.com/jquery-2.2.4.min.js"
-              integrity="sha256-BbhdlvQf/xTY9gja0Dq3HiwQF8LaCRTXxZKRutelT44="
-              crossorigin="anonymous"></script>
-    <link rel="stylesheet" href="<?php echo e(asset('bootstrap/css/bootstrap.min.css')); ?>">
+     <script src="<?php echo e(asset('plugins/jQuery/jQuery-2.1.4.min.js')); ?>"></script>
+      <link rel="stylesheet" href="<?php echo e(asset('dist/css/font-awesome.min.css')); ?>">
+
+      <link rel="stylesheet" href="<?php echo e(asset('bootstrap/css/bootstrap.min.css')); ?>">
     <link rel="stylesheet" href="<?php echo e(asset('fontawesome/css/all.css')); ?>">
       <link rel="stylesheet" href="<?php echo e(asset('plugins/select2/select2.min.css')); ?>">
       <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/ionicons/2.0.1/css/ionicons.min.css">
@@ -35,6 +33,7 @@
  <link rel="stylesheet" href="<?php echo e(asset('plugins/bootstrap-wysihtml5/bootstrap3-wysihtml5.min.css')); ?>">
       <link href="https://unpkg.com/filepond@^4/dist/filepond.css" rel="stylesheet" />
 
+      <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/ionicons/2.0.1/css/ionicons.min.css">
 
       <script src="https://unpkg.com/filepond@^4/dist/filepond.js"></script>
   <script src="https://oss.maxcdn.com/html5shiv/3.7.3/html5shiv.min.js"></script>
@@ -206,7 +205,21 @@ $(window).load(function() {
                     <h4 class="modal-title">ابحث برقم البينار او كود الملف </h4>
                 </div>
                 <div class="modal-body">
-                    
+                    <?php echo e(Form::open(array('route'=>'PStages','id'=>'protepssend'))); ?>
+
+                    <?php $pro = App\Models\Projects::Owne()->get() ?>
+                    <div class="form-inline">
+                        <label></label>
+                        <select name="PStages" class="form-control select2" required style="width: 80%">
+                            <option value="">---------إضغط للبحث---------</option>
+                            <?php $__currentLoopData = $pro; $__env->addLoop($__currentLoopData); foreach($__currentLoopData as $pros): $__env->incrementLoopIndices(); $loop = $__env->getLastLoop(); ?>
+                                <option value="<?php echo e($pros->Bennar); ?>"><?php echo e($pros->Bennar); ?> - <?php echo e($pros->FileCode); ?>  - <?php echo e($pros->City); ?></option>
+                            <?php endforeach; $__env->popLoop(); $loop = $__env->getLastLoop(); ?>
+                        </select>
+                        <button id="Addproteps" class="btn btn-success">بحث</button>
+                    </div>
+                    <?php echo e(Form::close()); ?>
+
                 </div>
                 <div class="modal-footer">
 

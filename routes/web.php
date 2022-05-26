@@ -1,66 +1,14 @@
 <?php
 
-use App\Events\ApprovalPackage;
-use App\Http\Controllers\AttendanceCon;
-use App\Http\Controllers\HTMLPDFController;
-use App\Models\Documents;
-use App\Notifications\AlertNotification;
-use Carbon\Carbon;
-use Illuminate\Support\Arr;
-use Illuminate\Support\Facades\Mail;
-use Illuminate\Support\Facades\Notification;
-use App\Http\Controllers\AgentsCon;
-use App\Http\Controllers\AgentsNamesCon;
-use App\Http\Controllers\AppointmentCon;
-use App\Http\Controllers\appointmentTypesCon;
-use App\Http\Controllers\branchsCon;
-use App\Http\Controllers\CategorySiteVisitsCon;
-use App\Http\Controllers\ChartsCon;
-use App\Http\Controllers\ClientjoinController;
-use App\Http\Controllers\ContactInfoCon;
-use App\Http\Controllers\ContractorCon;
+
 use App\Http\Controllers\DocumentsCon;
-use App\Http\Controllers\EmplyeeController;
-use App\Http\Controllers\jobTitleCon;
-use App\Http\Controllers\managesNameCon;
-use App\Http\Controllers\MobileInfoCon;
-use App\Http\Controllers\packagesCon;
 use App\Http\Controllers\ProjectsCon;
-use App\Http\Controllers\projectsStepsCon;
-use App\Http\Controllers\ProjectsTypeCon;
-use App\Http\Controllers\readyTasksCon;
-use App\Http\Controllers\ReplayTasksCon;
-use App\Http\Controllers\ServicesCon;
-use App\Http\Controllers\StepsTermCon;
-use App\Http\Controllers\SystemInfoCon;
-use App\Http\Controllers\tasksApplyCon;
-use App\Http\Controllers\TasksCon;
 use App\Http\Controllers\UsersCon;
-use App\Http\Controllers\vacationTypesCon;
-use App\Models\ActivateFile;
-use App\Models\Contractor;
-use App\Models\Orders;
-use App\Models\TasksFile;
-use App\Models\User;
-use App\Notifications\SendPushNotification;
+use App\Models\Projects;
 use Illuminate\Support\Facades\DB;
 use Illuminate\Support\Facades\Route;
-use Illuminate\Support\Facades\Session;
-use Illuminate\Support\Facades\Storage;
-use Nexmo\Laravel\Facade\Nexmo;
-use Illuminate\Http\Request;
-use App\Models\JobTitle;
-use App\Models\Branchs;
-use App\Models\ManagesName;
-use App\Models\Emplyee;
-use App\Models\Agent;
-use App\Models\Projects;
-use App\Models\ProjectsFile;
-use App\Models\Team;
-use App\Models\Tasks;
-use App\Models\ReplayTasks;
-use App\Models\EmpRequest;
-use App\Models\Appointment;
+
+
 //use Pixelpeter\Woocommerce\Facades\Woocommerce;
 use Illuminate\Support\Facades\Crypt;
 /*
@@ -110,7 +58,15 @@ Route::get('redirect', function () {
 Route::get('/ConsultingDashboard', function () {
     $txt = 'عرض ملفات المهندسين';
     App\Helpers\LogActivity::addToLog($txt);
-    return view('home');
+    $Data =  Projects::join('projects_status','projects_status.id','=','projects.Status')
+        ->orderBy('projects.id','DESC')
+        ->Owne()
+        //->where('activate_files.Status','Approved')
+        ->get();
+    $count1 = Projects::Owne()->count();
+    $count2 = Projects::Owne()->where('Status',1)->count();
+    $count3 = Projects::Owne()->where('Status',7)->count();
+    return view('home',compact('Data','count1','count2','count3'));
 })->middleware('auth','admin');
 
 Route::get('/index', function () {
@@ -119,5 +75,39 @@ Route::get('/index', function () {
     return view('notifications');
 })->middleware('auth','admin');
 
+
+Route::get('/test', function () {
+    $db_ext = DB::connection('skyCon');
+    $countries = $db_ext->table('documents')->first();
+dd($countries);
+
+})->middleware('auth','admin');
+
+Route::middleware(['auth','admin'])->group(function () {
+
+    Route::post('UpdateStage', [ProjectsCon::class, 'UpdateStage'])->name('UpdateStage');
+    Route::post('UpdateStat', [ProjectsCon::class, 'UpdateStat'])->name('UpdateStat');
+    Route::get('ProjectDetails/{id}', [ProjectsCon::class, 'ProjectDetails']);
+    Route::post('PStages', [ProjectsCon::class,'PStages'])->name('PStages');
+
+    Route::get('OfficeDocs', [DocumentsCon::class, 'OfficeDocs'])->name('OfficeDocs');
+    Route::get('DocsByPro', [DocumentsCon::class, 'DocsByPro'])->name('DocsByPro');
+    Route::get('deleteDocuments/{id}', [DocumentsCon::class, 'destroy'])->name('deleteDocuments');
+    Route::post('getMission', [DocumentsCon::class, 'getMission'])->name('getMission');
+
+    Route::post('uploadeTemp', [DocumentsCon::class, 'uploadeTemp'])->name('uploadeTemp');
+    Route::post('RefreshTempFiles', [DocumentsCon::class, 'RefreshTempFiles'])->name('RefreshTempFiles');
+
+
+    Route::post('UpdateAuth', [UsersCon::class, 'UpdateAuth'])->name('UpdateAuth');
+    Route::get('usersLog', [UsersCon::class, 'usersLog'])->name('usersLog');
+
+    Route::resources([
+        'Projects' => ProjectsCon::class,
+        'Documents' => DocumentsCon::class,
+        'Users' => UsersCon::class,
+    ]);
+
+});
 
 require __DIR__.'/auth.php';

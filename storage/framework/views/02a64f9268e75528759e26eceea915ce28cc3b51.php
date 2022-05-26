@@ -1,14 +1,17 @@
-@extends('layouts.index')
-@section('content')
+<?php $__env->startSection('content'); ?>
     <div class="col-md-12">
         <h3>
             المستخدمين
             <small>قائمة المستخدمين</small>
+
+
+
         </h3>
 
         <ol class="breadcrumb">
-            <li><a href="{{url('ConsultingDashboard')}}"><i class="fa fa-dashboard"></i> الرئيسية</a></li>
-            <li class="active"><a href="{{ url('Users') }}"><i class="fa fa-folder-open"></i>المستخدمين</a></li>
+            <li><a href="<?php echo e(url('UsersTasks')); ?>"><i class="fa fa-dashboard"></i> الرئيسية</a></li>
+            <li class="active"><a href="<?php echo e(url('UsersTasks')); ?>"><i class="fa fa-folder-open"></i>المستخدمين</a></li>
+
         </ol>
     </div>
 
@@ -30,46 +33,49 @@
                             <th>البريد الالكتروني</th>
                             <th>الصلاحية</th>
                             <th>فعالية الحساب</th>
+
+
                         </tr>
                         </thead>
                         <tbody>
-                        @foreach($Data as $Single)
-                            @php
+                        <?php $__currentLoopData = $Data; $__env->addLoop($__currentLoopData); foreach($__currentLoopData as $Single): $__env->incrementLoopIndices(); $loop = $__env->getLastLoop(); ?>
+                            <?php
                                 $access = DB::table('sys_access')->where('UID',$Single->id)->first();
-                            @endphp
+                            ?>
                             <tr>
-                                <td>{{ $Single->id }}</td>
-                                <td>{{ $Single->name }}</td>
-                                <td>{{ $Single->email }}</td>
+                                <td><?php echo e($Single->id); ?></td>
+                                <td><?php echo e($Single->name); ?></td>
+                                <td><?php echo e($Single->email); ?></td>
                                 <td>
-                                    @if(isset($access->haveAccess))
-                                        @if( $access->haveAccess == 1)
+                                    <?php if(isset($access->haveAccess)): ?>
+                                        <?php if( $access->haveAccess == 1): ?>
                                             <span class="badge bg-green">لديه صلاحية الدخول</span>
 
-                                        @elseif($access->haveAccess == 0)
+                                        <?php elseif($access->haveAccess == 0): ?>
                                             <span class="badge bg-red">الحساب مجمد</span>
-                                        @endif
-                                    @else
+                                        <?php endif; ?>
+                                    <?php else: ?>
                                         <span class="badge bg-yellow"> غير معروف</span>
-                                    @endif
+                                    <?php endif; ?>
                                 </td>
 
                                 <td>
-                                    <form action="{{route('UpdateAuth')}}"  id="{{ $Single->id }}" method="post">
-                                        {{csrf_field()}}
+                                    <form action="<?php echo e(route('UpdateAuth')); ?>"  id="<?php echo e($Single->id); ?>" method="post">
+                                        <?php echo e(csrf_field()); ?>
+
                                         <div class="form-inline">
-                                            <input type="hidden" id="UID" name="UID" value="{{$Single->id}}">
-                                            <select class="form-control select2" id="{{$Single->id}}" name="Level" style="width: 50%">
+                                            <input type="hidden" id="UID" name="UID" value="<?php echo e($Single->id); ?>">
+                                            <select class="form-control select2" id="<?php echo e($Single->id); ?>" name="Level" style="width: 50%">
                                                 <option value="">---أختر إجراء---</option>
-                                                @if(isset($access->haveAccess))
-                                                    @if($access->haveAccess == 1)
+                                                <?php if(isset($access->haveAccess)): ?>
+                                                    <?php if($access->haveAccess == 1): ?>
                                                         <option value="0">تجميد الحساب</option>
-                                                    @elseif($access->haveAccess == 0)
+                                                    <?php elseif($access->haveAccess == 0): ?>
                                                         <option value="1">تفعيل الحساب</option>
-                                                    @endif
-                                                @else
+                                                    <?php endif; ?>
+                                                <?php else: ?>
                                                     <option value="2"> ydv luv,t</option>
-                                                @endif
+                                                <?php endif; ?>
                                             </select>
                                             <button type="submit" class="btn bg-navy margin">حفظ</button>
                                         </div>
@@ -81,7 +87,7 @@
                             <script>
                                 /********************************************************************/
                                 /********************************************************************/
-                                $('#{{$Single->id}}').change(function (event) {
+                                $('#<?php echo e($Single->id); ?>').change(function (event) {
 
 
                                     $.ajaxSetup({
@@ -93,7 +99,7 @@
 
                                     event.preventDefault();
 
-                                    var data2    = $( '#{{ $Single->id }}' ).serialize();
+                                    var data2    = $( '#<?php echo e($Single->id); ?>' ).serialize();
                                     var headers = $('meta[name="csrf-token"]').attr('content');
 
                                     $.ajax({
@@ -132,7 +138,7 @@
 
                                 /*********************************************************************/
                             </script>
-                        @endforeach
+                        <?php endforeach; $__env->popLoop(); $loop = $__env->getLastLoop(); ?>
 
 
 
@@ -153,4 +159,5 @@
         $(".select2").select2();
         $("#example1").DataTable();
     </script>
-@endsection
+<?php $__env->stopSection(); ?>
+<?php echo $__env->make('index', \Illuminate\Support\Arr::except(get_defined_vars(), ['__data', '__path']))->render(); ?><?php /**PATH /Applications/MAMP/htdocs/consulting/resources/views/users/index.blade.php ENDPATH**/ ?>

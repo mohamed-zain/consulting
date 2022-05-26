@@ -2,14 +2,14 @@
 <html>
 <head>
     <meta charset="UTF-8">
-    <title>Ko-SATA - Login</title>
+    <title>KhayrOawn Consulting - login </title>
     <meta content="width=device-width, initial-scale=1, maximum-scale=1, user-scalable=no" name="viewport">
-    <meta name="description" content="برنامج ادارة خدمات عملاء خيرعون" />
-    <meta name="keywords" content="برنامج ادارة خدمات عملاء خيرعون" />
-    <meta name="author" content=" خيرعون - الإمارات"/>
+    <meta name="description" content="برنامج ادارة خدمات  المكاتب الاستشارية" />
+    <meta name="keywords" content="برنامج ادارة المكاتب الاستشارية - خيرعون" />
+    <meta name="author" content=" خيرعون - جدة"/>
 
     <!-- Favicon -->
-    <link rel="icon" type="image/png" href="<?php echo e(asset('dist/img/logo.png')); ?>" />
+    <link rel="icon" type="image/png" href="<?php echo e(asset('logo20221.png')); ?>" />
     <meta name="csrf-token" content="<?php echo e(csrf_token()); ?>" />
     <meta content="width=device-width, initial-scale=1, maximum-scale=1, user-scalable=no" name="viewport">
      <script src="<?php echo e(asset('plugins/jQuery/jQuery-2.1.4.min.js')); ?>"></script>

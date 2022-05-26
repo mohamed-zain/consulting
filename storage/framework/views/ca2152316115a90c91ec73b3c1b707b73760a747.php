@@ -1,0 +1,1 @@
+<?php /**PATH /Applications/MAMP/htdocs/consulting/resources/views/Users/main.blade.php ENDPATH**/ ?>

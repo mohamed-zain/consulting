@@ -1,11 +1,14 @@
 
       <header class="main-header">
         <!-- Logo -->
-        <a href="{{url('index')}}" class="logo">
+        <a href="{{url('ConsultingDashboard')}}" class="logo">
           <!-- mini logo for sidebar mini 50x50 pixels -->
           <span class="logo-mini"><b>K</b>O</span>
           <!-- logo for regular state and mobile devices -->
-          <span class="logo-lg"> <img src="{{ asset('dist/img/koyellow.png') }}" class="" alt="User Image" style="height: 30px;"></span>
+          <span class="logo-lg">
+            KHAYROAWN
+            {{--<img src="{{ asset('dist/img/koyellow.png') }}" class="" alt="User Image" style="height: 30px;">--}}
+          </span>
         </a>
         <!-- Header Navbar: style can be found in header.less -->
         <nav class="navbar navbar-static-top" role="navigation">
@@ -22,10 +25,9 @@
                 <a href="#" class="dropdown-toggle" data-toggle="dropdown">
                   <i class="fa fa-envelope-o"></i>
                   اشعارات
-                  <span class="label label-warning">0</span>
+                  <span class="label label-danger">0</span>
                 </a>
                 <ul class="dropdown-menu">
-
                   <li class="header">تنبيهات من ادارة خير عون</li>
                   <li>
                     <!-- inner menu: contains the actual data -->
@@ -63,7 +65,7 @@
               <!-- User Account: style can be found in dropdown.less -->
               <li class="dropdown user user-menu" >
                 <a href="#" class="dropdown-toggle" data-toggle="dropdown">
-                  <img src="{{ asset('dist/img/logo.png') }}" class="user-image" alt="User Image">
+                  <img src="{{ asset('logo20222.png') }}" class="user-image" alt="User Image">
                   <span class="hidden-xs">
                     @if(Auth::check())
                   {{ Auth::user()->name }}
@@ -78,13 +80,18 @@
                     @if(isset($dt))
                     <img src="{{$dtt->dt}}" class="img-circle" alt="User Image">
                     @else
-                    <img src="{{ asset('dist/img/logo.png') }}" class="img-circle" alt="User Image">
+                    <img src="{{ asset('logo20222.png') }}" class="img-circle" alt="User Image">
 
                     @endif
-                    <p style="color: #e39548;">
+                    <p style="color: white;">
                      @if(Auth::check())
-                  {{ Auth::user()->name }}
-                @endif
+                        {{ Auth::user()->name }}
+                      @endif
+                    </p>
+                    <p>
+                      @if(Auth::check())
+                        {{ Auth::user()->Office_code }}
+                      @endif
                     </p>
                   </li>
 

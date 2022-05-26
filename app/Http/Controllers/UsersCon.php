@@ -2,6 +2,7 @@
 
 namespace App\Http\Controllers;
 
+use App\Helpers\LogActivity;
 use App\Models\CheckinOut as CheckinOutModel;
 use App\Models\Documents;
 use Carbon\Carbon;
@@ -25,7 +26,7 @@ class UsersCon extends Controller
     public function index()
     {
        $Data = User::all();
-        return view('usersPrivileges/index',compact('Data'));
+        return view('Users.index',compact('Data'));
     }
 
     /**
@@ -46,6 +47,31 @@ class UsersCon extends Controller
 
         \Session::flash('Flash', 'تم تعديل بياناتك بنجاح');
         return redirect('/UpdateProfile');
+
+
+    }
+
+    public function usersLog(Request $request)
+    {
+        $txt = 'عرض سجل النشاطات داخل النظام';
+        LogActivity::addToLog($txt);
+        $logs = \App\Helpers\LogActivity::logActivityLists();
+        return view('Users/log',compact('logs'));
+
+    }
+
+    public function UpdateAuth(Request $request)
+    {
+        LogActivity::addToLog('تفعيل او الغاء صلاحية المستخدم لدخول النظام');
+
+        DB::table('sys_access')
+            ->where('UID', $request->UID)
+            ->update([
+                'haveAccess' => $request->Level
+            ]);
+        session()->flash('Flash', 'تم تعديل صلاحية الدخول ');
+        //return redirect()->back();
+        return 'تم تعديل صلاحية الدخول';
 
 
     }

@@ -31,9 +31,18 @@ body {
     direction:rtl;
 }
 a{
-  color: #D65F0F;
+  color: #4eadaf;
 }
+.skin-red .main-header .navbar{
+    background-color: #4eadaf !important;
+}
+.skin-red .main-header .logo{
+    background-color: #4eadaf !important;
+}
+.skin-red .main-header li.user-header{
+    background-color: #4eadaf !important;
 
+}
 /* Fonts */
 @font-face {
     font-family: "STC";

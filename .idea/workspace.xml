@@ -198,7 +198,7 @@
     <property name="RunOnceActivity.OpenProjectViewOnStart" value="true" />
     <property name="RunOnceActivity.ShowReadmeOnStart" value="true" />
     <property name="WebServerToolWindowFactoryState" value="false" />
-    <property name="last_opened_file_path" value="$PROJECT_DIR$/resources/views/Users" />
+    <property name="last_opened_file_path" value="$PROJECT_DIR$" />
     <property name="list.type.of.created.stylesheet" value="CSS" />
     <property name="node.js.detected.package.eslint" value="true" />
     <property name="node.js.detected.package.standard" value="true" />
@@ -211,11 +211,11 @@
   </component>
   <component name="RecentsManager">
     <key name="CopyFile.RECENT_KEYS">
+      <recent name="$PROJECT_DIR$" />
       <recent name="$PROJECT_DIR$/resources/views/Users" />
       <recent name="$PROJECT_DIR$/resources/views/documents" />
       <recent name="$PROJECT_DIR$/resources/views" />
       <recent name="$PROJECT_DIR$/resources/views/projects" />
-      <recent name="$PROJECT_DIR$/resources/views/ProjectsManager/reports/projects" />
     </key>
     <key name="MoveFile.RECENT_KEYS">
       <recent name="$PROJECT_DIR$/resources/views/layouts" />
@@ -276,7 +276,7 @@
       <workItem from="1650923216246" duration="71573000" />
       <workItem from="1652948771320" duration="1520000" />
       <workItem from="1652962150344" duration="9263000" />
-      <workItem from="1653083836216" duration="65323000" />
+      <workItem from="1653083836216" duration="65688000" />
     </task>
     <servers />
   </component>

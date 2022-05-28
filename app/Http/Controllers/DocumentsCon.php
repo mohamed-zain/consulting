@@ -59,7 +59,7 @@ class DocumentsCon extends Controller
             'Docs' => 'required|mimes:jpg,jpeg,pdf,dwg,rvt,DWG',
         ],
             $messsages = array(
-                'Docs.mimes'=>'خطأ في صيغة الملف',
+                'Docs.mimes'=>'خطأ في صيغة الملف'
 
             )
         );

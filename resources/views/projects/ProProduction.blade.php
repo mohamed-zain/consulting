@@ -400,11 +400,16 @@
                     <h4 class="modal-title">الخدمات المطلوب انجازها</h4><span style="color: red"></span>
                 </div>
                 <div class="modal-body">
-                    <?php $rs = \App\Models\RequireServices::where('BennarID',$Single->Bennar)->get(); ?>
+                    <?php
+                    $rs = \App\Models\RequireServices::join('main_services','main_services.id','=','require_services.serviceName')
+                        ->where('BennarID',$Single->Bennar)
+                        ->select('main_services.*','require_services.*',DB::raw('main_services.id as MID'))
+                        ->get();
+                    ?>
                     <ul class="nav nav-pills nav-stacked">
                         @if(isset($rs))
                             @foreach($rs as $item)
-                              <li><a href="#"><i class="fa fa-circle-o text-red"></i> {{$item->serviceName}}</a></li>
+                              <li><a href="#"><i class="fa fa-circle-o text-red"></i> {{$item->MainServiceName}}</a></li>
                             @endforeach
                         @endif
                     </ul>
@@ -415,10 +420,14 @@
             </div>
         </div>
     </div>
+    @foreach($rs as $Mser)
+        <?php
+         $sub = \App\Models\ProjectStatus::where('main_service',$Mser->MID)->get();
+        ?>
     <div class="col-md-12">
         <div class="box box-default" style="height: 207px ">
             <div class="box-header with-border">
-                <h3 class="box-title"> مراحل التنفيذ </h3>
+                <h3 class="box-title"> مراحل تنفيذ - {{ $Mser->MainServiceName }} </h3>
 
                 <div class="box-tools pull-right">
                     <button type="button" class="btn btn-box-tool" data-widget="collapse"><i class="fa fa-minus"></i>
@@ -432,7 +441,7 @@
             <div class="box-body" style="padding-top: 50px">
                 <div class="stepwizard">
                     <div class="stepwizard-row setup-panel">
-                        @foreach($Ser  as $key =>$item78)
+                        @foreach($sub  as $key =>$item78)
                             <div class="stepwizard-step col-xs-1.5">
                                 <a href="#step-1" type="button" class="@if(isset($Single->Status) && $Single->Status== $item78->id) btn btn-warning  @elseif(isset($Single->Status) && $Single->Status> $item78->id) btn btn-warning @else btn btn-default @endif btn-circle stp" >@if(isset($Single->Status) && $Single->Status== $item78->id) <i class="fa fa-check"></i> @else {{ $key+1 }} @endif</a>
                                 <p><small>{{ $item78->StatusName }}</small></p>
@@ -448,6 +457,7 @@
         </div>
         <!-- /.box -->
     </div>
+    @endforeach
 
 
    <div class="row">
@@ -726,7 +736,8 @@
                                             <div class="tab-pane active" id="E0tab_1">
                                                 <ul class="mailbox-attachments clearfix">
                                                 <?php
-                                                $charts = \App\Models\Files::where('projectID',$Single->Bennar)->where('mission','E0')->where('cat','1')->get();
+                                                    $db_ext = DB::connection('skyCon');
+                                                    $charts = $db_ext->table('documents')->where('projectID',$Single->Bennar)->where('mission','E0')->where('cat','1')->get();
                                                 ?>
                                                 @foreach($charts as $it)
                                                     <?php
@@ -761,7 +772,7 @@
                                                             <br>
                                                             <span class="mailbox-attachment-size">
                                                               {{ date('F d, Y', strtotime($it->created_at)) }}
-                                                              <a href="{{ url('storage/app/public') }}/{{$it->Docs}}" class="btn btn-default btn-xs pull-left">Download</a>
+                                                              <a href="{{ url('downloadClientFiles') }}/{{$it->Docs}}" class="btn btn-default btn-xs pull-left">Download</a>
                                                             </span>
                                                         </div>
                                                     </li>
@@ -772,7 +783,7 @@
                                             <div class="tab-pane" id="E0tab_2">
                                                 <ul class="mailbox-attachments clearfix">
                                                     <?php
-                                                    $Reports = \App\Models\Files::where('projectID',$Single->Bennar)->where('mission','E0')->where('cat','2')->get();
+                                                    $Reports = $db_ext->table('documents')->where('projectID',$Single->Bennar)->where('mission','E0')->where('cat','2')->get();
                                                     ?>
                                                     @foreach($Reports as $it)
                                                         <?php
@@ -815,7 +826,7 @@
                                             <div class="tab-pane" id="E0tab_3">
                                                 <ul class="mailbox-attachments clearfix">
                                                     <?php
-                                                    $Recomends = \App\Models\Files::where('projectID',$Single->Bennar)->where('mission','E0')->where('cat','3')->get();
+                                                    $Recomends = $db_ext->table('documents')->where('projectID',$Single->Bennar)->where('mission','E0')->where('cat','3')->get();
                                                     ?>
                                                     @foreach($Recomends as $it)
                                                         <?php
@@ -870,7 +881,7 @@
                                             <div class="tab-pane active" id="E1tab_1">
                                                 <ul class="mailbox-attachments clearfix">
                                                     <?php
-                                                    $charts = \App\Models\Files::where('projectID',$Single->Bennar)->where('mission','E1')->where('cat','1')->get();
+                                                    $charts = $db_ext->table('documents')->where('projectID',$Single->Bennar)->where('mission','E1')->where('cat','1')->get();
                                                     ?>
                                                     @foreach($charts as $it)
                                                         <?php
@@ -914,7 +925,7 @@
                                             <div class="tab-pane" id="E1tab_2">
                                                 <ul class="mailbox-attachments clearfix">
                                                     <?php
-                                                    $Reports = \App\Models\Files::where('projectID',$Single->Bennar)->where('mission','E1')->where('cat','2')->get();
+                                                    $Reports = $db_ext->table('documents')->where('projectID',$Single->Bennar)->where('mission','E1')->where('cat','2')->get();
                                                     ?>
                                                     @foreach($Reports as $it)
                                                         <?php
@@ -957,7 +968,7 @@
                                             <div class="tab-pane" id="E1tab_3">
                                                 <ul class="mailbox-attachments clearfix">
                                                     <?php
-                                                    $Recomends = \App\Models\Files::where('projectID',$Single->Bennar)->where('mission','E1')->where('cat','3')->get();
+                                                    $Recomends = $db_ext->table('documents')->where('projectID',$Single->Bennar)->where('mission','E1')->where('cat','3')->get();
                                                     ?>
                                                     @foreach($Recomends as $it)
                                                         <?php
@@ -1011,7 +1022,7 @@
                                             <div class="tab-pane active" id="E2tab_1">
                                                 <ul class="mailbox-attachments clearfix">
                                                     <?php
-                                                    $charts = \App\Models\Files::where('projectID',$Single->Bennar)->where('mission','E2')->where('cat','1')->get();
+                                                    $charts = $db_ext->table('documents')->where('projectID',$Single->Bennar)->where('mission','E2')->where('cat','1')->get();
                                                     ?>
                                                     @foreach($charts as $it)
                                                         <?php
@@ -1055,7 +1066,7 @@
                                             <div class="tab-pane" id="E2tab_2">
                                                 <ul class="mailbox-attachments clearfix">
                                                     <?php
-                                                    $Reports = \App\Models\Files::where('projectID',$Single->Bennar)->where('mission','E2')->where('cat','2')->get();
+                                                    $Reports = $db_ext->table('documents')->where('projectID',$Single->Bennar)->where('mission','E2')->where('cat','2')->get();
                                                     ?>
                                                     @foreach($Reports as $it)
                                                         <?php
@@ -1098,7 +1109,7 @@
                                             <div class="tab-pane" id="E2tab_3">
                                                 <ul class="mailbox-attachments clearfix">
                                                     <?php
-                                                    $Recomends = \App\Models\Files::where('projectID',$Single->Bennar)->where('mission','E2')->where('cat','3')->get();
+                                                    $Recomends = $db_ext->table('documents')->where('projectID',$Single->Bennar)->where('mission','E2')->where('cat','3')->get();
                                                     ?>
                                                     @foreach($Recomends as $it)
                                                         <?php
@@ -1152,7 +1163,7 @@
                                             <div class="tab-pane active" id="E3tab_1">
                                                 <ul class="mailbox-attachments clearfix">
                                                     <?php
-                                                    $charts = \App\Models\Files::where('projectID',$Single->Bennar)->where('mission','E3')->where('cat','1')->get();
+                                                    $charts = $db_ext->table('documents')->where('projectID',$Single->Bennar)->where('mission','E3')->where('cat','1')->get();
                                                     ?>
                                                     @foreach($charts as $it)
                                                         <?php
@@ -1196,7 +1207,7 @@
                                             <div class="tab-pane" id="E3tab_2">
                                                 <ul class="mailbox-attachments clearfix">
                                                     <?php
-                                                    $Reports = \App\Models\Files::where('projectID',$Single->Bennar)->where('mission','E3')->where('cat','2')->get();
+                                                    $Reports = $db_ext->table('documents')->where('projectID',$Single->Bennar)->where('mission','E3')->where('cat','2')->get();
                                                     ?>
                                                     @foreach($Reports as $it)
                                                         <?php
@@ -1239,7 +1250,7 @@
                                             <div class="tab-pane" id="E3tab_3">
                                                 <ul class="mailbox-attachments clearfix">
                                                     <?php
-                                                    $Recomends = \App\Models\Files::where('projectID',$Single->Bennar)->where('mission','E3')->where('cat','3')->get();
+                                                    $Recomends = $db_ext->table('documents')->where('projectID',$Single->Bennar)->where('mission','E3')->where('cat','3')->get();
                                                     ?>
                                                     @foreach($Recomends as $it)
                                                         <?php

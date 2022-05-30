@@ -11,5 +11,6 @@ class ProjectStatus extends Model
     protected $table = 'projects_status';
     protected $fillable = [
         'StatusName',
+        'main_service',
     ];
 }

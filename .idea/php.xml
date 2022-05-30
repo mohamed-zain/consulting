@@ -1,43 +1,6 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
-  <component name="ChangeListManager">
-    <list default="true" id="497bad7a-2ad6-4165-8778-b1e34b1b572c" name="Changes" comment="">
-      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/Models/ProjectStatus.php" beforeDir="false" afterPath="$PROJECT_DIR$/app/Models/ProjectStatus.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/config/database.php" beforeDir="false" afterPath="$PROJECT_DIR$/config/database.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/resources/views/projects/ProProduction.blade.php" beforeDir="false" afterPath="$PROJECT_DIR$/resources/views/projects/ProProduction.blade.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/routes/web.php" beforeDir="false" afterPath="$PROJECT_DIR$/routes/web.php" afterDir="false" />
-    </list>
-    <option name="SHOW_DIALOG" value="false" />
-    <option name="HIGHLIGHT_CONFLICTS" value="true" />
-    <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
-    <option name="LAST_RESOLUTION" value="IGNORE" />
-  </component>
-  <component name="ComposerSettings" doNotAsk="true" synchronizationState="SYNCHRONIZE">
-    <pharConfigPath>$PROJECT_DIR$/composer.json</pharConfigPath>
-    <execution />
-  </component>
-  <component name="FileTemplateManagerImpl">
-    <option name="RECENT_TEMPLATES">
-      <list>
-        <option value="HTML File" />
-        <option value="CSS File" />
-        <option value="JavaScript File" />
-      </list>
-    </option>
-  </component>
-  <component name="Git.Settings">
-    <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$" />
-  </component>
-  <component name="GitSEFilterConfiguration">
-    <file-type-list>
-      <filtered-out-file-type name="LOCAL_BRANCH" />
-      <filtered-out-file-type name="REMOTE_BRANCH" />
-      <filtered-out-file-type name="TAG" />
-      <filtered-out-file-type name="COMMIT_BY_MESSAGE" />
-    </file-type-list>
-  </component>
-  <component name="PhpWorkspaceProjectConfiguration">
+  <component name="PhpIncludePathManager">
     <include_path>
       <path value="$PROJECT_DIR$/vendor/lcobucci/jwt" />
       <path value="$PROJECT_DIR$/vendor/lcobucci/clock" />
@@ -188,128 +151,10 @@
       <path value="$PROJECT_DIR$/vendor/doctrine/inflector" />
     </include_path>
   </component>
-  <component name="ProjectId" id="1z2S9zRjSlYmivAguuujs2bz0aM" />
-  <component name="ProjectLevelVcsManager" settingsEditedManually="true">
-    <ConfirmationsSetting value="2" id="Add" />
-  </component>
-  <component name="ProjectViewState">
-    <option name="hideEmptyMiddlePackages" value="true" />
-    <option name="showExcludedFiles" value="false" />
-    <option name="showLibraryContents" value="true" />
-  </component>
-  <component name="PropertiesComponent">
-    <property name="ASKED_ADD_EXTERNAL_FILES" value="true" />
-    <property name="ASKED_MARK_IGNORED_FILES_AS_EXCLUDED" value="true" />
-    <property name="DefaultHtmlFileTemplate" value="HTML File" />
-    <property name="RunOnceActivity.OpenProjectViewOnStart" value="true" />
-    <property name="RunOnceActivity.ShowReadmeOnStart" value="true" />
-    <property name="WebServerToolWindowFactoryState" value="false" />
-    <property name="last_opened_file_path" value="$PROJECT_DIR$" />
-    <property name="list.type.of.created.stylesheet" value="CSS" />
-    <property name="node.js.detected.package.eslint" value="true" />
-    <property name="node.js.detected.package.standard" value="true" />
-    <property name="node.js.selected.package.eslint" value="(autodetect)" />
-    <property name="node.js.selected.package.standard" value="" />
-    <property name="nodejs_package_manager_path" value="npm" />
-    <property name="php.override.implement.member.chooser.php.doc" value="NONE" />
-    <property name="settings.editor.selected.configurable" value="project.propVCSSupport.Mappings" />
-    <property name="vue.rearranger.settings.migration" value="true" />
-  </component>
-  <component name="RecentsManager">
-    <key name="CopyFile.RECENT_KEYS">
-      <recent name="$PROJECT_DIR$" />
-      <recent name="$PROJECT_DIR$/resources/views/Users" />
-      <recent name="$PROJECT_DIR$/resources/views/documents" />
-      <recent name="$PROJECT_DIR$/resources/views" />
-      <recent name="$PROJECT_DIR$/resources/views/projects" />
-    </key>
-    <key name="MoveFile.RECENT_KEYS">
-      <recent name="$PROJECT_DIR$/resources/views/layouts" />
-      <recent name="$PROJECT_DIR$/resources/views/emails/pkg" />
-      <recent name="$PROJECT_DIR$/resources/views/employees/attendance" />
-      <recent name="$PROJECT_DIR$/resources/views/ProjectsManager" />
-    </key>
-  </component>
-  <component name="RunManager">
-    <configuration name="phpunit.xml" type="PHPUnitRunConfigurationType" factoryName="PHPUnit">
-      <TestRunner scope="XML" />
-      <method v="2" />
-    </configuration>
-  </component>
-  <component name="SpellCheckerSettings" RuntimeDictionaries="0" Folders="0" CustomDictionaries="0" DefaultDictionary="application-level" UseSingleDictionary="true" transferred="true" />
-  <component name="TaskManager">
-    <task active="true" id="Default" summary="Default task">
-      <changelist id="497bad7a-2ad6-4165-8778-b1e34b1b572c" name="Changes" comment="" />
-      <created>1633344543417</created>
-      <option name="number" value="Default" />
-      <option name="presentableId" value="Default" />
-      <updated>1633344543417</updated>
-      <workItem from="1633344546023" duration="120385000" />
-      <workItem from="1634218917548" duration="25256000" />
-      <workItem from="1634723160292" duration="24000" />
-      <workItem from="1634723198781" duration="12394000" />
-      <workItem from="1635082409208" duration="7646000" />
-      <workItem from="1635268546315" duration="594000" />
-      <workItem from="1635412440772" duration="4945000" />
-      <workItem from="1635431411917" duration="12110000" />
-      <workItem from="1636034517187" duration="4033000" />
-      <workItem from="1636278096132" duration="66995000" />
-      <workItem from="1637567311048" duration="29012000" />
-      <workItem from="1638270073805" duration="115128000" />
-      <workItem from="1639916854933" duration="25000" />
-      <workItem from="1639916894127" duration="169911000" />
-      <workItem from="1641897557041" duration="9872000" />
-      <workItem from="1642004344198" duration="17000" />
-      <workItem from="1642004375368" duration="63469000" />
-      <workItem from="1643550828015" duration="2053000" />
-      <workItem from="1643708158195" duration="41734000" />
-      <workItem from="1644674208558" duration="28064000" />
-      <workItem from="1645374153459" duration="1270000" />
-      <workItem from="1645438607490" duration="9145000" />
-      <workItem from="1645700163913" duration="15529000" />
-      <workItem from="1646136867500" duration="6245000" />
-      <workItem from="1646229567078" duration="9009000" />
-      <workItem from="1646566843489" duration="115074000" />
-      <workItem from="1648304507578" duration="14000" />
-      <workItem from="1648304535122" duration="17244000" />
-      <workItem from="1648658220769" duration="7663000" />
-      <workItem from="1649160752608" duration="625000" />
-      <workItem from="1649373179220" duration="622000" />
-      <workItem from="1649617210651" duration="11223000" />
-      <workItem from="1649873471763" duration="614000" />
-      <workItem from="1649876380701" duration="28162000" />
-      <workItem from="1650923183416" duration="17000" />
-      <workItem from="1650923216246" duration="71573000" />
-      <workItem from="1652948771320" duration="1520000" />
-      <workItem from="1652962150344" duration="9263000" />
-      <workItem from="1653083836216" duration="71814000" />
-      <workItem from="1653752713880" duration="372000" />
-      <workItem from="1653819248969" duration="31000" />
-      <workItem from="1653905336643" duration="231000" />
-      <workItem from="1653905590264" duration="3076000" />
-    </task>
-    <servers />
-  </component>
-  <component name="TypeScriptGeneratedFilesManager">
-    <option name="version" value="3" />
-  </component>
-  <component name="Vcs.Log.Tabs.Properties">
-    <option name="TAB_STATES">
-      <map>
-        <entry key="MAIN">
-          <value>
-            <State />
-          </value>
-        </entry>
-      </map>
-    </option>
-    <option name="oldMeFiltersMigrated" value="true" />
-  </component>
-  <component name="VcsManagerConfiguration">
-    <option name="ADD_EXTERNAL_FILES_SILENTLY" value="true" />
-  </component>
-  <component name="XSLT-Support.FileAssociations.UIState">
-    <expand />
-    <select />
+  <component name="PhpProjectSharedConfiguration" php_language_level="7.3" />
+  <component name="PhpUnit">
+    <phpunit_settings>
+      <PhpUnitSettings configuration_file_path="$PROJECT_DIR$/phpunit.xml" custom_loader_path="$PROJECT_DIR$/vendor/autoload.php" use_configuration_file="true" />
+    </phpunit_settings>
   </component>
 </project>

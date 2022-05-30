@@ -11,6 +11,8 @@ use Illuminate\Support\Facades\Route;
 
 //use Pixelpeter\Woocommerce\Facades\Woocommerce;
 use Illuminate\Support\Facades\Crypt;
+use Illuminate\Support\Facades\Storage;
+
 /*
 |--------------------------------------------------------------------------
 | Web Routes
@@ -84,7 +86,14 @@ dd($countries);
 })->middleware('auth','admin');
 
 Route::middleware(['auth','admin'])->group(function () {
+    Route::get('downloadClientFiles/{FID}', function ($FID) {
+        $filename = $FID;
+        $tempImage = tempnam(sys_get_temp_dir(), $filename);
+        copy('https://ko-sky.com/storage/app/public/'.$filename, $tempImage);
 
+        return response()->download('https://ko-sky.com/storage/app/public/'.$filename);
+        //return Storage::download($FID);
+    });
     Route::post('UpdateStage', [ProjectsCon::class, 'UpdateStage'])->name('UpdateStage');
     Route::post('UpdateStat', [ProjectsCon::class, 'UpdateStat'])->name('UpdateStat');
     Route::get('ProjectDetails/{id}', [ProjectsCon::class, 'ProjectDetails']);

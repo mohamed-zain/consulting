@@ -310,11 +310,16 @@
                     <h4 class="modal-title">الخدمات المطلوب انجازها</h4><span style="color: red"></span>
                 </div>
                 <div class="modal-body">
-                    <?php $rs = \App\Models\RequireServices::where('BennarID',$Single->Bennar)->get(); ?>
+                    <?php
+                    $rs = \App\Models\RequireServices::join('main_services','main_services.id','=','require_services.serviceName')
+                        ->where('BennarID',$Single->Bennar)
+                        ->select('main_services.*','require_services.*',DB::raw('main_services.id as MID'))
+                        ->get();
+                    ?>
                     <ul class="nav nav-pills nav-stacked">
                         <?php if(isset($rs)): ?>
                             <?php $__currentLoopData = $rs; $__env->addLoop($__currentLoopData); foreach($__currentLoopData as $item): $__env->incrementLoopIndices(); $loop = $__env->getLastLoop(); ?>
-                              <li><a href="#"><i class="fa fa-circle-o text-red"></i> <?php echo e($item->serviceName); ?></a></li>
+                              <li><a href="#"><i class="fa fa-circle-o text-red"></i> <?php echo e($item->MainServiceName); ?></a></li>
                             <?php endforeach; $__env->popLoop(); $loop = $__env->getLastLoop(); ?>
                         <?php endif; ?>
                     </ul>
@@ -325,10 +330,14 @@
             </div>
         </div>
     </div>
+    <?php $__currentLoopData = $rs; $__env->addLoop($__currentLoopData); foreach($__currentLoopData as $Mser): $__env->incrementLoopIndices(); $loop = $__env->getLastLoop(); ?>
+        <?php
+         $sub = \App\Models\ProjectStatus::where('main_service',$Mser->MID)->get();
+        ?>
     <div class="col-md-12">
         <div class="box box-default" style="height: 207px ">
             <div class="box-header with-border">
-                <h3 class="box-title"> مراحل التنفيذ </h3>
+                <h3 class="box-title"> مراحل تنفيذ - <?php echo e($Mser->MainServiceName); ?> </h3>
 
                 <div class="box-tools pull-right">
                     <button type="button" class="btn btn-box-tool" data-widget="collapse"><i class="fa fa-minus"></i>
@@ -342,7 +351,7 @@
             <div class="box-body" style="padding-top: 50px">
                 <div class="stepwizard">
                     <div class="stepwizard-row setup-panel">
-                        <?php $__currentLoopData = $Ser; $__env->addLoop($__currentLoopData); foreach($__currentLoopData as $key =>$item78): $__env->incrementLoopIndices(); $loop = $__env->getLastLoop(); ?>
+                        <?php $__currentLoopData = $sub; $__env->addLoop($__currentLoopData); foreach($__currentLoopData as $key =>$item78): $__env->incrementLoopIndices(); $loop = $__env->getLastLoop(); ?>
                             <div class="stepwizard-step col-xs-1.5">
                                 <a href="#step-1" type="button" class="<?php if(isset($Single->Status) && $Single->Status== $item78->id): ?> btn btn-warning  <?php elseif(isset($Single->Status) && $Single->Status> $item78->id): ?> btn btn-warning <?php else: ?> btn btn-default <?php endif; ?> btn-circle stp" ><?php if(isset($Single->Status) && $Single->Status== $item78->id): ?> <i class="fa fa-check"></i> <?php else: ?> <?php echo e($key+1); ?> <?php endif; ?></a>
                                 <p><small><?php echo e($item78->StatusName); ?></small></p>
@@ -358,6 +367,7 @@
         </div>
         <!-- /.box -->
     </div>
+    <?php endforeach; $__env->popLoop(); $loop = $__env->getLastLoop(); ?>
 
 
    <div class="row">
@@ -543,7 +553,8 @@
                                             <div class="tab-pane active" id="E0tab_1">
                                                 <ul class="mailbox-attachments clearfix">
                                                 <?php
-                                                $charts = \App\Models\Files::where('projectID',$Single->Bennar)->where('mission','E0')->where('cat','1')->get();
+                                                    $db_ext = DB::connection('skyCon');
+                                                    $charts = $db_ext->table('documents')->where('projectID',$Single->Bennar)->where('mission','E0')->where('cat','1')->get();
                                                 ?>
                                                 <?php $__currentLoopData = $charts; $__env->addLoop($__currentLoopData); foreach($__currentLoopData as $it): $__env->incrementLoopIndices(); $loop = $__env->getLastLoop(); ?>
                                                     <?php
@@ -579,7 +590,7 @@
                                                             <span class="mailbox-attachment-size">
                                                               <?php echo e(date('F d, Y', strtotime($it->created_at))); ?>
 
-                                                              <a href="<?php echo e(url('storage/app/public')); ?>/<?php echo e($it->Docs); ?>" class="btn btn-default btn-xs pull-left">Download</a>
+                                                              <a href="<?php echo e(url('downloadClientFiles')); ?>/<?php echo e($it->Docs); ?>" class="btn btn-default btn-xs pull-left">Download</a>
                                                             </span>
                                                         </div>
                                                     </li>
@@ -590,7 +601,7 @@
                                             <div class="tab-pane" id="E0tab_2">
                                                 <ul class="mailbox-attachments clearfix">
                                                     <?php
-                                                    $Reports = \App\Models\Files::where('projectID',$Single->Bennar)->where('mission','E0')->where('cat','2')->get();
+                                                    $Reports = $db_ext->table('documents')->where('projectID',$Single->Bennar)->where('mission','E0')->where('cat','2')->get();
                                                     ?>
                                                     <?php $__currentLoopData = $Reports; $__env->addLoop($__currentLoopData); foreach($__currentLoopData as $it): $__env->incrementLoopIndices(); $loop = $__env->getLastLoop(); ?>
                                                         <?php
@@ -634,7 +645,7 @@
                                             <div class="tab-pane" id="E0tab_3">
                                                 <ul class="mailbox-attachments clearfix">
                                                     <?php
-                                                    $Recomends = \App\Models\Files::where('projectID',$Single->Bennar)->where('mission','E0')->where('cat','3')->get();
+                                                    $Recomends = $db_ext->table('documents')->where('projectID',$Single->Bennar)->where('mission','E0')->where('cat','3')->get();
                                                     ?>
                                                     <?php $__currentLoopData = $Recomends; $__env->addLoop($__currentLoopData); foreach($__currentLoopData as $it): $__env->incrementLoopIndices(); $loop = $__env->getLastLoop(); ?>
                                                         <?php
@@ -690,7 +701,7 @@
                                             <div class="tab-pane active" id="E1tab_1">
                                                 <ul class="mailbox-attachments clearfix">
                                                     <?php
-                                                    $charts = \App\Models\Files::where('projectID',$Single->Bennar)->where('mission','E1')->where('cat','1')->get();
+                                                    $charts = $db_ext->table('documents')->where('projectID',$Single->Bennar)->where('mission','E1')->where('cat','1')->get();
                                                     ?>
                                                     <?php $__currentLoopData = $charts; $__env->addLoop($__currentLoopData); foreach($__currentLoopData as $it): $__env->incrementLoopIndices(); $loop = $__env->getLastLoop(); ?>
                                                         <?php
@@ -735,7 +746,7 @@
                                             <div class="tab-pane" id="E1tab_2">
                                                 <ul class="mailbox-attachments clearfix">
                                                     <?php
-                                                    $Reports = \App\Models\Files::where('projectID',$Single->Bennar)->where('mission','E1')->where('cat','2')->get();
+                                                    $Reports = $db_ext->table('documents')->where('projectID',$Single->Bennar)->where('mission','E1')->where('cat','2')->get();
                                                     ?>
                                                     <?php $__currentLoopData = $Reports; $__env->addLoop($__currentLoopData); foreach($__currentLoopData as $it): $__env->incrementLoopIndices(); $loop = $__env->getLastLoop(); ?>
                                                         <?php
@@ -779,7 +790,7 @@
                                             <div class="tab-pane" id="E1tab_3">
                                                 <ul class="mailbox-attachments clearfix">
                                                     <?php
-                                                    $Recomends = \App\Models\Files::where('projectID',$Single->Bennar)->where('mission','E1')->where('cat','3')->get();
+                                                    $Recomends = $db_ext->table('documents')->where('projectID',$Single->Bennar)->where('mission','E1')->where('cat','3')->get();
                                                     ?>
                                                     <?php $__currentLoopData = $Recomends; $__env->addLoop($__currentLoopData); foreach($__currentLoopData as $it): $__env->incrementLoopIndices(); $loop = $__env->getLastLoop(); ?>
                                                         <?php
@@ -834,7 +845,7 @@
                                             <div class="tab-pane active" id="E2tab_1">
                                                 <ul class="mailbox-attachments clearfix">
                                                     <?php
-                                                    $charts = \App\Models\Files::where('projectID',$Single->Bennar)->where('mission','E2')->where('cat','1')->get();
+                                                    $charts = $db_ext->table('documents')->where('projectID',$Single->Bennar)->where('mission','E2')->where('cat','1')->get();
                                                     ?>
                                                     <?php $__currentLoopData = $charts; $__env->addLoop($__currentLoopData); foreach($__currentLoopData as $it): $__env->incrementLoopIndices(); $loop = $__env->getLastLoop(); ?>
                                                         <?php
@@ -879,7 +890,7 @@
                                             <div class="tab-pane" id="E2tab_2">
                                                 <ul class="mailbox-attachments clearfix">
                                                     <?php
-                                                    $Reports = \App\Models\Files::where('projectID',$Single->Bennar)->where('mission','E2')->where('cat','2')->get();
+                                                    $Reports = $db_ext->table('documents')->where('projectID',$Single->Bennar)->where('mission','E2')->where('cat','2')->get();
                                                     ?>
                                                     <?php $__currentLoopData = $Reports; $__env->addLoop($__currentLoopData); foreach($__currentLoopData as $it): $__env->incrementLoopIndices(); $loop = $__env->getLastLoop(); ?>
                                                         <?php
@@ -923,7 +934,7 @@
                                             <div class="tab-pane" id="E2tab_3">
                                                 <ul class="mailbox-attachments clearfix">
                                                     <?php
-                                                    $Recomends = \App\Models\Files::where('projectID',$Single->Bennar)->where('mission','E2')->where('cat','3')->get();
+                                                    $Recomends = $db_ext->table('documents')->where('projectID',$Single->Bennar)->where('mission','E2')->where('cat','3')->get();
                                                     ?>
                                                     <?php $__currentLoopData = $Recomends; $__env->addLoop($__currentLoopData); foreach($__currentLoopData as $it): $__env->incrementLoopIndices(); $loop = $__env->getLastLoop(); ?>
                                                         <?php
@@ -978,7 +989,7 @@
                                             <div class="tab-pane active" id="E3tab_1">
                                                 <ul class="mailbox-attachments clearfix">
                                                     <?php
-                                                    $charts = \App\Models\Files::where('projectID',$Single->Bennar)->where('mission','E3')->where('cat','1')->get();
+                                                    $charts = $db_ext->table('documents')->where('projectID',$Single->Bennar)->where('mission','E3')->where('cat','1')->get();
                                                     ?>
                                                     <?php $__currentLoopData = $charts; $__env->addLoop($__currentLoopData); foreach($__currentLoopData as $it): $__env->incrementLoopIndices(); $loop = $__env->getLastLoop(); ?>
                                                         <?php
@@ -1023,7 +1034,7 @@
                                             <div class="tab-pane" id="E3tab_2">
                                                 <ul class="mailbox-attachments clearfix">
                                                     <?php
-                                                    $Reports = \App\Models\Files::where('projectID',$Single->Bennar)->where('mission','E3')->where('cat','2')->get();
+                                                    $Reports = $db_ext->table('documents')->where('projectID',$Single->Bennar)->where('mission','E3')->where('cat','2')->get();
                                                     ?>
                                                     <?php $__currentLoopData = $Reports; $__env->addLoop($__currentLoopData); foreach($__currentLoopData as $it): $__env->incrementLoopIndices(); $loop = $__env->getLastLoop(); ?>
                                                         <?php
@@ -1067,7 +1078,7 @@
                                             <div class="tab-pane" id="E3tab_3">
                                                 <ul class="mailbox-attachments clearfix">
                                                     <?php
-                                                    $Recomends = \App\Models\Files::where('projectID',$Single->Bennar)->where('mission','E3')->where('cat','3')->get();
+                                                    $Recomends = $db_ext->table('documents')->where('projectID',$Single->Bennar)->where('mission','E3')->where('cat','3')->get();
                                                     ?>
                                                     <?php $__currentLoopData = $Recomends; $__env->addLoop($__currentLoopData); foreach($__currentLoopData as $it): $__env->incrementLoopIndices(); $loop = $__env->getLastLoop(); ?>
                                                         <?php

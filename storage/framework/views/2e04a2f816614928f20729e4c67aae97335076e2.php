@@ -54,7 +54,7 @@
             </li>
             <li class="header">المستخدمين</li>
             <li>
-                <a href="<?php echo e(url('Users')); ?>">
+                <a href="<?php echo e(url('#')); ?>">
                     <i class="fa fa-users-cog  fa-lg" style="font-size: 30px;"></i>
                     <span>قائمة المستخدمين </span>
                 </a>
@@ -67,13 +67,13 @@
             </li>
             <li class="header">الاعدادات</li>
             <li>
-                <a href="<?php echo e(url('MainPort')); ?>">
+                <a href="<?php echo e(url('#')); ?>">
                     <i class="fa fa-cogs  fa-lg" style="font-size: 30px;"></i>
                     <span> البيانات الاساسية </span>
                 </a>
             </li>
             <li>
-                <a href="<?php echo e(url('MainPort')); ?>">
+                <a href="<?php echo e(url('#')); ?>">
                     <i class="fa fa-synagogue  fa-lg" style="font-size: 30px;"></i>
                     <span> اعدادات النظام </span>
                 </a>

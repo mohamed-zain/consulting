@@ -223,7 +223,7 @@
                     <i class="fa fa-folder-open fa-2x" style="font-size: 55px;"></i>ملفات من خير عون
                 </a>
                 <a href="<?php echo e(url('DocsByPro')); ?>?search_text=<?php echo e($Single->Bennar); ?>"  class="btn btn-app" >
-                    <i class="fa fa-folder fa-2x" style="font-size: 55px;"></i>ملفاتك المرفوعة
+                    <i class="fa fa-folder fa-2x" style="font-size: 55px;"></i> رفع الملفات
                 </a>
 
 
@@ -537,588 +537,240 @@
                                 <li class="">
                                     <a href="#E3" data-toggle="tab">الكهرباء</a>
                                 </li>
+                                <li class="">
+                                    <a href="#Other" data-toggle="tab">ملفات اخرى</a>
+                                </li>
 
                             </ul>
                             <div class="tab-content">
                                 <div class="tab-pane active" id="E0"  style="min-height: 300px">
-                                    <div class="nav-tabs-custom">
-                                        <ul class="nav nav-tabs">
-                                            <li class="active"><a href="#E0tab_1" data-toggle="tab"> المخططات</a></li>
-                                            <li><a href="#E0tab_2" data-toggle="tab">تقارير الكميات</a></li>
-                                            <li><a href="#E0tab_3" data-toggle="tab">التوصيات</a></li>
-                                        </ul>
-                                        <div class="tab-content">
-                                            <div class="tab-pane active" id="E0tab_1">
-                                                <ul class="mailbox-attachments clearfix">
-                                                <?php
-                                                    $db_ext = DB::connection('skyCon');
-                                                    $charts = $db_ext->table('documents')->where('projectID',$Single->Bennar)->where('mission','E0')->where('cat','1')->get();
-                                                ?>
-                                                <?php $__currentLoopData = $charts; $__env->addLoop($__currentLoopData); foreach($__currentLoopData as $it): $__env->incrementLoopIndices(); $loop = $__env->getLastLoop(); ?>
-                                                    <?php
-                                                    $infoPath = pathinfo(public_path($it->Docs));
-                                                    $extension = $infoPath['extension'];
-                                                    if ($extension == 'pdf'){
-                                                        $icon = 'fa fa-file-pdf-o';
-                                                        $color = 'red';
-                                                    }elseif($extension == 'png' || $extension == 'jpeg' || $extension == 'jpg'){
-                                                        $icon = 'fa fa-picture-o';
-                                                        $color = 'cadetblue';
-                                                    }elseif ($extension == 'dwg'){
-                                                        $icon = 'fa fa-file-code-o';
-                                                        $color = 'violet';
-                                                    }elseif ($extension == 'xls'){
-                                                        $icon = 'fa fa-excel-o';
-                                                        $color = 'darkcyan';
-                                                    }elseif ($extension == 'zip' || $extension == 'rar'){
-                                                        $icon = 'fa fa-file-archive-o';
-                                                        $color = 'seagreen';
-                                                    }else{
-                                                        $icon = 'fa fa-file';
-                                                        $color = 'seagreen';
-                                                    }
-                                                    ?>
-                                                    <li>
+                                    <ul class="mailbox-attachments clearfix">
+                                        <?php
+                                        $db_ext = DB::connection('skyCon');
+                                        $charts = $db_ext->table('documents')->where('projectID',$Single->Bennar)->where('mission','E0')->where('cat','cons')->get();
+                                        ?>
+                                        <?php $__currentLoopData = $charts; $__env->addLoop($__currentLoopData); foreach($__currentLoopData as $it): $__env->incrementLoopIndices(); $loop = $__env->getLastLoop(); ?>
+                                            <?php
+                                            $infoPath = pathinfo(public_path($it->Docs));
+                                            $extension = $infoPath['extension'];
+                                            if ($extension == 'pdf'){
+                                                $icon = 'fa fa-file-pdf-o';
+                                                $color = 'red';
+                                            }elseif($extension == 'png' || $extension == 'jpeg' || $extension == 'jpg'){
+                                                $icon = 'fa fa-picture-o';
+                                                $color = 'cadetblue';
+                                            }elseif ($extension == 'dwg'){
+                                                $icon = 'fa fa-file-code-o';
+                                                $color = 'violet';
+                                            }elseif ($extension == 'xls'){
+                                                $icon = 'fa fa-excel-o';
+                                                $color = 'darkcyan';
+                                            }elseif ($extension == 'zip' || $extension == 'rar'){
+                                                $icon = 'fa fa-file-archive-o';
+                                                $color = 'seagreen';
+                                            }else{
+                                                $icon = 'fa fa-file';
+                                                $color = 'seagreen';
+                                            }
+                                            ?>
+                                            <li>
                                                         <span class="mailbox-attachment-icon">
                                                             <i class="<?php echo e($icon); ?>" style="color: <?php echo e($color); ?>"></i>
                                                         </span>
-                                                        <div class="mailbox-attachment-info">
-                                                            <a href="#" class="mailbox-attachment-name"><i class="fa fa-paperclip"></i> <?php echo e(Str::limit($it->DocName, 40)); ?></a>
-                                                            <br>
-                                                            <span class="mailbox-attachment-size">
+                                                <div class="mailbox-attachment-info">
+                                                    <a href="#" class="mailbox-attachment-name"><i class="fa fa-paperclip"></i> <?php echo e(Str::limit($it->DocName, 40)); ?></a>
+                                                    <br>
+                                                    <span class="mailbox-attachment-size">
                                                               <?php echo e(date('F d, Y', strtotime($it->created_at))); ?>
 
                                                               <a href="https://ko-sky.com/storage/app/public/<?php echo e($it->Docs); ?>" class="btn btn-default btn-xs pull-left">Download</a>
                                                             </span>
-                                                        </div>
-                                                    </li>
+                                                </div>
+                                            </li>
 
-                                                <?php endforeach; $__env->popLoop(); $loop = $__env->getLastLoop(); ?>
-                                                </ul>
-                                            </div>
-                                            <div class="tab-pane" id="E0tab_2">
-                                                <ul class="mailbox-attachments clearfix">
-                                                    <?php
-                                                    $Reports = $db_ext->table('documents')->where('projectID',$Single->Bennar)->where('mission','E0')->where('cat','2')->get();
-                                                    ?>
-                                                    <?php $__currentLoopData = $Reports; $__env->addLoop($__currentLoopData); foreach($__currentLoopData as $it): $__env->incrementLoopIndices(); $loop = $__env->getLastLoop(); ?>
-                                                        <?php
-                                                        $infoPath = pathinfo(public_path($it->Docs));
-                                                        $extension = $infoPath['extension'];
-                                                        if ($extension == 'pdf'){
-                                                            $icon = 'fa fa-file-pdf-o';
-                                                            $color = 'red';
-                                                        }elseif($extension == 'png' || $extension == 'jpeg' || $extension == 'jpg'){
-                                                            $icon = 'fa fa-picture-o';
-                                                            $color = 'cadetblue';
-                                                        }elseif ($extension == 'dwg'){
-                                                            $icon = 'fa fa-file-code-o';
-                                                            $color = 'violet';
-                                                        }elseif ($extension == 'xls'){
-                                                            $icon = 'fa fa-excel-o';
-                                                            $color = 'darkcyan';
-                                                        }elseif ($extension == 'zip' || $extension == 'rar'){
-                                                            $icon = 'fa fa-file-archive-o';
-                                                            $color = 'seagreen';
-                                                        }else{
-                                                            $icon = 'fa fa-file';
-                                                            $color = 'seagreen';
-                                                        }
-                                                        ?>
-                                                        <li>
-                                                            <span class="mailbox-attachment-icon"><i class="<?php echo e($icon); ?>" style="color: <?php echo e($color); ?>"></i></span>
-                                                            <div class="mailbox-attachment-info">
-                                                                <a href="#" class="mailbox-attachment-name"><i class="fa fa-paperclip"></i> <?php echo e(Str::limit($it->DocName, 40)); ?></a>
-                                                                <span class="mailbox-attachment-size">
-                                                                      <?php echo e(date('F d, Y', strtotime($it->created_at))); ?>
-
-                                                                      <a href="https://ko-sky.com/storage/app/public/<?php echo e($it->Docs); ?>" class="btn btn-default btn-xs pull-left"><i class="fa fa-cloud-download"></i></a>
-                                                                    </span>
-                                                            </div>
-                                                        </li>
-
-                                                    <?php endforeach; $__env->popLoop(); $loop = $__env->getLastLoop(); ?>
-                                                </ul>
-                                            </div><!-- /.tab-pane -->
-                                            <div class="tab-pane" id="E0tab_3">
-                                                <ul class="mailbox-attachments clearfix">
-                                                    <?php
-                                                    $Recomends = $db_ext->table('documents')->where('projectID',$Single->Bennar)->where('mission','E0')->where('cat','3')->get();
-                                                    ?>
-                                                    <?php $__currentLoopData = $Recomends; $__env->addLoop($__currentLoopData); foreach($__currentLoopData as $it): $__env->incrementLoopIndices(); $loop = $__env->getLastLoop(); ?>
-                                                        <?php
-                                                        $infoPath = pathinfo(public_path($it->Docs));
-                                                        $extension = $infoPath['extension'];
-                                                        if ($extension == 'pdf'){
-                                                            $icon = 'fa fa-file-pdf-o';
-                                                            $color = 'red';
-                                                        }elseif($extension == 'png' || $extension == 'jpeg' || $extension == 'jpg'){
-                                                            $icon = 'fa fa-picture-o';
-                                                            $color = 'cadetblue';
-                                                        }elseif ($extension == 'dwg'){
-                                                            $icon = 'fa fa-file-code-o';
-                                                            $color = 'violet';
-                                                        }elseif ($extension == 'xls'){
-                                                            $icon = 'fa fa-excel-o';
-                                                            $color = 'darkcyan';
-                                                        }elseif ($extension == 'zip' || $extension == 'rar'){
-                                                            $icon = 'fa fa-file-archive-o';
-                                                            $color = 'seagreen';
-                                                        }else{
-                                                            $icon = 'fa fa-file';
-                                                            $color = 'seagreen';
-                                                        }
-                                                        ?>
-                                                        <li>
-                                                            <span class="mailbox-attachment-icon"><i class="<?php echo e($icon); ?>" style="color: <?php echo e($color); ?>"></i></span>
-                                                            <div class="mailbox-attachment-info">
-                                                                <a href="#" class="mailbox-attachment-name"><i class="fa fa-paperclip"></i> <?php echo e(Str::limit($it->DocName, 40)); ?></a>
-                                                                <span class="mailbox-attachment-size">
-                                                                      <?php echo e(date('F d, Y', strtotime($it->created_at))); ?>
-
-                                                                      <a href="https://ko-sky.com/storage/app/public/<?php echo e($it->Docs); ?>" class="btn btn-default btn-xs pull-left"><i class="fa fa-cloud-download"></i></a>
-                                                                    </span>
-                                                            </div>
-                                                        </li>
-
-                                                    <?php endforeach; $__env->popLoop(); $loop = $__env->getLastLoop(); ?>
-                                                </ul>
-                                            </div><!-- /.tab-pane -->
-                                        </div><!-- /.tab-content -->
-                                    </div>
+                                        <?php endforeach; $__env->popLoop(); $loop = $__env->getLastLoop(); ?>
+                                    </ul>
                                 </div>
 
                                 <div class="tab-pane " id="E1"  style="min-height: 300px">
-                                    <div class="nav-tabs-custom">
-                                        <ul class="nav nav-tabs">
-                                            <li class="active"><a href="#E1tab_1" data-toggle="tab"> المخططات</a></li>
-                                            <li><a href="#E1tab_2" data-toggle="tab">تقارير الكميات</a></li>
-                                            <li><a href="#E1tab_3" data-toggle="tab">التوصيات</a></li>
-                                        </ul>
-                                        <div class="tab-content">
-                                            <div class="tab-pane active" id="E1tab_1">
-                                                <ul class="mailbox-attachments clearfix">
-                                                    <?php
-                                                    $charts = $db_ext->table('documents')->where('projectID',$Single->Bennar)->where('mission','E1')->where('cat','1')->get();
-                                                    ?>
-                                                    <?php $__currentLoopData = $charts; $__env->addLoop($__currentLoopData); foreach($__currentLoopData as $it): $__env->incrementLoopIndices(); $loop = $__env->getLastLoop(); ?>
-                                                        <?php
-                                                        $infoPath = pathinfo(public_path($it->Docs));
-                                                        $extension = $infoPath['extension'];
-                                                        if ($extension == 'pdf'){
-                                                            $icon = 'fa fa-file-pdf-o';
-                                                            $color = 'red';
-                                                        }elseif($extension == 'png' || $extension == 'jpeg' || $extension == 'jpg'){
-                                                            $icon = 'fa fa-picture-o';
-                                                            $color = 'cadetblue';
-                                                        }elseif ($extension == 'dwg'){
-                                                            $icon = 'fa fa-file-code-o';
-                                                            $color = 'violet';
-                                                        }elseif ($extension == 'xls'){
-                                                            $icon = 'fa fa-excel-o';
-                                                            $color = 'darkcyan';
-                                                        }elseif ($extension == 'zip' || $extension == 'rar'){
-                                                            $icon = 'fa fa-file-archive-o';
-                                                            $color = 'seagreen';
-                                                        }else{
-                                                            $icon = 'fa fa-file';
-                                                            $color = 'seagreen';
-                                                        }
-                                                        ?>
-                                                        <li>
-                                                            <span class="mailbox-attachment-icon"><i class="<?php echo e($icon); ?>" style="color: <?php echo e($color); ?>"></i></span>
-                                                            <div class="mailbox-attachment-info">
-                                                                <a href="#" class="mailbox-attachment-name"><i class="fa fa-paperclip"></i> <?php echo e(Str::limit($it->DocName, 40)); ?></a>
-                                                                <br>
-                                                                <span class="mailbox-attachment-size">
+                                    <ul class="mailbox-attachments clearfix">
+                                        <?php
+                                        $charts = $db_ext->table('documents')->where('projectID',$Single->Bennar)->where('mission','E1')->where('cat','cons')->get();
+                                        ?>
+                                        <?php $__currentLoopData = $charts; $__env->addLoop($__currentLoopData); foreach($__currentLoopData as $it): $__env->incrementLoopIndices(); $loop = $__env->getLastLoop(); ?>
+                                            <?php
+                                            $infoPath = pathinfo(public_path($it->Docs));
+                                            $extension = $infoPath['extension'];
+                                            if ($extension == 'pdf'){
+                                                $icon = 'fa fa-file-pdf-o';
+                                                $color = 'red';
+                                            }elseif($extension == 'png' || $extension == 'jpeg' || $extension == 'jpg'){
+                                                $icon = 'fa fa-picture-o';
+                                                $color = 'cadetblue';
+                                            }elseif ($extension == 'dwg'){
+                                                $icon = 'fa fa-file-code-o';
+                                                $color = 'violet';
+                                            }elseif ($extension == 'xls'){
+                                                $icon = 'fa fa-excel-o';
+                                                $color = 'darkcyan';
+                                            }elseif ($extension == 'zip' || $extension == 'rar'){
+                                                $icon = 'fa fa-file-archive-o';
+                                                $color = 'seagreen';
+                                            }else{
+                                                $icon = 'fa fa-file';
+                                                $color = 'seagreen';
+                                            }
+                                            ?>
+                                            <li>
+                                                <span class="mailbox-attachment-icon"><i class="<?php echo e($icon); ?>" style="color: <?php echo e($color); ?>"></i></span>
+                                                <div class="mailbox-attachment-info">
+                                                    <a href="#" class="mailbox-attachment-name"><i class="fa fa-paperclip"></i> <?php echo e(Str::limit($it->DocName, 40)); ?></a>
+                                                    <br>
+                                                    <span class="mailbox-attachment-size">
                                                               <?php echo e(date('F d, Y', strtotime($it->created_at))); ?>
 
                                                               <a href="https://ko-sky.com/storage/app/public/<?php echo e($it->Docs); ?>" class="btn btn-default btn-xs pull-left">Download</a>
                                                             </span>
-                                                            </div>
-                                                        </li>
+                                                </div>
+                                            </li>
 
-                                                    <?php endforeach; $__env->popLoop(); $loop = $__env->getLastLoop(); ?>
-                                                </ul>
-                                            </div>
-                                            <div class="tab-pane" id="E1tab_2">
-                                                <ul class="mailbox-attachments clearfix">
-                                                    <?php
-                                                    $Reports = $db_ext->table('documents')->where('projectID',$Single->Bennar)->where('mission','E1')->where('cat','2')->get();
-                                                    ?>
-                                                    <?php $__currentLoopData = $Reports; $__env->addLoop($__currentLoopData); foreach($__currentLoopData as $it): $__env->incrementLoopIndices(); $loop = $__env->getLastLoop(); ?>
-                                                        <?php
-                                                        $infoPath = pathinfo(public_path($it->Docs));
-                                                        $extension = $infoPath['extension'];
-                                                        if ($extension == 'pdf'){
-                                                            $icon = 'fa fa-file-pdf-o';
-                                                            $color = 'red';
-                                                        }elseif($extension == 'png' || $extension == 'jpeg' || $extension == 'jpg'){
-                                                            $icon = 'fa fa-picture-o';
-                                                            $color = 'cadetblue';
-                                                        }elseif ($extension == 'dwg'){
-                                                            $icon = 'fa fa-file-code-o';
-                                                            $color = 'violet';
-                                                        }elseif ($extension == 'xls'){
-                                                            $icon = 'fa fa-excel-o';
-                                                            $color = 'darkcyan';
-                                                        }elseif ($extension == 'zip' || $extension == 'rar'){
-                                                            $icon = 'fa fa-file-archive-o';
-                                                            $color = 'seagreen';
-                                                        }else{
-                                                            $icon = 'fa fa-file';
-                                                            $color = 'seagreen';
-                                                        }
-                                                        ?>
-                                                        <li>
-                                                            <span class="mailbox-attachment-icon"><i class="<?php echo e($icon); ?>" style="color: <?php echo e($color); ?>"></i></span>
-                                                            <div class="mailbox-attachment-info">
-                                                                <a href="#" class="mailbox-attachment-name"><i class="fa fa-paperclip"></i> <?php echo e(Str::limit($it->DocName, 40)); ?></a>
-                                                                <span class="mailbox-attachment-size">
-                                                                      <?php echo e(date('F d, Y', strtotime($it->created_at))); ?>
-
-                                                                      <a href="https://ko-sky.com/storage/app/public/<?php echo e($it->Docs); ?>" class="btn btn-default btn-xs pull-left"><i class="fa fa-cloud-download"></i></a>
-                                                                    </span>
-                                                            </div>
-                                                        </li>
-
-                                                    <?php endforeach; $__env->popLoop(); $loop = $__env->getLastLoop(); ?>
-                                                </ul>
-                                            </div><!-- /.tab-pane -->
-                                            <div class="tab-pane" id="E1tab_3">
-                                                <ul class="mailbox-attachments clearfix">
-                                                    <?php
-                                                    $Recomends = $db_ext->table('documents')->where('projectID',$Single->Bennar)->where('mission','E1')->where('cat','3')->get();
-                                                    ?>
-                                                    <?php $__currentLoopData = $Recomends; $__env->addLoop($__currentLoopData); foreach($__currentLoopData as $it): $__env->incrementLoopIndices(); $loop = $__env->getLastLoop(); ?>
-                                                        <?php
-                                                        $infoPath = pathinfo(public_path($it->Docs));
-                                                        $extension = $infoPath['extension'];
-                                                        if ($extension == 'pdf'){
-                                                            $icon = 'fa fa-file-pdf-o';
-                                                            $color = 'red';
-                                                        }elseif($extension == 'png' || $extension == 'jpeg' || $extension == 'jpg'){
-                                                            $icon = 'fa fa-picture-o';
-                                                            $color = 'cadetblue';
-                                                        }elseif ($extension == 'dwg'){
-                                                            $icon = 'fa fa-file-code-o';
-                                                            $color = 'violet';
-                                                        }elseif ($extension == 'xls'){
-                                                            $icon = 'fa fa-excel-o';
-                                                            $color = 'darkcyan';
-                                                        }elseif ($extension == 'zip' || $extension == 'rar'){
-                                                            $icon = 'fa fa-file-archive-o';
-                                                            $color = 'seagreen';
-                                                        }else{
-                                                            $icon = 'fa fa-file';
-                                                            $color = 'seagreen';
-                                                        }
-                                                        ?>
-                                                        <li>
-                                                            <span class="mailbox-attachment-icon"><i class="<?php echo e($icon); ?>" style="color: <?php echo e($color); ?>"></i></span>
-                                                            <div class="mailbox-attachment-info">
-                                                                <a href="#" class="mailbox-attachment-name"><i class="fa fa-paperclip"></i> <?php echo e(Str::limit($it->DocName, 40)); ?></a>
-                                                                <span class="mailbox-attachment-size">
-                                                                      <?php echo e(date('F d, Y', strtotime($it->created_at))); ?>
-
-                                                                      <a href="https://ko-sky.com/storage/app/public/<?php echo e($it->Docs); ?>" class="btn btn-default btn-xs pull-left"><i class="fa fa-cloud-download"></i></a>
-                                                                    </span>
-                                                            </div>
-                                                        </li>
-
-                                                    <?php endforeach; $__env->popLoop(); $loop = $__env->getLastLoop(); ?>
-                                                </ul>
-                                            </div><!-- /.tab-pane -->
-                                        </div><!-- /.tab-content -->
-                                    </div>
+                                        <?php endforeach; $__env->popLoop(); $loop = $__env->getLastLoop(); ?>
+                                    </ul>
                                 </div>
                                 <div class="tab-pane " id="E2"  style="min-height: 300px">
-                                    <div class="nav-tabs-custom">
-                                        <ul class="nav nav-tabs">
-                                            <li class="active"><a href="#E2tab_1" data-toggle="tab"> المخططات</a></li>
-                                            <li><a href="#E2tab_2" data-toggle="tab">تقارير الكميات</a></li>
-                                            <li><a href="#E2tab_3" data-toggle="tab">التوصيات</a></li>
-                                        </ul>
-                                        <div class="tab-content">
-                                            <div class="tab-pane active" id="E2tab_1">
-                                                <ul class="mailbox-attachments clearfix">
-                                                    <?php
-                                                    $charts = $db_ext->table('documents')->where('projectID',$Single->Bennar)->where('mission','E2')->where('cat','1')->get();
-                                                    ?>
-                                                    <?php $__currentLoopData = $charts; $__env->addLoop($__currentLoopData); foreach($__currentLoopData as $it): $__env->incrementLoopIndices(); $loop = $__env->getLastLoop(); ?>
-                                                        <?php
-                                                        $infoPath = pathinfo(public_path($it->Docs));
-                                                        $extension = $infoPath['extension'];
-                                                        if ($extension == 'pdf'){
-                                                            $icon = 'fa fa-file-pdf-o';
-                                                            $color = 'red';
-                                                        }elseif($extension == 'png' || $extension == 'jpeg' || $extension == 'jpg'){
-                                                            $icon = 'fa fa-picture-o';
-                                                            $color = 'cadetblue';
-                                                        }elseif ($extension == 'dwg'){
-                                                            $icon = 'fa fa-file-code-o';
-                                                            $color = 'violet';
-                                                        }elseif ($extension == 'xls'){
-                                                            $icon = 'fa fa-excel-o';
-                                                            $color = 'darkcyan';
-                                                        }elseif ($extension == 'zip' || $extension == 'rar'){
-                                                            $icon = 'fa fa-file-archive-o';
-                                                            $color = 'seagreen';
-                                                        }else{
-                                                            $icon = 'fa fa-file';
-                                                            $color = 'seagreen';
-                                                        }
-                                                        ?>
-                                                        <li>
-                                                            <span class="mailbox-attachment-icon"><i class="<?php echo e($icon); ?>" style="color: <?php echo e($color); ?>"></i></span>
-                                                            <div class="mailbox-attachment-info">
-                                                                <a href="#" class="mailbox-attachment-name"><i class="fa fa-paperclip"></i> <?php echo e(Str::limit($it->DocName, 40)); ?></a>
-                                                                <br>
-                                                                <span class="mailbox-attachment-size">
+                                    <ul class="mailbox-attachments clearfix">
+                                        <?php
+                                        $charts = $db_ext->table('documents')->where('projectID',$Single->Bennar)->where('mission','E2')->where('cat','cons')->get();
+                                        ?>
+                                        <?php $__currentLoopData = $charts; $__env->addLoop($__currentLoopData); foreach($__currentLoopData as $it): $__env->incrementLoopIndices(); $loop = $__env->getLastLoop(); ?>
+                                            <?php
+                                            $infoPath = pathinfo(public_path($it->Docs));
+                                            $extension = $infoPath['extension'];
+                                            if ($extension == 'pdf'){
+                                                $icon = 'fa fa-file-pdf-o';
+                                                $color = 'red';
+                                            }elseif($extension == 'png' || $extension == 'jpeg' || $extension == 'jpg'){
+                                                $icon = 'fa fa-picture-o';
+                                                $color = 'cadetblue';
+                                            }elseif ($extension == 'dwg'){
+                                                $icon = 'fa fa-file-code-o';
+                                                $color = 'violet';
+                                            }elseif ($extension == 'xls'){
+                                                $icon = 'fa fa-excel-o';
+                                                $color = 'darkcyan';
+                                            }elseif ($extension == 'zip' || $extension == 'rar'){
+                                                $icon = 'fa fa-file-archive-o';
+                                                $color = 'seagreen';
+                                            }else{
+                                                $icon = 'fa fa-file';
+                                                $color = 'seagreen';
+                                            }
+                                            ?>
+                                            <li>
+                                                <span class="mailbox-attachment-icon"><i class="<?php echo e($icon); ?>" style="color: <?php echo e($color); ?>"></i></span>
+                                                <div class="mailbox-attachment-info">
+                                                    <a href="#" class="mailbox-attachment-name"><i class="fa fa-paperclip"></i> <?php echo e(Str::limit($it->DocName, 40)); ?></a>
+                                                    <br>
+                                                    <span class="mailbox-attachment-size">
                                                               <?php echo e(date('F d, Y', strtotime($it->created_at))); ?>
 
                                                               <a href="https://ko-sky.com/storage/app/public/<?php echo e($it->Docs); ?>" class="btn btn-default btn-xs pull-left">Download</a>
                                                             </span>
-                                                            </div>
-                                                        </li>
+                                                </div>
+                                            </li>
 
-                                                    <?php endforeach; $__env->popLoop(); $loop = $__env->getLastLoop(); ?>
-                                                </ul>
-                                            </div>
-                                            <div class="tab-pane" id="E2tab_2">
-                                                <ul class="mailbox-attachments clearfix">
-                                                    <?php
-                                                    $Reports = $db_ext->table('documents')->where('projectID',$Single->Bennar)->where('mission','E2')->where('cat','2')->get();
-                                                    ?>
-                                                    <?php $__currentLoopData = $Reports; $__env->addLoop($__currentLoopData); foreach($__currentLoopData as $it): $__env->incrementLoopIndices(); $loop = $__env->getLastLoop(); ?>
-                                                        <?php
-                                                        $infoPath = pathinfo(public_path($it->Docs));
-                                                        $extension = $infoPath['extension'];
-                                                        if ($extension == 'pdf'){
-                                                            $icon = 'fa fa-file-pdf-o';
-                                                            $color = 'red';
-                                                        }elseif($extension == 'png' || $extension == 'jpeg' || $extension == 'jpg'){
-                                                            $icon = 'fa fa-picture-o';
-                                                            $color = 'cadetblue';
-                                                        }elseif ($extension == 'dwg'){
-                                                            $icon = 'fa fa-file-code-o';
-                                                            $color = 'violet';
-                                                        }elseif ($extension == 'xls'){
-                                                            $icon = 'fa fa-excel-o';
-                                                            $color = 'darkcyan';
-                                                        }elseif ($extension == 'zip' || $extension == 'rar'){
-                                                            $icon = 'fa fa-file-archive-o';
-                                                            $color = 'seagreen';
-                                                        }else{
-                                                            $icon = 'fa fa-file';
-                                                            $color = 'seagreen';
-                                                        }
-                                                        ?>
-                                                        <li>
-                                                            <span class="mailbox-attachment-icon"><i class="<?php echo e($icon); ?>" style="color: <?php echo e($color); ?>"></i></span>
-                                                            <div class="mailbox-attachment-info">
-                                                                <a href="#" class="mailbox-attachment-name"><i class="fa fa-paperclip"></i> <?php echo e(Str::limit($it->DocName, 40)); ?></a>
-                                                                <span class="mailbox-attachment-size">
-                                                                      <?php echo e(date('F d, Y', strtotime($it->created_at))); ?>
-
-                                                                      <a href="https://ko-sky.com/storage/app/public/<?php echo e($it->Docs); ?>" class="btn btn-default btn-xs pull-left"><i class="fa fa-cloud-download"></i></a>
-                                                                    </span>
-                                                            </div>
-                                                        </li>
-
-                                                    <?php endforeach; $__env->popLoop(); $loop = $__env->getLastLoop(); ?>
-                                                </ul>
-                                            </div><!-- /.tab-pane -->
-                                            <div class="tab-pane" id="E2tab_3">
-                                                <ul class="mailbox-attachments clearfix">
-                                                    <?php
-                                                    $Recomends = $db_ext->table('documents')->where('projectID',$Single->Bennar)->where('mission','E2')->where('cat','3')->get();
-                                                    ?>
-                                                    <?php $__currentLoopData = $Recomends; $__env->addLoop($__currentLoopData); foreach($__currentLoopData as $it): $__env->incrementLoopIndices(); $loop = $__env->getLastLoop(); ?>
-                                                        <?php
-                                                        $infoPath = pathinfo(public_path($it->Docs));
-                                                        $extension = $infoPath['extension'];
-                                                        if ($extension == 'pdf'){
-                                                            $icon = 'fa fa-file-pdf-o';
-                                                            $color = 'red';
-                                                        }elseif($extension == 'png' || $extension == 'jpeg' || $extension == 'jpg'){
-                                                            $icon = 'fa fa-picture-o';
-                                                            $color = 'cadetblue';
-                                                        }elseif ($extension == 'dwg'){
-                                                            $icon = 'fa fa-file-code-o';
-                                                            $color = 'violet';
-                                                        }elseif ($extension == 'xls'){
-                                                            $icon = 'fa fa-excel-o';
-                                                            $color = 'darkcyan';
-                                                        }elseif ($extension == 'zip' || $extension == 'rar'){
-                                                            $icon = 'fa fa-file-archive-o';
-                                                            $color = 'seagreen';
-                                                        }else{
-                                                            $icon = 'fa fa-file';
-                                                            $color = 'seagreen';
-                                                        }
-                                                        ?>
-                                                        <li>
-                                                            <span class="mailbox-attachment-icon"><i class="<?php echo e($icon); ?>" style="color: <?php echo e($color); ?>"></i></span>
-                                                            <div class="mailbox-attachment-info">
-                                                                <a href="#" class="mailbox-attachment-name"><i class="fa fa-paperclip"></i> <?php echo e(Str::limit($it->DocName, 40)); ?></a>
-                                                                <span class="mailbox-attachment-size">
-                                                                      <?php echo e(date('F d, Y', strtotime($it->created_at))); ?>
-
-                                                                      <a href="https://ko-sky.com/storage/app/public/<?php echo e($it->Docs); ?>" class="btn btn-default btn-xs pull-left"><i class="fa fa-cloud-download"></i></a>
-                                                                    </span>
-                                                            </div>
-                                                        </li>
-
-                                                    <?php endforeach; $__env->popLoop(); $loop = $__env->getLastLoop(); ?>
-                                                </ul>
-                                            </div><!-- /.tab-pane -->
-                                        </div><!-- /.tab-content -->
-                                    </div>
+                                        <?php endforeach; $__env->popLoop(); $loop = $__env->getLastLoop(); ?>
+                                    </ul>
                                 </div>
                                 <div class="tab-pane " id="E3"  style="min-height: 300px">
-                                    <div class="nav-tabs-custom">
-                                        <ul class="nav nav-tabs">
-                                            <li class="active"><a href="#E3tab_1" data-toggle="tab"> المخططات</a></li>
-                                            <li><a href="#E3tab_2" data-toggle="tab">تقارير الكميات</a></li>
-                                            <li><a href="#E3tab_3" data-toggle="tab">التوصيات</a></li>
-                                        </ul>
-                                        <div class="tab-content">
-                                            <div class="tab-pane active" id="E3tab_1">
-                                                <ul class="mailbox-attachments clearfix">
-                                                    <?php
-                                                    $charts = $db_ext->table('documents')->where('projectID',$Single->Bennar)->where('mission','E3')->where('cat','1')->get();
-                                                    ?>
-                                                    <?php $__currentLoopData = $charts; $__env->addLoop($__currentLoopData); foreach($__currentLoopData as $it): $__env->incrementLoopIndices(); $loop = $__env->getLastLoop(); ?>
-                                                        <?php
-                                                        $infoPath = pathinfo(public_path($it->Docs));
-                                                        $extension = $infoPath['extension'];
-                                                        if ($extension == 'pdf'){
-                                                            $icon = 'fa fa-file-pdf-o';
-                                                            $color = 'red';
-                                                        }elseif($extension == 'png' || $extension == 'jpeg' || $extension == 'jpg'){
-                                                            $icon = 'fa fa-picture-o';
-                                                            $color = 'cadetblue';
-                                                        }elseif ($extension == 'dwg'){
-                                                            $icon = 'fa fa-file-code-o';
-                                                            $color = 'violet';
-                                                        }elseif ($extension == 'xls'){
-                                                            $icon = 'fa fa-excel-o';
-                                                            $color = 'darkcyan';
-                                                        }elseif ($extension == 'zip' || $extension == 'rar'){
-                                                            $icon = 'fa fa-file-archive-o';
-                                                            $color = 'seagreen';
-                                                        }else{
-                                                            $icon = 'fa fa-file';
-                                                            $color = 'seagreen';
-                                                        }
-                                                        ?>
-                                                        <li>
-                                                            <span class="mailbox-attachment-icon"><i class="<?php echo e($icon); ?>" style="color: <?php echo e($color); ?>"></i></span>
-                                                            <div class="mailbox-attachment-info">
-                                                                <a href="#" class="mailbox-attachment-name"><i class="fa fa-paperclip"></i> <?php echo e(Str::limit($it->DocName, 40)); ?></a>
-                                                                <br>
-                                                                <span class="mailbox-attachment-size">
+                                    <ul class="mailbox-attachments clearfix">
+                                        <?php
+                                        $charts = $db_ext->table('documents')->where('projectID',$Single->Bennar)->where('mission','E3')->where('cat','cons')->get();
+                                        ?>
+                                        <?php $__currentLoopData = $charts; $__env->addLoop($__currentLoopData); foreach($__currentLoopData as $it): $__env->incrementLoopIndices(); $loop = $__env->getLastLoop(); ?>
+                                            <?php
+                                            $infoPath = pathinfo(public_path($it->Docs));
+                                            $extension = $infoPath['extension'];
+                                            if ($extension == 'pdf'){
+                                                $icon = 'fa fa-file-pdf-o';
+                                                $color = 'red';
+                                            }elseif($extension == 'png' || $extension == 'jpeg' || $extension == 'jpg'){
+                                                $icon = 'fa fa-picture-o';
+                                                $color = 'cadetblue';
+                                            }elseif ($extension == 'dwg'){
+                                                $icon = 'fa fa-file-code-o';
+                                                $color = 'violet';
+                                            }elseif ($extension == 'xls'){
+                                                $icon = 'fa fa-excel-o';
+                                                $color = 'darkcyan';
+                                            }elseif ($extension == 'zip' || $extension == 'rar'){
+                                                $icon = 'fa fa-file-archive-o';
+                                                $color = 'seagreen';
+                                            }else{
+                                                $icon = 'fa fa-file';
+                                                $color = 'seagreen';
+                                            }
+                                            ?>
+                                            <li>
+                                                <span class="mailbox-attachment-icon"><i class="<?php echo e($icon); ?>" style="color: <?php echo e($color); ?>"></i></span>
+                                                <div class="mailbox-attachment-info">
+                                                    <a href="#" class="mailbox-attachment-name"><i class="fa fa-paperclip"></i> <?php echo e(Str::limit($it->DocName, 40)); ?></a>
+                                                    <br>
+                                                    <span class="mailbox-attachment-size">
                                                               <?php echo e(date('F d, Y', strtotime($it->created_at))); ?>
 
                                                               <a href="https://ko-sky.com/storage/app/public/<?php echo e($it->Docs); ?>" class="btn btn-default btn-xs pull-left">Download</a>
                                                             </span>
-                                                            </div>
-                                                        </li>
+                                                </div>
+                                            </li>
 
-                                                    <?php endforeach; $__env->popLoop(); $loop = $__env->getLastLoop(); ?>
-                                                </ul>
-                                            </div>
-                                            <div class="tab-pane" id="E3tab_2">
-                                                <ul class="mailbox-attachments clearfix">
-                                                    <?php
-                                                    $Reports = $db_ext->table('documents')->where('projectID',$Single->Bennar)->where('mission','E3')->where('cat','2')->get();
-                                                    ?>
-                                                    <?php $__currentLoopData = $Reports; $__env->addLoop($__currentLoopData); foreach($__currentLoopData as $it): $__env->incrementLoopIndices(); $loop = $__env->getLastLoop(); ?>
-                                                        <?php
-                                                        $infoPath = pathinfo(public_path($it->Docs));
-                                                        $extension = $infoPath['extension'];
-                                                        if ($extension == 'pdf'){
-                                                            $icon = 'fa fa-file-pdf-o';
-                                                            $color = 'red';
-                                                        }elseif($extension == 'png' || $extension == 'jpeg' || $extension == 'jpg'){
-                                                            $icon = 'fa fa-picture-o';
-                                                            $color = 'cadetblue';
-                                                        }elseif ($extension == 'dwg'){
-                                                            $icon = 'fa fa-file-code-o';
-                                                            $color = 'violet';
-                                                        }elseif ($extension == 'xls'){
-                                                            $icon = 'fa fa-excel-o';
-                                                            $color = 'darkcyan';
-                                                        }elseif ($extension == 'zip' || $extension == 'rar'){
-                                                            $icon = 'fa fa-file-archive-o';
-                                                            $color = 'seagreen';
-                                                        }else{
-                                                            $icon = 'fa fa-file';
-                                                            $color = 'seagreen';
-                                                        }
-                                                        ?>
-                                                        <li>
-                                                            <span class="mailbox-attachment-icon"><i class="<?php echo e($icon); ?>" style="color: <?php echo e($color); ?>"></i></span>
-                                                            <div class="mailbox-attachment-info">
-                                                                <a href="#" class="mailbox-attachment-name"><i class="fa fa-paperclip"></i> <?php echo e(Str::limit($it->DocName, 40)); ?></a>
-                                                                <span class="mailbox-attachment-size">
-                                                                      <?php echo e(date('F d, Y', strtotime($it->created_at))); ?>
+                                        <?php endforeach; $__env->popLoop(); $loop = $__env->getLastLoop(); ?>
+                                    </ul>
+                                </div>
+                                <div class="tab-pane " id="Other"  style="min-height: 300px">
+                                    <ul class="mailbox-attachments clearfix">
+                                        <?php
+                                        $charts = DB::table('files')->where('projectID',$Single->Bennar)->get();
+                                        ?>
+                                        <?php $__currentLoopData = $charts; $__env->addLoop($__currentLoopData); foreach($__currentLoopData as $it): $__env->incrementLoopIndices(); $loop = $__env->getLastLoop(); ?>
+                                            <?php
+                                            $infoPath = pathinfo(public_path($it->Docs));
+                                            $extension = $infoPath['extension'];
+                                            if ($extension == 'pdf'){
+                                                $icon = 'fa fa-file-pdf-o';
+                                                $color = 'red';
+                                            }elseif($extension == 'png' || $extension == 'jpeg' || $extension == 'jpg'){
+                                                $icon = 'fa fa-picture-o';
+                                                $color = 'cadetblue';
+                                            }elseif ($extension == 'dwg'){
+                                                $icon = 'fa fa-file-code-o';
+                                                $color = 'violet';
+                                            }elseif ($extension == 'xls'){
+                                                $icon = 'fa fa-excel-o';
+                                                $color = 'darkcyan';
+                                            }elseif ($extension == 'zip' || $extension == 'rar'){
+                                                $icon = 'fa fa-file-archive-o';
+                                                $color = 'seagreen';
+                                            }else{
+                                                $icon = 'fa fa-file';
+                                                $color = 'seagreen';
+                                            }
+                                            ?>
+                                            <li>
+                                                <span class="mailbox-attachment-icon"><i class="<?php echo e($icon); ?>" style="color: <?php echo e($color); ?>"></i></span>
+                                                <div class="mailbox-attachment-info">
+                                                    <a href="#" class="mailbox-attachment-name"><i class="fa fa-paperclip"></i> <?php echo e(Str::limit($it->DocName, 40)); ?></a>
+                                                    <br>
+                                                    <span class="mailbox-attachment-size">
+                                                              <?php echo e(date('F d, Y', strtotime($it->created_at))); ?>
 
-                                                                      <a href="https://ko-sky.com/storage/app/public/<?php echo e($it->Docs); ?>" class="btn btn-default btn-xs pull-left"><i class="fa fa-cloud-download"></i></a>
-                                                                    </span>
-                                                            </div>
-                                                        </li>
+                                                              <a href="https://ko-sky.com/storage/app/public/<?php echo e($it->Docs); ?>" class="btn btn-default btn-xs pull-left">Download</a>
+                                                            </span>
+                                                </div>
+                                            </li>
 
-                                                    <?php endforeach; $__env->popLoop(); $loop = $__env->getLastLoop(); ?>
-                                                </ul>
-                                            </div><!-- /.tab-pane -->
-                                            <div class="tab-pane" id="E3tab_3">
-                                                <ul class="mailbox-attachments clearfix">
-                                                    <?php
-                                                    $Recomends = $db_ext->table('documents')->where('projectID',$Single->Bennar)->where('mission','E3')->where('cat','3')->get();
-                                                    ?>
-                                                    <?php $__currentLoopData = $Recomends; $__env->addLoop($__currentLoopData); foreach($__currentLoopData as $it): $__env->incrementLoopIndices(); $loop = $__env->getLastLoop(); ?>
-                                                        <?php
-                                                        $infoPath = pathinfo(public_path($it->Docs));
-                                                        $extension = $infoPath['extension'];
-                                                        if ($extension == 'pdf'){
-                                                            $icon = 'fa fa-file-pdf-o';
-                                                            $color = 'red';
-                                                        }elseif($extension == 'png' || $extension == 'jpeg' || $extension == 'jpg'){
-                                                            $icon = 'fa fa-picture-o';
-                                                            $color = 'cadetblue';
-                                                        }elseif ($extension == 'dwg'){
-                                                            $icon = 'fa fa-file-code-o';
-                                                            $color = 'violet';
-                                                        }elseif ($extension == 'xls'){
-                                                            $icon = 'fa fa-excel-o';
-                                                            $color = 'darkcyan';
-                                                        }elseif ($extension == 'zip' || $extension == 'rar'){
-                                                            $icon = 'fa fa-file-archive-o';
-                                                            $color = 'seagreen';
-                                                        }else{
-                                                            $icon = 'fa fa-file';
-                                                            $color = 'seagreen';
-                                                        }
-                                                        ?>
-                                                        <li>
-                                                            <span class="mailbox-attachment-icon"><i class="<?php echo e($icon); ?>" style="color: <?php echo e($color); ?>"></i></span>
-                                                            <div class="mailbox-attachment-info">
-                                                                <a href="#" class="mailbox-attachment-name"><i class="fa fa-paperclip"></i> <?php echo e(Str::limit($it->DocName, 40)); ?></a>
-                                                                <span class="mailbox-attachment-size">
-                                                                      <?php echo e(date('F d, Y', strtotime($it->created_at))); ?>
-
-                                                                      <a href="https://ko-sky.com/storage/app/public/<?php echo e($it->Docs); ?>" class="btn btn-default btn-xs pull-left"><i class="fa fa-cloud-download"></i></a>
-                                                                    </span>
-                                                            </div>
-                                                        </li>
-
-                                                    <?php endforeach; $__env->popLoop(); $loop = $__env->getLastLoop(); ?>
-                                                </ul>
-                                            </div><!-- /.tab-pane -->
-                                        </div><!-- /.tab-content -->
-                                    </div>
+                                        <?php endforeach; $__env->popLoop(); $loop = $__env->getLastLoop(); ?>
+                                    </ul>
                                 </div>
 
                                 <!-- /.tab-pane -->

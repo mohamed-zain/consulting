@@ -53,7 +53,7 @@
             </li>
             <li class="header">المستخدمين</li>
             <li>
-                <a href="{{url('Users')}}">
+                <a href="{{url('#')}}">
                     <i class="fa fa-users-cog  fa-lg" style="font-size: 30px;"></i>
                     <span>قائمة المستخدمين </span>
                 </a>
@@ -66,13 +66,13 @@
             </li>
             <li class="header">الاعدادات</li>
             <li>
-                <a href="{{url('MainPort')}}">
+                <a href="{{url('#')}}">
                     <i class="fa fa-cogs  fa-lg" style="font-size: 30px;"></i>
                     <span> البيانات الاساسية </span>
                 </a>
             </li>
             <li>
-                <a href="{{url('MainPort')}}">
+                <a href="{{url('#')}}">
                     <i class="fa fa-synagogue  fa-lg" style="font-size: 30px;"></i>
                     <span> اعدادات النظام </span>
                 </a>

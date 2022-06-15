@@ -228,7 +228,7 @@
                     <i class="fa fa-folder-open fa-2x" style="font-size: 55px;"></i>ملفات من خير عون
                 </a>
                 <a href="{{ url('DocsByPro') }}?search_text={{ $Single->Bennar }}"  class="btn btn-app" >
-                    <i class="fa fa-folder fa-2x" style="font-size: 55px;"></i>ملفاتك المرفوعة
+                    <i class="fa fa-folder fa-2x" style="font-size: 55px;"></i> رفع الملفات
                 </a>
 
 

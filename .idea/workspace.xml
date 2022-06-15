@@ -2,9 +2,13 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="497bad7a-2ad6-4165-8778-b1e34b1b572c" name="Changes" comment="">
-      <change afterPath="$PROJECT_DIR$/resources/views/projects/ProProductionCopy.blade.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.gitignore" beforeDir="false" afterPath="$PROJECT_DIR$/.gitignore" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/config/database.php" beforeDir="false" afterPath="$PROJECT_DIR$/config/database.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/resources/views/layouts/aside.blade.php" beforeDir="false" afterPath="$PROJECT_DIR$/resources/views/layouts/aside.blade.php" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/resources/views/projects/ProProduction.blade.php" beforeDir="false" afterPath="$PROJECT_DIR$/resources/views/projects/ProProduction.blade.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/storage/framework/views/2e04a2f816614928f20729e4c67aae97335076e2.php" beforeDir="false" afterPath="$PROJECT_DIR$/storage/framework/views/2e04a2f816614928f20729e4c67aae97335076e2.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/storage/framework/views/406fef2ac900d39c2524b62fbe5b188397c9229e.php" beforeDir="false" afterPath="$PROJECT_DIR$/storage/framework/views/406fef2ac900d39c2524b62fbe5b188397c9229e.php" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -217,11 +221,11 @@
   </component>
   <component name="RecentsManager">
     <key name="CopyFile.RECENT_KEYS">
+      <recent name="$PROJECT_DIR$/resources/views/projects" />
       <recent name="$PROJECT_DIR$" />
       <recent name="$PROJECT_DIR$/resources/views/Users" />
       <recent name="$PROJECT_DIR$/resources/views/documents" />
       <recent name="$PROJECT_DIR$/resources/views" />
-      <recent name="$PROJECT_DIR$/resources/views/projects" />
     </key>
     <key name="MoveFile.RECENT_KEYS">
       <recent name="$PROJECT_DIR$/resources/views/layouts" />
@@ -291,7 +295,7 @@
       <workItem from="1654005909017" duration="8435000" />
       <workItem from="1654518743859" duration="23000" />
       <workItem from="1655287158773" duration="1140000" />
-      <workItem from="1655288804917" duration="4666000" />
+      <workItem from="1655288804917" duration="6357000" />
     </task>
     <servers />
   </component>

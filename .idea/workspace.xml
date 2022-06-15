@@ -2,21 +2,7 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="497bad7a-2ad6-4165-8778-b1e34b1b572c" name="Changes" comment="">
-      <change afterPath="$PROJECT_DIR$/.idea/symfony2.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/Http/Controllers/DocumentsCon.php" beforeDir="false" afterPath="$PROJECT_DIR$/app/Http/Controllers/DocumentsCon.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/Http/Controllers/UsersCon.php" beforeDir="false" afterPath="$PROJECT_DIR$/app/Http/Controllers/UsersCon.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/Models/Files.php" beforeDir="false" afterPath="$PROJECT_DIR$/app/Models/Files.php" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/config/database.php" beforeDir="false" afterPath="$PROJECT_DIR$/config/database.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/resources/views/documents/DocsByPro.blade.php" beforeDir="false" afterPath="$PROJECT_DIR$/resources/views/documents/DocsByPro.blade.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/resources/views/documents/gitmissions.blade.php" beforeDir="false" afterPath="$PROJECT_DIR$/resources/views/documents/gitmissions.blade.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/resources/views/projects/ProProduction.blade.php" beforeDir="false" afterPath="$PROJECT_DIR$/resources/views/projects/ProProduction.blade.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/resources/views/projects/index2.blade.php" beforeDir="false" afterPath="$PROJECT_DIR$/resources/views/projects/index2.blade.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/resources/views/users/index.blade.php" beforeDir="false" afterPath="$PROJECT_DIR$/resources/views/users/index.blade.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/routes/web.php" beforeDir="false" afterPath="$PROJECT_DIR$/routes/web.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/storage/framework/views/406fef2ac900d39c2524b62fbe5b188397c9229e.php" beforeDir="false" afterPath="$PROJECT_DIR$/storage/framework/views/406fef2ac900d39c2524b62fbe5b188397c9229e.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/storage/framework/views/982f3cf99c3a519657fbeffb4f7e70ba776619bc.php" beforeDir="false" afterPath="$PROJECT_DIR$/storage/framework/views/982f3cf99c3a519657fbeffb4f7e70ba776619bc.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/storage/framework/views/d8879a9bcbd434fc042c145eae36bf68d54c9ea3.php" beforeDir="false" afterPath="$PROJECT_DIR$/storage/framework/views/d8879a9bcbd434fc042c145eae36bf68d54c9ea3.php" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -303,7 +289,7 @@
       <workItem from="1654005909017" duration="8435000" />
       <workItem from="1654518743859" duration="23000" />
       <workItem from="1655287158773" duration="1140000" />
-      <workItem from="1655288804917" duration="2920000" />
+      <workItem from="1655288804917" duration="3513000" />
     </task>
     <servers />
   </component>

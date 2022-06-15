@@ -51,7 +51,6 @@
                 </thead>
                 <tbody>
                 @foreach($Data as $item)
-
                     <tr>
                         <td><a href="{{url('ProjectDetails')}}/{{ $item->Bennar }}">{{ $item->FileCode }}</a></td>
                         <td><a href="{{url('ProjectDetails')}}/{{ $item->Bennar }}">{{ $item->Bennar }}</a></td>

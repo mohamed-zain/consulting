@@ -218,9 +218,7 @@
                     <i class="fa fa-tasks fa-2x" style="font-size: 55px;"></i>  الخدمات المطلوبة
                 </a>
                
-                <a href="#"  class="btn btn-app" data-toggle="modal" data-target="#Modal55">
-                    <i class="fa fa-stream fa-2x" style="font-size: 55px;"></i>مرحلة المشروع
-                </a>
+                
                 <a href="#"  class="btn btn-app" data-toggle="modal" data-target="#FilesPro">
                     <i class="fa fa-folder-open fa-2x" style="font-size: 55px;"></i>ملفات من خير عون
                 </a>
@@ -590,7 +588,7 @@
                                                             <span class="mailbox-attachment-size">
                                                               <?php echo e(date('F d, Y', strtotime($it->created_at))); ?>
 
-                                                              <a href="<?php echo e(url('downloadClientFiles')); ?>/<?php echo e($it->Docs); ?>" class="btn btn-default btn-xs pull-left">Download</a>
+                                                              <a href="https://ko-sky.com/storage/app/public/<?php echo e($it->Docs); ?>" class="btn btn-default btn-xs pull-left">Download</a>
                                                             </span>
                                                         </div>
                                                     </li>
@@ -634,7 +632,7 @@
                                                                 <span class="mailbox-attachment-size">
                                                                       <?php echo e(date('F d, Y', strtotime($it->created_at))); ?>
 
-                                                                      <a href="<?php echo e(url('storage/app/public')); ?>/<?php echo e($it->Docs); ?>" class="btn btn-default btn-xs pull-left"><i class="fa fa-cloud-download"></i></a>
+                                                                      <a href="https://ko-sky.com/storage/app/public/<?php echo e($it->Docs); ?>" class="btn btn-default btn-xs pull-left"><i class="fa fa-cloud-download"></i></a>
                                                                     </span>
                                                             </div>
                                                         </li>
@@ -678,7 +676,7 @@
                                                                 <span class="mailbox-attachment-size">
                                                                       <?php echo e(date('F d, Y', strtotime($it->created_at))); ?>
 
-                                                                      <a href="<?php echo e(url('storage/app/public')); ?>/<?php echo e($it->Docs); ?>" class="btn btn-default btn-xs pull-left"><i class="fa fa-cloud-download"></i></a>
+                                                                      <a href="https://ko-sky.com/storage/app/public/<?php echo e($it->Docs); ?>" class="btn btn-default btn-xs pull-left"><i class="fa fa-cloud-download"></i></a>
                                                                     </span>
                                                             </div>
                                                         </li>
@@ -735,7 +733,7 @@
                                                                 <span class="mailbox-attachment-size">
                                                               <?php echo e(date('F d, Y', strtotime($it->created_at))); ?>
 
-                                                              <a href="<?php echo e(url('storage/app/public')); ?>/<?php echo e($it->Docs); ?>" class="btn btn-default btn-xs pull-left">Download</a>
+                                                              <a href="https://ko-sky.com/storage/app/public/<?php echo e($it->Docs); ?>" class="btn btn-default btn-xs pull-left">Download</a>
                                                             </span>
                                                             </div>
                                                         </li>
@@ -779,7 +777,7 @@
                                                                 <span class="mailbox-attachment-size">
                                                                       <?php echo e(date('F d, Y', strtotime($it->created_at))); ?>
 
-                                                                      <a href="<?php echo e(url('storage/app/public')); ?>/<?php echo e($it->Docs); ?>" class="btn btn-default btn-xs pull-left"><i class="fa fa-cloud-download"></i></a>
+                                                                      <a href="https://ko-sky.com/storage/app/public/<?php echo e($it->Docs); ?>" class="btn btn-default btn-xs pull-left"><i class="fa fa-cloud-download"></i></a>
                                                                     </span>
                                                             </div>
                                                         </li>
@@ -823,7 +821,7 @@
                                                                 <span class="mailbox-attachment-size">
                                                                       <?php echo e(date('F d, Y', strtotime($it->created_at))); ?>
 
-                                                                      <a href="<?php echo e(url('storage/app/public')); ?>/<?php echo e($it->Docs); ?>" class="btn btn-default btn-xs pull-left"><i class="fa fa-cloud-download"></i></a>
+                                                                      <a href="https://ko-sky.com/storage/app/public/<?php echo e($it->Docs); ?>" class="btn btn-default btn-xs pull-left"><i class="fa fa-cloud-download"></i></a>
                                                                     </span>
                                                             </div>
                                                         </li>
@@ -879,7 +877,7 @@
                                                                 <span class="mailbox-attachment-size">
                                                               <?php echo e(date('F d, Y', strtotime($it->created_at))); ?>
 
-                                                              <a href="<?php echo e(url('storage/app/public')); ?>/<?php echo e($it->Docs); ?>" class="btn btn-default btn-xs pull-left">Download</a>
+                                                              <a href="https://ko-sky.com/storage/app/public/<?php echo e($it->Docs); ?>" class="btn btn-default btn-xs pull-left">Download</a>
                                                             </span>
                                                             </div>
                                                         </li>
@@ -923,7 +921,7 @@
                                                                 <span class="mailbox-attachment-size">
                                                                       <?php echo e(date('F d, Y', strtotime($it->created_at))); ?>
 
-                                                                      <a href="<?php echo e(url('storage/app/public')); ?>/<?php echo e($it->Docs); ?>" class="btn btn-default btn-xs pull-left"><i class="fa fa-cloud-download"></i></a>
+                                                                      <a href="https://ko-sky.com/storage/app/public/<?php echo e($it->Docs); ?>" class="btn btn-default btn-xs pull-left"><i class="fa fa-cloud-download"></i></a>
                                                                     </span>
                                                             </div>
                                                         </li>
@@ -967,7 +965,7 @@
                                                                 <span class="mailbox-attachment-size">
                                                                       <?php echo e(date('F d, Y', strtotime($it->created_at))); ?>
 
-                                                                      <a href="<?php echo e(url('storage/app/public')); ?>/<?php echo e($it->Docs); ?>" class="btn btn-default btn-xs pull-left"><i class="fa fa-cloud-download"></i></a>
+                                                                      <a href="https://ko-sky.com/storage/app/public/<?php echo e($it->Docs); ?>" class="btn btn-default btn-xs pull-left"><i class="fa fa-cloud-download"></i></a>
                                                                     </span>
                                                             </div>
                                                         </li>
@@ -1023,7 +1021,7 @@
                                                                 <span class="mailbox-attachment-size">
                                                               <?php echo e(date('F d, Y', strtotime($it->created_at))); ?>
 
-                                                              <a href="<?php echo e(url('storage/app/public')); ?>/<?php echo e($it->Docs); ?>" class="btn btn-default btn-xs pull-left">Download</a>
+                                                              <a href="https://ko-sky.com/storage/app/public/<?php echo e($it->Docs); ?>" class="btn btn-default btn-xs pull-left">Download</a>
                                                             </span>
                                                             </div>
                                                         </li>
@@ -1067,7 +1065,7 @@
                                                                 <span class="mailbox-attachment-size">
                                                                       <?php echo e(date('F d, Y', strtotime($it->created_at))); ?>
 
-                                                                      <a href="<?php echo e(url('storage/app/public')); ?>/<?php echo e($it->Docs); ?>" class="btn btn-default btn-xs pull-left"><i class="fa fa-cloud-download"></i></a>
+                                                                      <a href="https://ko-sky.com/storage/app/public/<?php echo e($it->Docs); ?>" class="btn btn-default btn-xs pull-left"><i class="fa fa-cloud-download"></i></a>
                                                                     </span>
                                                             </div>
                                                         </li>
@@ -1111,7 +1109,7 @@
                                                                 <span class="mailbox-attachment-size">
                                                                       <?php echo e(date('F d, Y', strtotime($it->created_at))); ?>
 
-                                                                      <a href="<?php echo e(url('storage/app/public')); ?>/<?php echo e($it->Docs); ?>" class="btn btn-default btn-xs pull-left"><i class="fa fa-cloud-download"></i></a>
+                                                                      <a href="https://ko-sky.com/storage/app/public/<?php echo e($it->Docs); ?>" class="btn btn-default btn-xs pull-left"><i class="fa fa-cloud-download"></i></a>
                                                                     </span>
                                                             </div>
                                                         </li>

@@ -19,7 +19,6 @@ class Files extends Model
         'DocDetails',
         'DocName',
         'Docs',
-        'notification',
         'reject_accept',
         'reject_accept_at',
         'reject_reason',

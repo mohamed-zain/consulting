@@ -85,6 +85,17 @@ dd($countries);
 
 })->middleware('auth','admin');
 
+
+Route::get('join', function () {
+   return view('wizard');
+
+});
+
+Route::post('CheckUp', function () {
+   return view('wizard');
+
+})->name('CheckUp');
+
 Route::middleware(['auth','admin'])->group(function () {
     Route::get('downloadClientFiles/{FID}', function ($FID) {
         $filename = $FID;
@@ -94,6 +105,8 @@ Route::middleware(['auth','admin'])->group(function () {
         return response()->download('https://ko-sky.com/storage/app/public/'.$filename);
         //return Storage::download($FID);
     });
+
+    Route::post('getSS', [DocumentsCon::class, 'getSS'])->name('getSS');
     Route::post('UpdateStage', [ProjectsCon::class, 'UpdateStage'])->name('UpdateStage');
     Route::post('UpdateStat', [ProjectsCon::class, 'UpdateStat'])->name('UpdateStat');
     Route::get('ProjectDetails/{id}', [ProjectsCon::class, 'ProjectDetails']);

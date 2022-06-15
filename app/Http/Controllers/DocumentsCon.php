@@ -52,6 +52,15 @@ class DocumentsCon extends Controller
         return 'done Refreshing';
     }
 
+    public function getSS(Request $request)
+    {
+        //dd($request->all());
+        $ef = \App\Models\Documents::where('Bennar',$request->Bennar)->pluck('DocType');
+
+        $Data = DocsType::where('mainStage',$request->MainS)->whereNotIn('id',$ef)->get();
+        return view('documents.gitmissions',compact('Data'));
+    }
+
 
     public function uploadeTemp(Request $request)
     {

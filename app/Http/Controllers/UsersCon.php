@@ -23,7 +23,7 @@ class UsersCon extends Controller
     }
     public function index()
     {
-       $Data = User::all();
+       $Data = User::where('Office_code',auth()->user()->Office_code)->get();
         return view('Users.index',compact('Data'));
     }
 

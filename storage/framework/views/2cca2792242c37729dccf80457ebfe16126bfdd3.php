@@ -49,7 +49,6 @@
                 </thead>
                 <tbody>
                 <?php $__currentLoopData = $Data; $__env->addLoop($__currentLoopData); foreach($__currentLoopData as $item): $__env->incrementLoopIndices(); $loop = $__env->getLastLoop(); ?>
-
                     <tr>
                         <td><a href="<?php echo e(url('ProjectDetails')); ?>/<?php echo e($item->Bennar); ?>"><?php echo e($item->FileCode); ?></a></td>
                         <td><a href="<?php echo e(url('ProjectDetails')); ?>/<?php echo e($item->Bennar); ?>"><?php echo e($item->Bennar); ?></a></td>

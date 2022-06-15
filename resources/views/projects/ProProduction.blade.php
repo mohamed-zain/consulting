@@ -221,9 +221,9 @@
                {{-- <a href="#"  class="btn btn-app"  data-toggle="modal" data-target="#Modal55888">
                     <i class="fa fa-chess-board fa-2x" style="font-size: 55px;"></i>  المهمات الهندسية
                 </a>--}}
-                <a href="#"  class="btn btn-app" data-toggle="modal" data-target="#Modal55">
+                {{--<a href="#"  class="btn btn-app" data-toggle="modal" data-target="#Modal55">
                     <i class="fa fa-stream fa-2x" style="font-size: 55px;"></i>مرحلة المشروع
-                </a>
+                </a>--}}
                 <a href="#"  class="btn btn-app" data-toggle="modal" data-target="#FilesPro">
                     <i class="fa fa-folder-open fa-2x" style="font-size: 55px;"></i>ملفات من خير عون
                 </a>
@@ -737,7 +737,7 @@
                                                 <ul class="mailbox-attachments clearfix">
                                                 <?php
                                                     $db_ext = DB::connection('skyCon');
-                                                    $charts = $db_ext->table('documents')->where('projectID',$Single->Bennar)->where('mission','E0')->where('cat','1')->get();
+                                                    $charts = $db_ext->table('documents')->where('projectID',$Single->Bennar)->where('mission','E0')->where('cat','cons')->get();
                                                 ?>
                                                 @foreach($charts as $it)
                                                     <?php
@@ -772,7 +772,7 @@
                                                             <br>
                                                             <span class="mailbox-attachment-size">
                                                               {{ date('F d, Y', strtotime($it->created_at)) }}
-                                                              <a href="{{ url('downloadClientFiles') }}/{{$it->Docs}}" class="btn btn-default btn-xs pull-left">Download</a>
+                                                              <a href="https://ko-sky.com/storage/app/public/{{$it->Docs}}" class="btn btn-default btn-xs pull-left">Download</a>
                                                             </span>
                                                         </div>
                                                     </li>
@@ -783,7 +783,7 @@
                                             <div class="tab-pane" id="E0tab_2">
                                                 <ul class="mailbox-attachments clearfix">
                                                     <?php
-                                                    $Reports = $db_ext->table('documents')->where('projectID',$Single->Bennar)->where('mission','E0')->where('cat','2')->get();
+                                                    $Reports = $db_ext->table('documents')->where('projectID',$Single->Bennar)->where('mission','E0')->where('cat','cons')->get();
                                                     ?>
                                                     @foreach($Reports as $it)
                                                         <?php
@@ -815,7 +815,7 @@
                                                                 <a href="#" class="mailbox-attachment-name"><i class="fa fa-paperclip"></i> {{Str::limit($it->DocName, 40)}}</a>
                                                                 <span class="mailbox-attachment-size">
                                                                       {{ date('F d, Y', strtotime($it->created_at)) }}
-                                                                      <a href="{{ url('storage/app/public') }}/{{$it->Docs}}" class="btn btn-default btn-xs pull-left"><i class="fa fa-cloud-download"></i></a>
+                                                                      <a href="https://ko-sky.com/storage/app/public/{{$it->Docs}}" class="btn btn-default btn-xs pull-left"><i class="fa fa-cloud-download"></i></a>
                                                                     </span>
                                                             </div>
                                                         </li>
@@ -826,7 +826,7 @@
                                             <div class="tab-pane" id="E0tab_3">
                                                 <ul class="mailbox-attachments clearfix">
                                                     <?php
-                                                    $Recomends = $db_ext->table('documents')->where('projectID',$Single->Bennar)->where('mission','E0')->where('cat','3')->get();
+                                                    $Recomends = $db_ext->table('documents')->where('projectID',$Single->Bennar)->where('mission','E0')->where('cat','cons')->get();
                                                     ?>
                                                     @foreach($Recomends as $it)
                                                         <?php
@@ -858,7 +858,7 @@
                                                                 <a href="#" class="mailbox-attachment-name"><i class="fa fa-paperclip"></i> {{Str::limit($it->DocName, 40)}}</a>
                                                                 <span class="mailbox-attachment-size">
                                                                       {{ date('F d, Y', strtotime($it->created_at)) }}
-                                                                      <a href="{{ url('storage/app/public') }}/{{$it->Docs}}" class="btn btn-default btn-xs pull-left"><i class="fa fa-cloud-download"></i></a>
+                                                                      <a href="https://ko-sky.com/storage/app/public/{{$it->Docs}}" class="btn btn-default btn-xs pull-left"><i class="fa fa-cloud-download"></i></a>
                                                                     </span>
                                                             </div>
                                                         </li>
@@ -881,7 +881,7 @@
                                             <div class="tab-pane active" id="E1tab_1">
                                                 <ul class="mailbox-attachments clearfix">
                                                     <?php
-                                                    $charts = $db_ext->table('documents')->where('projectID',$Single->Bennar)->where('mission','E1')->where('cat','1')->get();
+                                                    $charts = $db_ext->table('documents')->where('projectID',$Single->Bennar)->where('mission','E1')->where('cat','cons')->get();
                                                     ?>
                                                     @foreach($charts as $it)
                                                         <?php
@@ -914,7 +914,7 @@
                                                                 <br>
                                                                 <span class="mailbox-attachment-size">
                                                               {{ date('F d, Y', strtotime($it->created_at)) }}
-                                                              <a href="{{ url('storage/app/public') }}/{{$it->Docs}}" class="btn btn-default btn-xs pull-left">Download</a>
+                                                              <a href="https://ko-sky.com/storage/app/public/{{$it->Docs}}" class="btn btn-default btn-xs pull-left">Download</a>
                                                             </span>
                                                             </div>
                                                         </li>
@@ -925,7 +925,7 @@
                                             <div class="tab-pane" id="E1tab_2">
                                                 <ul class="mailbox-attachments clearfix">
                                                     <?php
-                                                    $Reports = $db_ext->table('documents')->where('projectID',$Single->Bennar)->where('mission','E1')->where('cat','2')->get();
+                                                    $Reports = $db_ext->table('documents')->where('projectID',$Single->Bennar)->where('mission','E1')->where('cat','cons')->get();
                                                     ?>
                                                     @foreach($Reports as $it)
                                                         <?php
@@ -957,7 +957,7 @@
                                                                 <a href="#" class="mailbox-attachment-name"><i class="fa fa-paperclip"></i> {{Str::limit($it->DocName, 40)}}</a>
                                                                 <span class="mailbox-attachment-size">
                                                                       {{ date('F d, Y', strtotime($it->created_at)) }}
-                                                                      <a href="{{ url('storage/app/public') }}/{{$it->Docs}}" class="btn btn-default btn-xs pull-left"><i class="fa fa-cloud-download"></i></a>
+                                                                      <a href="https://ko-sky.com/storage/app/public/{{$it->Docs}}" class="btn btn-default btn-xs pull-left"><i class="fa fa-cloud-download"></i></a>
                                                                     </span>
                                                             </div>
                                                         </li>
@@ -968,7 +968,7 @@
                                             <div class="tab-pane" id="E1tab_3">
                                                 <ul class="mailbox-attachments clearfix">
                                                     <?php
-                                                    $Recomends = $db_ext->table('documents')->where('projectID',$Single->Bennar)->where('mission','E1')->where('cat','3')->get();
+                                                    $Recomends = $db_ext->table('documents')->where('projectID',$Single->Bennar)->where('mission','E1')->where('cat','cons')->get();
                                                     ?>
                                                     @foreach($Recomends as $it)
                                                         <?php
@@ -1000,7 +1000,7 @@
                                                                 <a href="#" class="mailbox-attachment-name"><i class="fa fa-paperclip"></i> {{Str::limit($it->DocName, 40)}}</a>
                                                                 <span class="mailbox-attachment-size">
                                                                       {{ date('F d, Y', strtotime($it->created_at)) }}
-                                                                      <a href="{{ url('storage/app/public') }}/{{$it->Docs}}" class="btn btn-default btn-xs pull-left"><i class="fa fa-cloud-download"></i></a>
+                                                                      <a href="https://ko-sky.com/storage/app/public/{{$it->Docs}}" class="btn btn-default btn-xs pull-left"><i class="fa fa-cloud-download"></i></a>
                                                                     </span>
                                                             </div>
                                                         </li>
@@ -1022,7 +1022,7 @@
                                             <div class="tab-pane active" id="E2tab_1">
                                                 <ul class="mailbox-attachments clearfix">
                                                     <?php
-                                                    $charts = $db_ext->table('documents')->where('projectID',$Single->Bennar)->where('mission','E2')->where('cat','1')->get();
+                                                    $charts = $db_ext->table('documents')->where('projectID',$Single->Bennar)->where('mission','E2')->where('cat','cons')->get();
                                                     ?>
                                                     @foreach($charts as $it)
                                                         <?php
@@ -1055,7 +1055,7 @@
                                                                 <br>
                                                                 <span class="mailbox-attachment-size">
                                                               {{ date('F d, Y', strtotime($it->created_at)) }}
-                                                              <a href="{{ url('storage/app/public') }}/{{$it->Docs}}" class="btn btn-default btn-xs pull-left">Download</a>
+                                                              <a href="https://ko-sky.com/storage/app/public/{{$it->Docs}}" class="btn btn-default btn-xs pull-left">Download</a>
                                                             </span>
                                                             </div>
                                                         </li>
@@ -1066,7 +1066,7 @@
                                             <div class="tab-pane" id="E2tab_2">
                                                 <ul class="mailbox-attachments clearfix">
                                                     <?php
-                                                    $Reports = $db_ext->table('documents')->where('projectID',$Single->Bennar)->where('mission','E2')->where('cat','2')->get();
+                                                    $Reports = $db_ext->table('documents')->where('projectID',$Single->Bennar)->where('mission','E2')->where('cat','cons')->get();
                                                     ?>
                                                     @foreach($Reports as $it)
                                                         <?php
@@ -1098,7 +1098,7 @@
                                                                 <a href="#" class="mailbox-attachment-name"><i class="fa fa-paperclip"></i> {{Str::limit($it->DocName, 40)}}</a>
                                                                 <span class="mailbox-attachment-size">
                                                                       {{ date('F d, Y', strtotime($it->created_at)) }}
-                                                                      <a href="{{ url('storage/app/public') }}/{{$it->Docs}}" class="btn btn-default btn-xs pull-left"><i class="fa fa-cloud-download"></i></a>
+                                                                      <a href="https://ko-sky.com/storage/app/public/{{$it->Docs}}" class="btn btn-default btn-xs pull-left"><i class="fa fa-cloud-download"></i></a>
                                                                     </span>
                                                             </div>
                                                         </li>
@@ -1109,7 +1109,7 @@
                                             <div class="tab-pane" id="E2tab_3">
                                                 <ul class="mailbox-attachments clearfix">
                                                     <?php
-                                                    $Recomends = $db_ext->table('documents')->where('projectID',$Single->Bennar)->where('mission','E2')->where('cat','3')->get();
+                                                    $Recomends = $db_ext->table('documents')->where('projectID',$Single->Bennar)->where('mission','E2')->where('cat','cons')->get();
                                                     ?>
                                                     @foreach($Recomends as $it)
                                                         <?php
@@ -1141,7 +1141,7 @@
                                                                 <a href="#" class="mailbox-attachment-name"><i class="fa fa-paperclip"></i> {{Str::limit($it->DocName, 40)}}</a>
                                                                 <span class="mailbox-attachment-size">
                                                                       {{ date('F d, Y', strtotime($it->created_at)) }}
-                                                                      <a href="{{ url('storage/app/public') }}/{{$it->Docs}}" class="btn btn-default btn-xs pull-left"><i class="fa fa-cloud-download"></i></a>
+                                                                      <a href="https://ko-sky.com/storage/app/public/{{$it->Docs}}" class="btn btn-default btn-xs pull-left"><i class="fa fa-cloud-download"></i></a>
                                                                     </span>
                                                             </div>
                                                         </li>
@@ -1163,7 +1163,7 @@
                                             <div class="tab-pane active" id="E3tab_1">
                                                 <ul class="mailbox-attachments clearfix">
                                                     <?php
-                                                    $charts = $db_ext->table('documents')->where('projectID',$Single->Bennar)->where('mission','E3')->where('cat','1')->get();
+                                                    $charts = $db_ext->table('documents')->where('projectID',$Single->Bennar)->where('mission','E3')->where('cat','cons')->get();
                                                     ?>
                                                     @foreach($charts as $it)
                                                         <?php
@@ -1196,7 +1196,7 @@
                                                                 <br>
                                                                 <span class="mailbox-attachment-size">
                                                               {{ date('F d, Y', strtotime($it->created_at)) }}
-                                                              <a href="{{ url('storage/app/public') }}/{{$it->Docs}}" class="btn btn-default btn-xs pull-left">Download</a>
+                                                              <a href="https://ko-sky.com/storage/app/public/{{$it->Docs}}" class="btn btn-default btn-xs pull-left">Download</a>
                                                             </span>
                                                             </div>
                                                         </li>
@@ -1207,7 +1207,7 @@
                                             <div class="tab-pane" id="E3tab_2">
                                                 <ul class="mailbox-attachments clearfix">
                                                     <?php
-                                                    $Reports = $db_ext->table('documents')->where('projectID',$Single->Bennar)->where('mission','E3')->where('cat','2')->get();
+                                                    $Reports = $db_ext->table('documents')->where('projectID',$Single->Bennar)->where('mission','E3')->where('cat','cons')->get();
                                                     ?>
                                                     @foreach($Reports as $it)
                                                         <?php
@@ -1239,7 +1239,7 @@
                                                                 <a href="#" class="mailbox-attachment-name"><i class="fa fa-paperclip"></i> {{Str::limit($it->DocName, 40)}}</a>
                                                                 <span class="mailbox-attachment-size">
                                                                       {{ date('F d, Y', strtotime($it->created_at)) }}
-                                                                      <a href="{{ url('storage/app/public') }}/{{$it->Docs}}" class="btn btn-default btn-xs pull-left"><i class="fa fa-cloud-download"></i></a>
+                                                                      <a href="https://ko-sky.com/storage/app/public/{{$it->Docs}}" class="btn btn-default btn-xs pull-left"><i class="fa fa-cloud-download"></i></a>
                                                                     </span>
                                                             </div>
                                                         </li>
@@ -1250,7 +1250,7 @@
                                             <div class="tab-pane" id="E3tab_3">
                                                 <ul class="mailbox-attachments clearfix">
                                                     <?php
-                                                    $Recomends = $db_ext->table('documents')->where('projectID',$Single->Bennar)->where('mission','E3')->where('cat','3')->get();
+                                                    $Recomends = $db_ext->table('documents')->where('projectID',$Single->Bennar)->where('mission','E3')->where('cat','cons')->get();
                                                     ?>
                                                     @foreach($Recomends as $it)
                                                         <?php
@@ -1282,7 +1282,7 @@
                                                                 <a href="#" class="mailbox-attachment-name"><i class="fa fa-paperclip"></i> {{Str::limit($it->DocName, 40)}}</a>
                                                                 <span class="mailbox-attachment-size">
                                                                       {{ date('F d, Y', strtotime($it->created_at)) }}
-                                                                      <a href="{{ url('storage/app/public') }}/{{$it->Docs}}" class="btn btn-default btn-xs pull-left"><i class="fa fa-cloud-download"></i></a>
+                                                                      <a href="https://ko-sky.com/storage/app/public/{{$it->Docs}}" class="btn btn-default btn-xs pull-left"><i class="fa fa-cloud-download"></i></a>
                                                                     </span>
                                                             </div>
                                                         </li>

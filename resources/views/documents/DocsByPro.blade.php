@@ -21,13 +21,17 @@
                 }
             });
 
-            var your_selected_value = $('#projectID').val();
+            var selected_bennar = $('#Bennar').val();
+            var selected_mains = $('#MainS').val();
             $.ajax({
-                url: "{{url('getMission')}}",
+                url: "{{url('getSS')}}",
                 type: "POST",
-                data:{ bennar : your_selected_value},
+                data:{
+                    Bennar : selected_bennar,
+                    MainS : selected_mains,
+                },
                 success: function(data){
-                    $("#warpMission").html(data);
+                    $("#SS").html(data);
                 },
                 error: function(){
                     console.log("No results for " + data + ".");
@@ -271,21 +275,26 @@
             </div>
             <div class="modal-body">
                 <form class="form-horizontal" id="Consend22" method="POST" action="{{ route('Documents.store') }}" enctype="multipart/form-data" >
-
-
                     {!! csrf_field() !!}
-
+                    <input name="Bennar" type="hidden" id="Bennar" value="{{ $fn->Bennar }}">
+                    <div class="form-group">
+                        <label for="Stage" class="col-sm-4 control-label"> اختر الخدمة </label>
+                        <div class="col-sm-8">
+                            <select  class="form-control select2" name="MainS" style="width: 100%" required id="MainS" onchange="getMission()">
+                                <?php
+                                $ef = DB::table('require_services')->join('main_services','main_services.id','=','require_services.serviceName')->get();
+                                ?>
+                                <option>----إختر الخدمة----</option>
+                                @foreach($ef as $dct)
+                                    <option value="{{ $dct->id }}">{{ $dct->MainServiceName }}</option>
+                                @endforeach
+                            </select>
+                        </div>
+                    </div>
                     <div class="form-group">
                         <label for="Stage" class="col-sm-4 control-label">اسم المستند </label>
-                        <div class="col-sm-8">
-                                <select  class="form-control select2" name="DocName" style="width: 100%" required>
-                                    <?php
-                                    $ef = \App\Models\Documents::where('Bennar',$fn->Bennar)->pluck('DocType');
-                                        echo $ef;
-                                    ?>
-                                @foreach(App\Models\DocsType::whereNotIn('id',$ef)->get() as $dct)
-                                <option value="{{ $dct->id }}">{{ $dct->DocTypeName }}</option>
-                                @endforeach
+                        <div class="col-sm-8" >
+                            <select  class="form-control select2" name="DocName" style="width: 100%" required id="SS">
                             </select>
                         </div>
                     </div>
@@ -295,21 +304,17 @@
                             <?php $pro = App\Models\Projects::all(); ?>
                             <input type="hidden" name="Bennar" value="{{$fn->Bennar}}">
                             <input type="text" name="" class="form-control" value="{{ $fn->Bennar }} - {{ $fn->FileCode }}" disabled>
-
                         </div>
                     </div>
-
                     <div class="form-group">
                         <label for="Docdetails" class="col-sm-4 control-label"  required="required">ملاحظات</label>
                         <div class="col-sm-8">
                             <textarea name="Docdetails" class="form-control" id="Docdetails" placeholder="اكتب ملاحظتك هنا" rows="5" ></textarea>
                         </div>
-
                     </div>
                     <div class="form-group">
                         <label for="Stage" class="col-sm-4 control-label">اختر المستند </label>
                         <input type="file" name="Docs" id="filoo" required="required" data-max-file-size="60MB">
-
                     </div>
                     <button id="Conse123" class="btn btn-success" >حفظ</button>
                 </form>

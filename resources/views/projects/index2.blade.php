@@ -80,12 +80,43 @@
                                 </button>
                                 <ul class="dropdown-menu" role="menu">
                                     <li> <a class="text-green " href="{{url('ProjectDetails')}}/{{ $item->Bennar }}" target="_blank"> تفاصيل المشروع </a></li>
-                                    <li> <a class="text-blue" href="#"  data-toggle="modal" data-target="#jobCard"> تغيير حالة المشروع</a></li>
-                                    <li><a class="text-red" href="#" > ملفات المشروع </a></li>
+                                    <li> <a class="text-blue" href="#"   data-toggle="modal" data-target="#Modal3{{$item->Bennar}}"> تغيير حالة المشروع</a></li>
+                                    <li><a class="text-red" href="{{ url('DocsByPro') }}?search_text={{ $item->Bennar }}"> رفع الملفات  </a></li>
                                 </ul>
                             </div>
                         </td>
                     </tr>
+                    <div class="modal fade" id="Modal3{{$item->Bennar}}" role="dialog">
+                        <div class="modal-dialog modal-md">
+                            <div class="modal-content">
+                                <div class="modal-header">
+                                    <button type="button" class="close" data-dismiss="modal">&times;</button>
+                                    <h4 class="modal-title">اعداد الحالة الحالية للمشروع {{ $item->FileCode }} </h4><span style="color: red"></span>
+                                </div>
+                                <div class="modal-body">
+                                    <form class="form-horizontal" method="POST" action="{{ route('UpdateStat') }}">
+                                        <input type="hidden" name="Bennar" value="{{ $item->Bennar }}">
+                                        {!! csrf_field() !!}
+                                        <div class="form-group">
+                                            <label for="State" class="col-sm-4 control-label">حالة المشروع الحالية</label>
+                                            <div class="col-sm-8">
+                                                {!! Form::select('stat',[
+                                                       '1'=>'في الانتظار',
+                                                       '3'=>'متوقف',
+                                                       '2'=>'جاري العمل عليه',
+                                                       ],null, ['class' => 'form-control  select2','style' => 'width:90%']) !!}
+                                            </div>
+                                        </div>
+                                        <button id="registrationID" class="btn btn-success">حفظ</button>
+                                    </form>
+
+                                </div>
+                                <div class="modal-footer">
+
+                                </div>
+                            </div>
+                        </div>
+                    </div>
                 @endforeach
                 </tbody>
             </table>

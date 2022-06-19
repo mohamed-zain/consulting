@@ -42,12 +42,12 @@
     <section class="content-header">
         <div class="">
             <h3>
-                المكتب
-                <small>المستندات</small>
+                مركز رفع الملفات
+                <small>ملفات المشروع</small>
             </h3>
             <ol class="breadcrumb">
                 <li><a href="<?php echo e(url('/ConsultingDashboard')); ?>"><i class="fa fa-dashboard"></i> الرئيسية</a></li>
-                <li class="active">مستندات المكتب</li>
+                <li class="active"> ملفات المشروع</li>
 
             </ol>
         </div>
@@ -55,7 +55,7 @@
     <div class="col-md-12">
         <div class="box box-default">
             <div class="box-header with-border">
-                <h3 class="box-title">مستندات المكتب</h3>
+                <h3 class="box-title">ملفات المشروع</h3>
 
                 <div class="box-tools pull-right">
                     
@@ -65,7 +65,7 @@
             <!-- /.box-header -->
             <div class="box-body">
                 <div class="callout callout-warning col-lg-12">
-                    <h4>مركز رفع الملفات لنظام مستندات المكتب!</h4>
+                    <h4>مركز رفع الملفات للمشروع</h4>
 
                     <p>من هنا يمكن للاستشاري رفع الملفات المطلوبة في المشروع
                          الخاصة بالمشروع </p><p>(يشمل العقود والاتفاقيات ورخص البناء وتقارير الاشراف وشهادات الإشغال)</p>

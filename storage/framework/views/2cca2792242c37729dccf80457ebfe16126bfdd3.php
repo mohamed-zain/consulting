@@ -78,12 +78,45 @@
                                 </button>
                                 <ul class="dropdown-menu" role="menu">
                                     <li> <a class="text-green " href="<?php echo e(url('ProjectDetails')); ?>/<?php echo e($item->Bennar); ?>" target="_blank"> تفاصيل المشروع </a></li>
-                                    <li> <a class="text-blue" href="#"  data-toggle="modal" data-target="#jobCard"> تغيير حالة المشروع</a></li>
-                                    <li><a class="text-red" href="#" > ملفات المشروع </a></li>
+                                    <li> <a class="text-blue" href="#"   data-toggle="modal" data-target="#Modal3<?php echo e($item->Bennar); ?>"> تغيير حالة المشروع</a></li>
+                                    <li><a class="text-red" href="<?php echo e(url('DocsByPro')); ?>?search_text=<?php echo e($item->Bennar); ?>"> رفع الملفات  </a></li>
                                 </ul>
                             </div>
                         </td>
                     </tr>
+                    <div class="modal fade" id="Modal3<?php echo e($item->Bennar); ?>" role="dialog">
+                        <div class="modal-dialog modal-md">
+                            <div class="modal-content">
+                                <div class="modal-header">
+                                    <button type="button" class="close" data-dismiss="modal">&times;</button>
+                                    <h4 class="modal-title">اعداد الحالة الحالية للمشروع <?php echo e($item->FileCode); ?> </h4><span style="color: red"></span>
+                                </div>
+                                <div class="modal-body">
+                                    <form class="form-horizontal" method="POST" action="<?php echo e(route('UpdateStat')); ?>">
+                                        <input type="hidden" name="Bennar" value="<?php echo e($item->Bennar); ?>">
+                                        <?php echo csrf_field(); ?>
+
+                                        <div class="form-group">
+                                            <label for="State" class="col-sm-4 control-label">حالة المشروع الحالية</label>
+                                            <div class="col-sm-8">
+                                                <?php echo Form::select('stat',[
+                                                       '1'=>'في الانتظار',
+                                                       '3'=>'متوقف',
+                                                       '2'=>'جاري العمل عليه',
+                                                       ],null, ['class' => 'form-control  select2','style' => 'width:90%']); ?>
+
+                                            </div>
+                                        </div>
+                                        <button id="registrationID" class="btn btn-success">حفظ</button>
+                                    </form>
+
+                                </div>
+                                <div class="modal-footer">
+
+                                </div>
+                            </div>
+                        </div>
+                    </div>
                 <?php endforeach; $__env->popLoop(); $loop = $__env->getLastLoop(); ?>
                 </tbody>
             </table>

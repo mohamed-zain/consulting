@@ -3,13 +3,16 @@
 <head>
 	<meta charset="utf-8" />
 	<meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1" />
-	<title>خيرعون الامارات - لوحة تحكم العميل</title>
+	<title>خيرعون  - تسجيل استشاري معتمد</title>
+	<meta name="description" content="البوابة الرقمية لتسجيل المكاتب الاستشارية المعتمدة" />
+	<meta name="keywords" content="برنامج ادارة خدمات المكاتب الاستشارية من خير عون" />
+	<meta name="author" content=" خيرعون - المملكة العربية السعودية"/>
 
 	<meta content='width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=0' name='viewport' />
     <meta name="viewport" content="width=device-width" />
 	<meta name="csrf-token" content="{{ csrf_token() }}">
-	<link rel="apple-touch-icon" sizes="76x76" href="{{ asset('dist/img/logo.png') }}" />
-	<link rel="icon" type="image/jpg" href="{{ asset('dist/img/logo.png') }}" />
+	<link rel="apple-touch-icon" sizes="76x76" href="{{ asset('logo20221.png') }}" />
+	<link rel="icon" type="image/png" href="{{ asset('logo20222.png') }}" />
 	<!--     Fonts and icons     -->
 	<!-- CSS Files -->
 	<link href="{{ asset('/assets2/css/bootstrap.min.css') }}" rel="stylesheet" />
@@ -91,6 +94,11 @@
 		* {
 			box-sizing: border-box;
 		}
+		@media only screen and (max-width: 720px) {
+			.logo {
+				display: none;
+			}
+		}
 
 	</style>
 </head>
@@ -141,19 +149,19 @@
 @endif
 	<div class="image-container set-full-height" style="background-image: url('public/slide3.jpg')">
 	    <!--   Creative Tim Branding   -->
-	    <a href="http://neelain.edu.sd">
+	    <a href="https://consulting.ko-sky.com">
 	         <div class="logo-container">
 	            <div class="logo">
-	                <img src="{{ asset('dist/img/logo.png') }}">
+	                <img src="{{ asset('logo20221.png') }}">
 	            </div>
-	            <div class="brand">خيرعون الامارات </div>
+	            <div class="brand">خيرعون جدة </div>
 	        </div>
 	    </a>
 
 		<!--  Made With Material Kit  -->
-		<a href="http://neelain.edu.sd/sites/centers/51" class="made-with-mk">
+		<a href="https://consulting.ko-sky.com" class="made-with-mk">
 			<div class="brand"> KO </div>
-			<div class="made-with"> خيرعون <strong>  الامارات  </strong></div>
+			<div class="made-with"> خيرعون <strong>  جدة  </strong></div>
 		</a>
 
 	    <!--   Big container   -->
@@ -162,24 +170,24 @@
 		        <div class="col-sm-12 ">
 		            <!--      Wizard container        -->
 		            <div class="wizard-container">
-		                <div class="card wizard-card" data-color="orange" id="wizard">
+		                <div class="card wizard-card" data-color="blue" id="wizard">
 						<form action="{{ route('CheckUp') }}" method="POST" enctype="multipart/form-data"  id="Registrationform">
 							{{ csrf_field() }}
 		                <!--        You can switch " data-color="blue" "  with one of the next bright colors: "green", "orange", "red", "purple"             -->
 
 		                    	<div class="wizard-header">
 									<div class="row">
-										<div class="col-lg-2 col-md-2 col-sm-2 col-xs-2">
-											<img src="{{ asset('dist/img/logo.png') }}" style="max-height: 80px;width: auto" class="img-responsive center">
+										<div class="col-lg-2 col-md-2 col-sm-2 col-xs-2 ">
+											<img src="{{ asset('logo20221.png') }}" style="max-height: 80px;width: auto" class="img-responsive center logo">
 										</div>
 										<div class="col-lg-8 col-md-8 col-sm-8 col-xs-8">
 											<h3 class="wizard-title">
-												الاشتراك في باقة الاشراف - ESPM
+												التسجيل كإستشاري - خير عون جدة
 											</h3>
 											<h5>قم بتعبئة النموذج وتأكد من صحة البيانات المدخلة</h5>
 										</div>
-										<div class="col-lg-2 col-md-2 col-sm-2 col-xs-2">
-											<img src="{{ asset('dist/img/logo.png') }}" style="max-height: 80px;float: left!important;" class="img-responsive center">
+										<div class="col-lg-2 col-md-2 col-sm-2 col-xs-2 ">
+											<img src="{{ asset('logo20221.png') }}" style="max-height: 80px;float: left!important;" class="img-responsive center logo">
 										</div>
 									</div>
 
@@ -187,33 +195,26 @@
 		                    	</div>
 								<div class="wizard-navigation">
 									<ul>
-			                            <li><a href="#details" data-toggle="tab">البيانات الشخصية</a></li>
-										<li><a href="#captain" data-toggle="tab"> بيانات التمويل </a></li>
-										<li><a href="#activity" data-toggle="tab">  مكونات المشروع </a></li>
-										<li><a href="#live" data-toggle="tab">الطابق الثاني </a></li>
-										<li><a href="#attach" data-toggle="tab"> الاستشاري السابق  </a></li>
-										<li><a href="#construct" data-toggle="tab"> رسالة من الشركة   </a></li>
-										<li><a href="#andtate" data-toggle="tab"> مقاول مرشح    </a></li>
-										<li><a href="#legal" data-toggle="tab"> 	الضوابط القانونية</a></li>
-										<li><a href="#other" data-toggle="tab"> 	معلومات اخري</a></li>
+			                            <li><a href="#details" data-toggle="tab">البيانات الاساسية</a></li>
+										<li><a href="#legal" data-toggle="tab">الملفات المطلوبة</a></li>
+										<li><a href="#other" data-toggle="tab">الشروط والأحكام</a></li>
 
 			                        </ul>
 								</div>
 
 		                        <div class="tab-content">
 		                            <div class="tab-pane" id="details">
-
 										<h4 class="info-text">تكرم بإدخال المعلومات الشخصية عزيزنا العميل </h4>
 										<div class="row">
 											<div class="col-sm-4">
 												<div class="form-group label-floating">
-													<label> الاسم بالكامل </label>
+													<label>المنطقة</label>
 													<input name="idcard_id" class="form-control"  id="idcard_id">
 												</div>
 											</div>
 											<div class="col-sm-4">
 												<div class="form-group label-floating">
-													<label> من مواطني </label>
+													<label>  المدينة </label>
 													<select name="idcard_type" id="idcard_type" class="form-control" >
 														{{--@foreach($idtyype as $itype)
                                                             <option value="{{$itype->cardtype_id}}">{{$itype->cardtype_name}}</option>
@@ -223,7 +224,7 @@
 											</div>
 											<div class="col-sm-4">
 												<div class="form-group label-floating">
-													<label> رقم الهوية </label>
+													<label>  الحي واسم الشارع </label>
 													<input type="text" name="idcard_id" class="form-control"  id="idcard_id">
 
 												</div>
@@ -233,41 +234,60 @@
 										<div class="row">
 											<div class="col-sm-4">
 												<div class="form-group label-floating">
-													<label>   رقم الجواز </label>
-													<input type="text" name="phone1" class="form-control mynum"  id="phone1" minlength="1" maxlength="10" >
-												</div>
-
-											</div>
-											<div class="col-sm-4">
-												<div class="form-group label-floating">
-													<label> رقم الجوال (1) </label>
-													<input type="text" name="phone1" class="form-control mynum"  id="phone1" minlength="1" maxlength="10" >
-
-												</div>
-											</div>
-											<div class="col-sm-4">
-												<div class="form-group label-floating">
-													<label> رقم الجوال (2) </label>
-													<input type="text" name="phone1" class="form-control mynum"  id="phone1" minlength="1" maxlength="10" >
-
-												</div>
-
-											</div>
-										</div>
-										<div class="row">
-											<div class="col-sm-6">
-												<div class="form-group label-floating">
-													<label> الامارة </label>
+													<label>نوع الكيان</label>
 													<select name="local_id" id="localID" class="form-control" >
-														<option value="">---اختر الامارة---</option>
+														<option value="">مؤسسة</option>
+														<option value="">شركة</option>
+														<option value="">مكتب استشاري عام </option>
+														<option value="">مكتب استشاري متخصص</option>
+														<option value="">مجموعة</option>
 
-													</select>												</div>
+													</select>
+												</div>
+
 											</div>
+											<div class="col-sm-4">
+												<div class="form-group label-floating">
+													<label>اسم الكيان كما في السجل التجاري</label>
+													<input type="text" name="phone1" class="form-control mynum"  id="phone1" minlength="1" maxlength="10" >
+
+												</div>
+											</div>
+											<div class="col-sm-4">
+												<div class="form-group label-floating">
+													<label> رقم السجل التجاري </label>
+													<input type="text" name="phone1" class="form-control mynum"  id="phone1" minlength="1" maxlength="10" >
+
+												</div>
+
+											</div>
+										</div>
+										<div class="row">
 											<div class="col-sm-6">
 												<div class="form-group label-floating">
-													<label> هاتف المنزل</label>
-													<input type="text" name="birthplace" class="form-control" >
+													<label> نوع النشاط كما هو في السجل التجاري </label>
+													<select name="local_id" id="localID" class="form-control" >
+														<option value="">A.	استشارات هندسية ( مخططات وتصاميم )</option>
+														<option value="">B.	استشارت هندسية ( مخططات ،تصاميم  واشراف)</option>
+														<option value="">C.	استشارات هندسية إدارة مشاريع انشائية</option>
+														<option value="">D.	استشارات هندسية تصاميم داخليه </option>
+														<option value="">E.	مكتب مساحة معتمد. </option>
+														<option value="">F.	مختبر معتمد. (تربة ، تكنلوجيا خرسانية )</option>
+
+													</select>
 												</div>
+											</div>
+											<div class="col-sm-6">
+												{{--<div class="form-group label-floating">
+													<label></label>
+													<div class="choice" data-toggle="wizard-radio" rel="tooltip" title="" data-original-title="يجب ان يكون الملف بصيغة PDF">
+														<input type="file" name="type" value="House">
+														<div class="icon">
+															<i class="material-icons">تحميل</i>
+														</div>
+														<h4></h4>
+													</div>
+												</div>--}}
 
 											</div>
 										</div>
@@ -275,46 +295,44 @@
 										<div class="row">
 											<div class="col-sm-6">
 												<div class="form-group label-floating">
-													<label>  البريد الالكتروني (1) </label>
+													<label>  البريد الالكتروني الرسمي للمنشأة </label>
 													<input type="email" name="home_no" class="form-control">
 
 												</div>
 											</div>
 											<div class="col-sm-6">
 												<div class="form-group label-floating">
-													<label>البريد الالكتروني (2) </label>
-													<input type="email" name="home_no" class="form-control">
+													<label>الهاتف الرسمي </label>
+													<input type="number" name="home_no" class="form-control">
 
 												</div>
 
 											</div>
 										</div>
 										<br>
-										<p class="" style="color: red">بيانات الوكيل</p>
-										<hr>
 										<div class="row">
 											<div class="col-sm-4">
 												<div class="form-group label-floating">
-													<label> اسم الوكيل او من ينوب عنه</label>
+													<label> اسم مدير المكتب المفوض من قبل المالك</label>
 													<input type="text" name="home_no" class="form-control">
 												</div>
 											</div>
 											<div class="col-sm-4">
 												<div class="form-group label-floating">
-													<label>الجنسية</label>
+													<label>رقم الجوال</label>
 													<input type="text" name="neighborhood" class="form-control" >
 												</div>
 
 											</div>
 											<div class="col-sm-4">
 												<div class="form-group label-floating">
-													<label>تاريخ الميلاد</label>
-													<input type="text" name="neighborhood" class="form-control" >
+													<label>الايميل</label>
+													<input type="email" name="neighborhood" class="form-control" >
 												</div>
 
 											</div>
 
-											<div class="col-sm-4">
+											{{--<div class="col-sm-4">
 												<div class="form-group label-floating">
 													<label>رقم الهويه</label>
 													<input type="text" name="neighborhood" class="form-control" >
@@ -334,971 +352,33 @@
 													<input type="email" name="neighborhood" class="form-control" >
 												</div>
 
-											</div>
+											</div>--}}
 										</div>
 
 		                            </div>
-		                            <div class="tab-pane" id="captain">
-										<div class="alert alert-warning alert-dismissible" role="alert" id="alert" style="display: none">
-											<button type="button" class="close" data-dismiss="alert" aria-label="Close"><span aria-hidden="true">&times;</span></button>
-											<strong>Warning!</strong> <div id="message"></div>
-										</div>
-		                                <h4 class="info-text">تكرم بإدخال معلومات التمويل  </h4>
-
-										<div class="row">
-											<h4 class="info-text">حدد نوع تمويل المشروع؟</h4>
-											<div class="col-sm-4">
-												<div class="radio">
-													<label>
-														<input type="radio" name="activity" value="5666666">
-													</label>
-													<span> قرض سكني </span>
-												</div>
-											</div>
-											<div class="col-sm-4">
-												<div class="radio">
-													<label>
-														<input type="radio" name="activity" value="5666666">
-													</label>
-													<span> تمويل خاص </span>
-												</div>
-											</div>
-											<div class="col-sm-4">
-												<div class="radio">
-													<label>
-														<input type="radio" name="activity" value="5666666">
-													</label>
-													<span> قرض سكني وتمويل الفارق </span>
-												</div>
-											</div>
-
-										</div>
-										<div class="row">
-											<div class="col-sm-6">
-												<div class="form-group label-floating">
-													<label>	كم هي قيمة القرض السكني </label>
-													<input type="text" name="activity"  class="form-control">
-
-												</div>
-											</div>
-											<div class="col-sm-6">
-												<div class="form-group label-floating">
-													<label>	حدد قيمة التمويل الخاص ان وجد </label>
-													<input type="text" name="activity"  class="form-control">
-
-												</div>
-
-											</div>
-										</div>
-										<div class="row">
-											<div class="col-sm-4">
-												<div class="form-group label-floating">
-													<label>		اسم البنك الممول (في حالة القرض السكني)</label>
-													<input type="text" name="activity"  class="form-control">
-
-												</div>
-											</div>
-											<div class="col-sm-4">
-												<div class="form-group label-floating">
-													<label>	رقم القرض السكني في البنك الممول</label>
-													<input type="text" name="activity"  class="form-control">
-
-												</div>
-
-											</div>
-											<div class="col-sm-4">
-												<div class="form-group label-floating">
-													<label>	رقم الحساب البنكي للعميل </label>
-													<input type="text" name="activity"  class="form-control">
-
-												</div>
-
-											</div>
-										</div>
-										<br/>
-										<p class="" style="color: red">معلومات الأرض السكنية</p>
-										<hr>
-										<div class="row">
-
-											<div class="col-sm-3">
-												<div class="radio">
-													<span> استخدام الارض : </span>
-												</div>
-
-											</div>
-											<div class="col-sm-3">
-												<div class="radio">
-													<label>
-														<input type="radio" name="tttt" value="5666666">
-													</label>
-													<span> سكن خاص </span>
-												</div>
-											</div>
-											<div class="col-sm-3">
-												<div class="radio">
-													<label>
-														<input type="radio" name="tttt" value="5666666">
-													</label>
-													<span> مسكن شعبي </span>
-												</div>
-											</div>
-											<div class="col-sm-3">
-												<div class="radio">
-													<label>
-														<input type="radio" name="tttt" value="5666666">
-													</label>
-													<span> تجاري </span>
-												</div>
-
-											</div>
-										</div>
-										<div class="row">
-											<div class="col-sm-4">
-												<div class="form-group label-floating">
-													<label>الامارة </label>
-													<input type="text" name="activity"  class="form-control">
-
-												</div>
-											</div>
-											<div class="col-sm-4">
-												<div class="form-group label-floating">
-													<label>	المنطقة</label>
-													<input type="text" name="activity"  class="form-control">
-
-												</div>
-
-											</div>
-											<div class="col-sm-4">
-												<div class="form-group label-floating">
-													<label>	الحي </label>
-													<input type="text" name="activity"  class="form-control">
-
-												</div>
-
-											</div>
-										</div>
-										<hr>
-										<div class="row">
-											<div class="col-sm-6">
-												<div class="form-group label-floating">
-													<label>رقم القسيمة </label>
-													<input type="text" name="activity"  class="form-control">
-
-												</div>
-											</div>
-											<div class="col-sm-6">
-												<div class="form-group label-floating">
-													<label>	مساحة القطعه</label>
-													<input type="text" name="activity"  class="form-control">
-
-												</div>
-
-											</div>
-											<div class="col-sm-6">
-												<div class="form-group label-floating">
-													<label>	تاريخ اصدار القسيمة </label>
-													<input type="text" name="activity"  class="form-control">
-
-												</div>
-
-											</div>
-											<div class="col-sm-6">
-												<div class="form-group label-floating">
-													<label>	الشارع </label>
-													<input type="text" name="activity"  class="form-control">
-
-												</div>
-
-											</div>
-										</div>
-
-		                            </div>
-
-									<div class="tab-pane" id="activity">
-										<h5 class="info-text"><strong> عزيزنا عميل خيرعون </strong>
-											في هذه المرحله يتم الاستبيان بكثافة معلوماتية لكي نتمكن من خدمة بشكل أفضل.  حيث يتم تصنيف خيرعون الامارات كطرف أول ويتم تصنيف عميلنا الكريم بطرف ثاني. 										</h5>
-										<div class="row">
-												<h4 class="info-text">الفيلا وهي فيلا مكونة من ؟</h4>
-												<div class="col-sm-4">
-													<div class="radio">
-														<span>A : </span>
-														<label>
-															<input type="radio" name="activity" value="5666666">
-														</label>
-														<span>  مبنى واحد وكتله واحده  </span>
-													</div>
-												</div>
-												<div class="col-sm-4">
-													<div class="radio">
-														<span>B : </span>
-														<label>
-															<input type="radio" name="activity" value="5666666">
-														</label>
-														<span> مبنى رئيسي للسكن ومبنى مستقل للضيافة </span>
-													</div>
-												</div>
-												<div class="col-sm-4">
-													<div class="radio">
-														<span>C : </span>
-														<label>
-															<input type="radio" name="activity" value="5666666">
-														</label>
-														<span>عدة مباني مستقله ومتعددة الاستخدام  </span>
-													</div>
-												</div>
-
-										</div>
-										<div class="row">
-											<div class="col-sm-10">
-												<div class="form-group label-floating">
-													<label>	حسب التصميم المرفق والمعتمد من البلد يه، مع المحافظة على الارتدادات المطلوبة من قبل نظام البلد يه المتبع في مدينة  </label>
-													<input type="text" name="activity"  class="form-control" placeholder="اكتب المدينة">
-
-												</div>
-											</div>
-											<div class="col-sm-2">
-												<div class="form-group label-floating">
-													<label>	 في إمارة</label>
-													<input type="text" name="activity"  class="form-control"  placeholder="اكتب الامارة">
-
-												</div>
-
-											</div>
-										</div>
-										<div class="row">
-											<h4 class="info-text" style="float: right"> النظام السكني : </h4>
-											<br/>
-											<br/>
-										</div>
-										<div class="row">
-											<div class="col-sm-8">
-												<div class="radio">
-													<span>يحتوي الاستاندرد الخاص بالطرف الاول (خيرعون الامارات) على عدة خيارات متعددة
-													ويحق الطرف الثاني اختيار و تحديد المتطلبات حسب المخطط فيما يلي:
-													الطابق الاول (الأرضي)</span>
-
-												</div>
-											</div>
-										</div>
-										<div class="row">
-											<div class="col-sm-8">
-												<div class="checkbox">
-													<span>A : </span>
-													<label>
-														<input type="checkbox" name="activity" value="5666666">
-													</label>
-													<span> مجالس الضيافة ( رجال )  </span>
-													<label>اذكر عددها</label>
-													<input type="text" name="activity" class="form-control" placeholder="اذكر عددها">
-												</div>
-											</div>
-										</div>
-										<div class="row">
-											<div class="col-sm-8">
-												<div class="checkbox">
-													<span>B : </span>
-													<label>
-														<input type="checkbox" name="activity" value="5666666">
-													</label>
-													<span> مجالس الضيافة ( نساء )  </span>
-													<label>اذكر عددها</label>
-													<input type="text" name="activity" class="form-control" placeholder="اذكر عددها">
-												</div>
-											</div>
-										</div>
-										<div class="row">
-											<div class="col-sm-4">
-												<div class="checkbox">
-													<span>C : </span>
-													<label>
-														<input type="checkbox" name="activity" value="5666666">
-													</label>
-													<span>غرفة طعام ضيافة مستقلة  </span>
-												</div>
-											</div>
-
-										</div>
-										<div class="row">
-											<div class="col-sm-4">
-												<div class="checkbox">
-													<span>D : </span>
-													<label>
-														<input type="checkbox" name="activity" value="5666666">
-													</label>
-													<span>صالة البيت الرئيسية   </span>
-												</div>
-											</div>
-
-										</div>
-										<div class="row">
-											<div class="col-sm-4">
-												<div class="checkbox">
-													<span>E : </span>
-													<label>
-														<input type="checkbox" name="activity" value="5666666">
-													</label>
-													<span>مطبخ خارجي مستقل  </span>
-												</div>
-											</div>
-
-										</div>
-										<div class="row">
-											<div class="col-sm-4">
-												<div class="checkbox">
-													<span>F : </span>
-													<label>
-														<input type="checkbox" name="activity" value="5666666">
-													</label>
-													<span>مستودع خاص بالمطبخ الخارجي   </span>
-												</div>
-											</div>
-
-										</div>
-										<div class="row">
-											<div class="col-sm-4">
-												<div class="checkbox">
-													<span>G : </span>
-													<label>
-														<input type="checkbox" name="activity" value="5666666">
-													</label>
-													<span>مطبخ داخلي   </span>
-												</div>
-											</div>
-										</div>
-										<div class="row">
-											<div class="col-sm-8">
-												<div class="checkbox">
-													<span>H : </span>
-													<label>
-														<input type="checkbox" name="activity" value="5666666">
-													</label>
-													<span> جناح النوم  ( الضيافة )  </span>
-													<label>اذكر عددها</label>
-													<input type="text" name="activity" class="form-control" placeholder="اذكر عددها">
-												</div>
-											</div>
-										</div>
-										<div class="row">
-											<div class="col-sm-4">
-												<div class="checkbox">
-													<span>I : </span>
-													<label>
-														<input type="checkbox" name="activity" value="5666666">
-													</label>
-													<span> مصعد  </span>
-												</div>
-											</div>
-										</div>
-										<div class="row">
-											<div class="col-sm-4">
-												<div class="checkbox">
-													<span>I : </span>
-													<label>
-														<input type="checkbox" name="activity" value="5666666">
-													</label>
-													<span> الدرج (جانبي او مفتوح على الصاله)    </span>
-												</div>
-											</div>
-										</div>
-										<div class="row">
-											<div class="col-sm-8">
-												<div class="checkbox">
-													<span>H : </span>
-													<label>
-														<input type="checkbox" name="activity" value="5666666">
-													</label>
-													<span>مرافق أخرى.. يلزم ذكرها   </span>
-													<label>اذكرها </label>
-													<input type="text" name="activity" class="form-control" placeholder="اذكر المرافق الأخري">
-												</div>
-											</div>
-										</div>
-									</div>
-
-									<div class="tab-pane" id="live">
-										<h4 class="info-text">
-											ينظم استاندرد خيرعون الطابق الثاني على اجنحة النوم وتحتوي على (غرفة النوم+ خزانة الملابس + دورة المياه)
-										</h4>
-
-										<div class="row">
-											<div class="col-sm-8">
-												<div class="checkbox">
-													<span>A : </span>
-													<label>
-														<input type="checkbox" name="activity" value="5666666">
-													</label>
-													<span>جناح النوم الرئيسي   </span>
-													</div>
-											</div>
-										</div>
-										<div class="row">
-											<div class="col-sm-8">
-												<div class="checkbox">
-													<span>B : </span>
-													<label>
-														<input type="checkbox" name="activity" value="5666666">
-													</label>
-													<span>جناح النوم المفرد.. اذكر عددها </span>
-													<label>اذكرها </label>
-													<input type="text" name="activity" class="form-control" placeholder="اذكر  عددها">
-												</div>
-											</div>
-										</div>
-										<div class="row">
-											<div class="col-sm-8">
-												<div class="checkbox">
-													<span>C : </span>
-													<label>
-														<input type="checkbox" name="activity" value="5666666">
-													</label>
-													<span>جناح النوم المزدوج.. اذكر عددها  </span>
-													<label>اذكرها </label>
-													<input type="text" name="activity" class="form-control" placeholder="اذكر  عددها">
-												</div>
-											</div>
-										</div>
-										<div class="row">
-											<div class="col-sm-8">
-												<div class="checkbox">
-													<span>D : </span>
-													<label>
-														<input type="checkbox" name="activity" value="5666666">
-													</label>
-													<span>صالة الطابق الثاني   </span>
-													</div>
-											</div>
-										</div>
-										<div class="row">
-											<div class="col-sm-8">
-												<div class="checkbox">
-													<span>E : </span>
-													<label>
-														<input type="checkbox" name="activity" value="5666666">
-													</label>
-													<span>بوفية مفتوح ع الصاله   </span>
-												</div>
-											</div>
-										</div>
-										<h4 class="info-text" style="">	الطابق الثالث: (السطح)</h4>
-										<br/>
-										<div class="row">
-											<div class="col-sm-8">
-												<div class="checkbox">
-													<span>A : </span>
-													<label>
-														<input type="checkbox" name="activity" value="5666666">
-													</label>
-													<span>غرف العمالة المنزلية    </span>
-												</div>
-											</div>
-										</div>
-										<div class="row">
-											<div class="col-sm-8">
-												<div class="checkbox">
-													<span>B : </span>
-													<label>
-														<input type="checkbox" name="activity" value="5666666">
-													</label>
-													<span>منطقة الغسيل    </span>
-												</div>
-											</div>
-										</div>
-										<div class="row">
-											<div class="col-sm-8">
-												<div class="checkbox">
-													<span>C : </span>
-													<label>
-														<input type="checkbox" name="activity" value="5666666">
-													</label>
-													<span>صالة رياضيه    </span>
-												</div>
-											</div>
-										</div>
-										<div class="row">
-											<div class="col-sm-8">
-												<div class="checkbox">
-													<span>D : </span>
-													<label>
-														<input type="checkbox" name="activity" value="5666666">
-													</label>
-													<span>صالة السنما    </span>
-												</div>
-											</div>
-										</div>
-										<div class="row">
-											<div class="col-sm-8">
-												<div class="checkbox">
-													<span>E : </span>
-													<label>
-														<input type="checkbox" name="activity" value="5666666">
-													</label>
-													<span>حديقة معلقه   </span>
-												</div>
-											</div>
-										</div>
-
-										<h4 class="info-text" style="">	الملاحق والاضافات الجانبية  </h4>
-										<br/>
-										<div class="row">
-											<div class="col-sm-8">
-												<div class="checkbox">
-													<span>A : </span>
-													<label>
-														<input type="checkbox" name="activity" value="5666666">
-													</label>
-													<span>ملحق السطح للفيلا حسب نظام البلدية المتبع</span>
-												</div>
-											</div>
-										</div>
-										<div class="row">
-											<div class="col-sm-8">
-												<div class="checkbox">
-													<span>B : </span>
-													<label>
-														<input type="checkbox" name="activity" value="5666666">
-													</label>
-													<span>ملحق المجلس الخارجي. (ديوانيه)</span>
-												</div>
-											</div>
-										</div>
-										<div class="row">
-											<div class="col-sm-8">
-												<div class="checkbox">
-													<span>C : </span>
-													<label>
-														<input type="checkbox" name="activity" value="5666666">
-													</label>
-													<span>المطبخ الخارجي    </span>
-												</div>
-											</div>
-										</div>
-										<div class="row">
-											<div class="col-sm-8">
-												<div class="checkbox">
-													<span>D : </span>
-													<label>
-														<input type="checkbox" name="activity" value="5666666">
-													</label>
-													<span>السور الخارجي.    </span>
-												</div>
-											</div>
-										</div>
-										<div class="row">
-											<div class="col-sm-8">
-												<div class="checkbox">
-													<span>E : </span>
-													<label>
-														<input type="checkbox" name="activity" value="5666666">
-													</label>
-													<span> غرفة حارس وحمامه.</span>
-												</div>
-											</div>
-										</div>
-										<div class="row">
-											<div class="col-sm-8">
-												<div class="checkbox">
-													<span>F : </span>
-													<label>
-														<input type="checkbox" name="activity" value="5666666">
-													</label>
-													<span>  موقف مظلة سيارة داخلي.</span>
-												</div>
-											</div>
-										</div>
-
-										<div class="row">
-											<div class="col-sm-8">
-												<div class="checkbox">
-													<span>G : </span>
-													<label>
-														<input type="checkbox" name="activity" value="5666666">
-													</label>
-													<span>  غرفة كهرباء حسب نظام البلدية المتبع</span>
-												</div>
-											</div>
-										</div>
-										<div class="row">
-											<div class="col-sm-8">
-												<div class="checkbox">
-													<span>H : </span>
-													<label>
-														<input type="checkbox" name="activity" value="5666666">
-													</label>
-													<span> خزان صرف صحي حسب نظام البلدية المتبع</span>
-												</div>
-											</div>
-										</div>
-										<div class="row">
-											<div class="col-sm-8">
-												<div class="checkbox">
-													<span>I : </span>
-													<label> اضافة اخري يلزم تدوينها</label>
-													<textarea type="text" name="activity" class="form-control" rows="4"></textarea>
-												</div>
-											</div>
-										</div>
-										<div class="row">
-											<div class="col-sm-8">
-												<div class="checkbox">
-													<label>	المساحة الاجمالية للإشراف حسب المخططات </label>
-													<input type="text" name="activity" class="form-control">
-												</div>
-											</div>
-										</div>
-
-									</div>
-									<div class="tab-pane" id="attach">
-										<h4 class="info-text"></h4>
-										<div class="row">
-											<div class="col-sm-6">
-												<div class="choice btn-next" data-toggle="wizard-checkbox ">
-													<div class="icon">
-														<i class="fa fa-pencil "></i>
-													</div>
-													<h3>تصاميم من خيرعون الاستشاري</h3>
-												</div>
-											</div>
-											<div class="col-sm-6">
-												<div class="choice" data-toggle="wizard-checkbox">
-													<input type="checkbox" name="jobb" value="Design" id="oko">
-													<div class="icon">
-														<i class="fa fa-pencil"></i>
-													</div>
-													<h3>تصاميم من مكتب استشاري اخر</h3>
-												</div>
-											</div>
-										</div>
-										<hr>
-										<h4 class="info-text">نتشرف بانضمامك الينا كما نتشرف بتقديم الدعم الفني للمشروع وعليه نرجوا التكرم بإدخال المعلومات الخاصة بالاستشاري المصمم للمشروع مسبقاً </h4>
-										<div class="row">
-											<div class="col-sm-3">
-												<div class="form-group label-floating">
-													<label>الامارة </label>
-													<input type="text" name="activity"  class="form-control">
-
-												</div>
-											</div>
-											<div class="col-sm-3">
-												<div class="form-group label-floating">
-													<label>	المدينه</label>
-													<input type="text" name="activity"  class="form-control">
-
-												</div>
-
-											</div>
-											<div class="col-sm-3">
-												<div class="form-group label-floating">
-													<label>	الحي </label>
-													<input type="text" name="activity"  class="form-control">
-
-												</div>
-
-											</div>
-											<div class="col-sm-3">
-												<div class="form-group label-floating">
-													<label>	اسم البناية </label>
-													<input type="text" name="activity"  class="form-control">
-
-												</div>
-
-											</div>
-											<div class="col-sm-4">
-												<div class="form-group label-floating">
-													<label>	رقم هاتف الاستشاري </label>
-													<input type="text" name="activity"  class="form-control">
-
-												</div>
-
-											</div>
-											<div class="col-sm-4">
-												<div class="form-group label-floating">
-													<label>	رقم المهندس المسئول عن التصميم </label>
-													<input type="text" name="activity"  class="form-control">
-
-												</div>
-
-											</div>
-											<div class="col-sm-4">
-												<div class="form-group label-floating">
-													<label>	 رقم الفاكس الرسمي </label>
-													<input type="text" name="activity"  class="form-control">
-
-												</div>
-
-											</div>
-										</div>
-										<h4 class="info-text">نتشرف بانضمامك الينا كما نتشرف بتقديم الدعم الفني للمشروع وعليه نرجوا التكرم بإدخال المعلومات الخاصة بالاستشاري المصمم للمشروع مسبقاً </h4>
-										<p><small>يرجى التكرم بتحديد أنواع المخططات المعتمدة والصادرة من قبل الاستشاري المصمم مسبقاً و المتوفره لديك</small></p>
-										<div class="row">
-											<div class="col-sm-8">
-												<div class="checkbox">
-													<span>A : </span>
-													<label>
-														<input type="checkbox" name="activity" value="5666666">
-													</label>
-													<span> المخططات المعمارية </span>
-												</div>
-											</div>
-										</div>
-										<div class="row">
-											<div class="col-sm-8">
-												<div class="checkbox">
-													<span>A : </span>
-													<label>
-														<input type="checkbox" name="activity" value="5666666">
-													</label>
-													<span> المخططات الانشائية  </span>
-												</div>
-											</div>
-										</div>
-										<div class="row">
-											<div class="col-sm-8">
-												<div class="checkbox">
-													<span>A : </span>
-													<label>
-														<input type="checkbox" name="activity" value="5666666">
-													</label>
-													<span> المخططات الخدمية (ماء، كهرباء، اتصالات ، صرف صحي ، تكييف). </span>
-												</div>
-											</div>
-										</div>
-										<div class="row">
-											<div class="col-sm-8">
-												<div class="checkbox">
-													<span>A : </span>
-													<label>
-														<input type="checkbox" name="activity" value="5666666">
-													</label>
-													<span> التصميم الداخلي (في حال وجوده) </span>
-												</div>
-											</div>
-										</div>
-										<div class="row">
-											<div class="col-sm-8">
-												<div class="checkbox">
-													<span>A : </span>
-													<label>
-														<input type="checkbox" name="activity" value="5666666">
-													</label>
-													<span> مخططات التنفيذية للتصميم الداخلي (في حال وجوده) </span>
-												</div>
-											</div>
-										</div>
-
-										<div class="row">
-											<div class="col-sm-12">
-												<div class="checkbox">
-													<span>A : </span>
-													<label>
-														<input type="checkbox" name="activity" value="5666666">
-													</label>
-													<span>إضافة تصاميم أو مخططات أخرى تكون موضوع طلب الاشراف الهندسي لخير عون عليها. </span>
-												</div>
-											</div>
-										</div>
-										<code><p>ملاحظة هامة (يتحمل الاستشاري السابق كافة التعديلات المطلوبة لأي مخططات تنفيذية تطلبها الدوائر الرسمية الأخرى+ عمل أي تعديل آخر يكون بطلب من المالك في المخططات).</p></code>
-
-
-									</div>
-									<div class="tab-pane" id="construct">
-										<h4 class="info-text"> رسالة من ادارة الشركة</h4>
-										<p>يقدم خيرعون الامارات باقة الاشراف ESPM وفق نظام اداري وهندسي وقانوني مُحكم، ليتم التعامل مع المشروع وفق الخطوات القانونية لحمايتكم بشكل احترافي ، حيثُ يُلزم خيرعون الامارات  كل مقاول برغب ببناء المشروع ، التسجيل في موقع الالكتروني المخصص لخدمة الاشراف ، وبعد التسجيل يتم تصنيف المقاول والتأكد من جميع الثبوتيات القانونيه وملائمته لتنفيذ المشروع واطلاعه على جميع الملفات و الاستاندرد الخاصه بخيرعون والكراسة التنفيذية عالية الوضوح في الية تنفيذ الاعمال وماهية الاشراف والاستلام والضبط المالي ونظام التقارير  وتوقيع عقد صادر من المحامي الخاص بخيرعون، كل هذا يقدم لخدمتكم ولضمان الحق لجميع الأطراف ، وإنتاج مشروع خالي من العيوب والاجتهادات الشخصيه، بإذن الله وتحد تلك الخطوات  من توقف المشروع بسبب المقاول او مقاول الباطن  او انسحاب المقاول من المشروع والعديد من المعوقات الضارة بالمشروع لاسمح الله وعليه نرجوا التكرم  بالتعاون معنا في هذه المرحله . لخدمتكم بشكل أفضل...  </p>
-
-
-									</div>
-									<div class="tab-pane" id="andtate">
-										<h4 class="info-text">مقاول مرشح من قبل الطرف الثاني (مالك المشروع او من ينوب عنه) يرجى منكم التكرم بتعبئة الاستبيان التالي </h4>
-										<div class="col-sm-4">
-											<div class="form-group label-floating">
-												<label>	إسم المنشأه</label>
-												<input type="text" name="activity"  class="form-control">
-
-											</div>
-
-										</div>
-										<div class="col-sm-4">
-											<div class="form-group label-floating">
-												<label>	 نوع المنشأة للمقاول </label>
-												<input type="text" name="activity"  class="form-control">
-
-											</div>
-
-										</div>
-										<div class="col-sm-4">
-											<div class="form-group label-floating">
-												<label>	 رقم الرخصة التجارية </label>
-												<input type="text" name="activity"  class="form-control">
-
-											</div>
-
-										</div>
-										<div class="col-sm-4">
-											<div class="form-group label-floating">
-												<label>	مقـــر المقـــاول   </label>
-												<input type="text" name="activity"  class="form-control">
-
-											</div>
-
-										</div>
-										<div class="col-sm-4">
-											<div class="form-group label-floating">
-												<label>	 رقم الرخصة التجارية </label>
-												<input type="text" name="activity"  class="form-control">
-
-											</div>
-
-										</div>
-										<div class="col-sm-4">
-											<div class="form-group label-floating">
-												<label>	تصنيف الحكومي المقاول </label>
-												<input type="text" name="activity"  class="form-control">
-
-											</div>
-
-										</div>
-										<div class="col-sm-4">
-											<div class="form-group label-floating">
-												<label>	 تاريخ التأسيس  </label>
-												<input type="text" name="activity"  class="form-control">
-
-											</div>
-
-										</div>
-										<div class="col-sm-4">
-											<div class="form-group label-floating">
-												<label>	 تاريخ إصدار الرخصة التجارية </label>
-												<input type="text" name="activity"  class="form-control">
-
-											</div>
-
-										</div>
-										<div class="col-sm-4">
-											<div class="form-group label-floating">
-												<label>	 تاريخ انتهاء الرخصة التجاريه </label>
-												<input type="text" name="activity"  class="form-control">
-
-											</div>
-
-										</div>
-
-										<div class="col-sm-4">
-											<div class="form-group label-floating">
-												<label>	عدد العمالة للمقاول </label>
-												<input type="text" name="activity"  class="form-control">
-
-											</div>
-
-										</div>
-
-										<div class="col-sm-4">
-											<div class="form-group label-floating">
-												<label>رقم هاتف المقاول </label>
-												<input type="text" name="activity"  class="form-control">
-
-											</div>
-
-										</div>
-
-										<div class="col-sm-4">
-											<div class="form-group label-floating">
-												<label>	صندوق البريـــد</label>
-												<input type="text" name="activity"  class="form-control">
-
-											</div>
-
-										</div>
-
-
-										<div class="col-sm-3">
-											<div class="form-group label-floating">
-												<label>	 المدينه </label>
-												<input type="text" name="activity"  class="form-control">
-
-											</div>
-
-										</div>
-
-
-										<div class="col-sm-3">
-											<div class="form-group label-floating">
-												<label>	الحي </label>
-												<input type="text" name="activity"  class="form-control">
-
-											</div>
-
-										</div>
-
-										<div class="col-sm-3">
-											<div class="form-group label-floating">
-												<label>	 اسم البناية </label>
-												<input type="text" name="activity"  class="form-control">
-
-											</div>
-
-										</div>
-
-
-										<div class="col-sm-3">
-											<div class="form-group label-floating">
-												<label>	 الطابق </label>
-												<input type="text" name="activity"  class="form-control">
-
-											</div>
-
-										</div>
-
-										<div class="col-sm-6">
-											<div class="form-group label-floating">
-												<label>	رقم الفاكـــــس </label>
-												<input type="text" name="activity"  class="form-control">
-
-											</div>
-
-										</div>
-										<div class="col-sm-6">
-											<div class="form-group label-floating">
-												<label>	 الإيميل الرسمي للمقاول  </label>
-												<input type="text" name="activity"  class="form-control">
-
-											</div>
-
-										</div>
-										<div class="col-sm-6">
-											<div class="form-group label-floating">
-												<label>	 الموقع الالكتروني للشركة </label>
-												<input type="text" name="activity"  class="form-control">
-
-											</div>
-
-										</div>
-										<div class="col-sm-6">
-											<div class="form-group label-floating">
-												<label>للتواصل (يرجى تحديد شخص ) </label>
-												<input type="text" name="activity"  class="form-control">
-
-											</div>
-
-										</div>
-
-									<code><p>	بعد قبول طلب الاشتراك بالباقة وتقيع العقد النهائي بين الطرف الاول ( خيرعون الامارات ) والطرف الثاني...                                ( عميل خيرعون ) يتم التواصل مع المقاول للبدء بتسجيل طلب الاعتماد من قبل المقاول في موقعنا المخصص لباقة الاشراف ،لكي يتم قبول الاعتماد للمقاول</p></code>
-
-									</div>
 									<div class="tab-pane" id="legal">
-
-										<h4 class="info-text">الضوابط القانونية الخاصة بتسجيل الطلب، حيث يصنف الاستشاري (خيرعون الامارات)  بالطرف الاول والعميل المشترك بالباقة او من ينوب عنه بالطرف الثاني </h4>
-
-
-										<p> 1.	يقدم الطرف الاول العقود اللازمة للطرف الثاني للتوقيع مع المقاول، وفق عقد مخصص ينظم علاقة المقاول بالطرف الثاني، كما يلتزم بعدم توقيع أي إتفاقية أو عقد يقُدم من قبل المقاول نهائياً، وان وجد ذلك مسبقاً فيلزم إلغائه </p>
-										<p>2.	يلتزم الطرفان الاول والثاني، عبر إلزام المقاول بالتسجيل في منظومة خيرعون الامارات. قبل البدء في اعتماده من البلدية. </p>
-										<p>3.	يقر الطرف الثاني بالموافقة التامة على سياسة الطرف الأول. (الاشتراطات والاحكام) وسيتم تزويدكم بها في مكتب الشركة قبل توقيع العقد النهائي. </p>
-										<p>4.	الطرف الثاني يفوض الطرف الاول بمهام الاستشاري المعتمد للمشروع وفق نظام باقة ESPM بصفه حصريه</p>
-										<p>5.	يحدد الطرف الأول مقاس 900 متر مربع او ما يعادلها بالقدم مسطح الأرض او اجمالي مسطحات المبنى كحد اقصى لباقة ESPM وفي حال كان أكثر من ذلك، يقدم الطرف الاول إعادة تسعير للمشروع حسب المخططات المرفقة</p>
-										<p>6.	يقر الطرف الثاني بصحة جميع المعلومات المدخلة على مسؤوليته التامه. </p>
-										<p>7.	يقر الطرف الثاني بالاطلاع التام على ملف باقة الاشراف ESPM الخاصة المقدمه من الطرف الاول، والموافقة على جميع بنودها</p>
-										<p>8.	بعد قبول الطرف الاول الطلب المقدم من الطرف الثاني، وقبل تسديد قيمة الباقة يتكرم الطرف الثاني بزيارة مقر الطرف الاول الواقع في مدينة العين، والاطلاع جميع الملفات والعقود والتوقيع على العقود النهائية</p>
-										<p>9.	يعتمد الطرف الاول محامي خاص به في صياغة العقود وعليه يلتزم الطرفان الاول والثاني بعدم توقيع أي عقود مع المقاول، او أي جهه أخرى ضماناً لحقه، وفي حال تم ذلك مسبقاً، يلزم ابلاغ الطرف الاول بذلك قبل توقيع العقد النهائي. </p>
-										<p>10.	في حال كان الطرف الثاني يمتلك المخططات مسبقاً من قبل استشاري أخر فيلتزم الطرف الثاني بتزويد الطرف الاول بجميع المخططات بصيغة الاتوكاد قبل توقيع العقد النهائي بين الطرفان.</p>
-
+										<div class="row">
+											<div class="col-sm-12 col-sm-offset-1">
+												<div class="col-sm-4 col-sm-offset-2">
+													<div class="choice" data-toggle="wizard-radio" rel="tooltip" title="" data-original-title="يجب ان تكون النسخة بصيغة PDF">
+														<input type="radio" name="type" value="House">
+														<div class="icon">
+															<i class="material-icons">Upload</i>
+														</div>
+														<h4>نسخة من رخصة هيئة المهندسين</h4>
+													</div>
+												</div>
+												<div class="col-sm-4">
+													<div class="choice active" data-toggle="wizard-radio" rel="tooltip" title="" data-original-title="يجب ان تكون النسخة بصيغة PDF">
+														<input type="radio" name="type" value="Appartment" checked="checked">
+														<div class="icon">
+															<i class="material-icons">Upload</i>
+														</div>
+														<h4>نسخة من السجل التجاري</h4>
+													</div>
+												</div>
+											</div>
+										</div>
 									</div>
 									<div class="tab-pane" id="other">
 
@@ -1316,7 +396,7 @@
 		                        </div>
 	                        	<div class="wizard-footer">
 	                            	<div class="pull-left">
-	                                    <input type='button' class='btn btn-next btn-fill btn-danger btn-wd' name='next' value='التالي' />
+	                                    <input type='button' class='btn btn-next btn-fill btn-info btn-wd' name='next' value='التالي' />
 	                                    <input type='submit' id="btsubmit" class='btn btn-finish btn-fill btn-danger btn-wd' name='finish' value='حفظ وارسال' />
 	                                </div>
 	                                <div class="pull-right">

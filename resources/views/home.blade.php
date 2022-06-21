@@ -62,7 +62,7 @@
                 <span class="info-box-icon bg-yellow"><i class="fa fa-chart-line" style="margin-top: 20px"></i></span>
 
                 <div class="info-box-content">
-                    <span class="info-box-text"><a href="{{ url('AllNotifications') }}" >التنبيهات</a> </span>
+                    <span class="info-box-text"><a href="{{ url('/') }}" >التنبيهات</a> </span>
                     <span class="info-box-number">44</span>
                 </div>
                 <!-- /.info-box-content -->

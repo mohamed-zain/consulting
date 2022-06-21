@@ -71,11 +71,7 @@
                          الخاصة بالمشروع </p><p>(يشمل العقود والاتفاقيات ورخص البناء وتقارير الاشراف وشهادات الإشغال)</p>
 
                 </div>
-
-
             </div>
-
-
             <!-- /.box-body -->
         </div>
         <!-- /.box -->
@@ -85,7 +81,6 @@
             <div class="box box-default">
                 <div class="box-header with-border">
                     <h3 class="box-title"></h3>
-
                     <div class="box-tools pull-right">
                         <div class="has-feedback">
                             <form action="<?php echo e(url('DocsByPro')); ?>" method="GET" class="form form-inline" id="search" name="search" >
@@ -97,40 +92,30 @@
                                     <?php endforeach; $__env->popLoop(); $loop = $__env->getLastLoop(); ?>
                                 </select>
                             </form>
-
                         </div>
                     </div>
-
                     <!-- /.box-tools -->
                 </div>
                 <!-- /.box-header -->
                 <div class="box-body">
                     <div class="row">
                         <div class="col-xs-12 table-responsive" >
-
                             <ul class="mailbox-attachments clearfix">
-
                                 <?php $__currentLoopData = $Docs; $__env->addLoop($__currentLoopData); foreach($__currentLoopData as $Single): $__env->incrementLoopIndices(); $loop = $__env->getLastLoop(); ?>
                                     <li style="width: 120px">
                                         <span class="mailbox-attachment-icon" style="font-size:30px"><a href="<?php echo e(url('DocsByPro')); ?>?search_text=<?php echo e($Single->Bennar); ?>" id="<?php echo e($Single->Bennar); ?>"><i class="fa fa-folder-open" style="font-weight: 0px !important;"></i></a></span>
                                         <div class="mailbox-attachment-info" style="font-size: 10px">
                                             <a href="#" data-toggle="modal" data-target="#<?php echo e($Single->Bennar); ?>" class="mailbox-attachment-name">
-
                                                 <?php echo e(Str::limit($Single->FileCode, 20)); ?>
 
                                             </a>
                                             <span class="mailbox-attachment-size" style="font-size: 8px">
                          رقم المشروع  <?php echo e($Single->Bennar); ?>
 
-
                                             </span>
                                         </div>
                                     </li>
-
                                 <?php endforeach; $__env->popLoop(); $loop = $__env->getLastLoop(); ?>
-
-
-
                             </ul>
                         </div>
                         <!-- /.col -->

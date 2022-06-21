@@ -55,7 +55,9 @@ Route::get('redirect', function () {
 
 });
 
-
+Route::get('/', function () {
+    return view('index');
+});
 
 Route::get('/ConsultingDashboard', function () {
     $txt = 'عرض ملفات المهندسين';

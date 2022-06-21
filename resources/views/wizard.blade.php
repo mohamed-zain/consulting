@@ -3,13 +3,16 @@
 <head>
 	<meta charset="utf-8" />
 	<meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1" />
-	<title>خيرعون الامارات - لوحة تحكم العميل</title>
+	<title>خيرعون  - تسجيل استشاري معتمد</title>
+	<meta name="description" content="البوابة الرقمية لتسجيل المكاتب الاستشارية المعتمدة" />
+	<meta name="keywords" content="برنامج ادارة خدمات المكاتب الاستشارية من خير عون" />
+	<meta name="author" content=" خيرعون - المملكة العربية السعودية"/>
 
 	<meta content='width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=0' name='viewport' />
     <meta name="viewport" content="width=device-width" />
 	<meta name="csrf-token" content="{{ csrf_token() }}">
-	<link rel="apple-touch-icon" sizes="76x76" href="{{ asset('dist/img/logo.png') }}" />
-	<link rel="icon" type="image/jpg" href="{{ asset('dist/img/logo.png') }}" />
+	<link rel="apple-touch-icon" sizes="76x76" href="{{ asset('logo20221.png') }}" />
+	<link rel="icon" type="image/png" href="{{ asset('logo20222.png') }}" />
 	<!--     Fonts and icons     -->
 	<!-- CSS Files -->
 	<link href="{{ asset('/assets2/css/bootstrap.min.css') }}" rel="stylesheet" />
@@ -141,19 +144,19 @@
 @endif
 	<div class="image-container set-full-height" style="background-image: url('public/slide3.jpg')">
 	    <!--   Creative Tim Branding   -->
-	    <a href="http://neelain.edu.sd">
+	    <a href="https://consulting.ko-sky.com">
 	         <div class="logo-container">
 	            <div class="logo">
-	                <img src="{{ asset('dist/img/logo.png') }}">
+	                <img src="{{ asset('logo202221.png') }}">
 	            </div>
-	            <div class="brand">خيرعون الامارات </div>
+	            <div class="brand">خيرعون المملكة العربية السعودية </div>
 	        </div>
 	    </a>
 
 		<!--  Made With Material Kit  -->
-		<a href="http://neelain.edu.sd/sites/centers/51" class="made-with-mk">
+		<a href="https://consulting.ko-sky.com" class="made-with-mk">
 			<div class="brand"> KO </div>
-			<div class="made-with"> خيرعون <strong>  الامارات  </strong></div>
+			<div class="made-with"> خيرعون <strong>  جدة  </strong></div>
 		</a>
 
 	    <!--   Big container   -->
@@ -170,16 +173,16 @@
 		                    	<div class="wizard-header">
 									<div class="row">
 										<div class="col-lg-2 col-md-2 col-sm-2 col-xs-2">
-											<img src="{{ asset('dist/img/logo.png') }}" style="max-height: 80px;width: auto" class="img-responsive center">
+											<img src="{{ asset('logo20221.png') }}" style="max-height: 80px;width: auto" class="img-responsive center">
 										</div>
 										<div class="col-lg-8 col-md-8 col-sm-8 col-xs-8">
 											<h3 class="wizard-title">
-												الاشتراك في باقة الاشراف - ESPM
+												التسجيل كإستشاري - خير عون جدة
 											</h3>
 											<h5>قم بتعبئة النموذج وتأكد من صحة البيانات المدخلة</h5>
 										</div>
 										<div class="col-lg-2 col-md-2 col-sm-2 col-xs-2">
-											<img src="{{ asset('dist/img/logo.png') }}" style="max-height: 80px;float: left!important;" class="img-responsive center">
+											<img src="{{ asset('logo20221.png') }}" style="max-height: 80px;float: left!important;" class="img-responsive center">
 										</div>
 									</div>
 

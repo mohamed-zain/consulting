@@ -182,7 +182,7 @@
 										</div>
 										<div class="col-lg-8 col-md-8 col-sm-8 col-xs-8">
 											<h3 class="wizard-title">
-												التسجيل كإستشاري - خير عون جدة
+												طلب الإنضمام كإستشاري - خير عون جدة
 											</h3>
 											<h5>قم بتعبئة النموذج وتأكد من صحة البيانات المدخلة</h5>
 										</div>
@@ -209,7 +209,21 @@
 											<div class="col-sm-4">
 												<div class="form-group label-floating">
 													<label>المنطقة</label>
-													<input name="idcard_id" class="form-control"  id="idcard_id">
+													<select name="local_id" id="localID" class="form-control" >
+														<option value="">منطقة الرياض</option>
+														<option value="">منطقة مكة المكرمة</option>
+														<option value="">منطقة المدينة المنورة</option>
+														<option value="">منطقة القصيم</option>
+														<option value="">المنطقة الشرقية</option>
+														<option value="">منطقة عسير</option>
+														<option value="">منطقة تبوك</option>
+														<option value="">منطقة حائل</option>
+														<option value="">الحدود الشمالية</option>
+														<option value="">منطقة جازان</option>
+														<option value="">منطقة نجران</option>
+														<option value="">منطقة الباحة</option>
+														<option value="">منطقة الجوف</option>
+													</select>
 												</div>
 											</div>
 											<div class="col-sm-4">

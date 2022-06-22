@@ -2,308 +2,18 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="c5c1f75a-33b9-4e20-9c19-ff32ec45cd60" name="Changes" comment="">
-      <change afterPath="$PROJECT_DIR$/public/conAssets/YoutubeVideoModalPlugin/jquery.yu2fvl.css" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/public/conAssets/YoutubeVideoModalPlugin/jquery.yu2fvl.js" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/public/conAssets/css/animate.css" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/public/conAssets/css/aos.css" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/public/conAssets/css/bootstrap.min.css" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/public/conAssets/css/flipping_gallery.css" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/public/conAssets/css/font-awesome.min.css" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/public/conAssets/css/images/ui-icons_444444_256x240.html" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/public/conAssets/css/images/ui-icons_555555_256x240.html" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/public/conAssets/css/images/ui-icons_777620_256x240.html" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/public/conAssets/css/images/ui-icons_777777_256x240.html" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/public/conAssets/css/images/ui-icons_cc0000_256x240.html" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/public/conAssets/css/images/ui-icons_ffffff_256x240.html" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/public/conAssets/css/jquery-ui.css" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/public/conAssets/css/jquery.fancybox.min.css" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/public/conAssets/css/owl.carousel.min.css" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/public/conAssets/css/owl.theme.default.min.css" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/public/conAssets/css/owl.video.play.html" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/public/conAssets/css/responsive.css" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/public/conAssets/css/sm-core-css.css" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/public/conAssets/css/sm-simple.css" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/public/conAssets/css/style.css" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/public/conAssets/css/xzoom.css" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/public/conAssets/flaticon/Flaticon.eot" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/public/conAssets/flaticon/Flaticon.svg" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/public/conAssets/flaticon/Flaticon.ttf" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/public/conAssets/flaticon/Flaticon.woff" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/public/conAssets/flaticon/Flaticon.woff2" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/public/conAssets/flaticon/Flaticond41d.eot" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/public/conAssets/flaticon/flaticon.css" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/public/conAssets/fonawesome5/css/all.min.css" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/public/conAssets/fonawesome5/js/all.min.js" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/public/conAssets/fonts/avenir/AvenirNextLTPro-Bold.woff" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/public/conAssets/fonts/avenir/AvenirNextLTPro-Bold.woff2" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/public/conAssets/fonts/avenir/AvenirNextLTPro-BoldCn.woff" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/public/conAssets/fonts/avenir/AvenirNextLTPro-BoldCn.woff2" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/public/conAssets/fonts/avenir/AvenirNextLTPro-Demi.woff" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/public/conAssets/fonts/avenir/AvenirNextLTPro-Demi.woff2" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/public/conAssets/fonts/avenir/AvenirNextLTPro-DemiCn.woff" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/public/conAssets/fonts/avenir/AvenirNextLTPro-DemiCn.woff2" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/public/conAssets/fonts/avenir/AvenirNextLTPro-It.woff" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/public/conAssets/fonts/avenir/AvenirNextLTPro-It.woff2" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/public/conAssets/fonts/avenir/AvenirNextLTPro-Regular.woff" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/public/conAssets/fonts/avenir/AvenirNextLTPro-Regular.woff2" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/public/conAssets/fonts/avenir/stylesheet.css" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/public/conAssets/fonts/circularSTD/CircularStd-Bold.woff" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/public/conAssets/fonts/circularSTD/CircularStd-Bold.woff2" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/public/conAssets/fonts/circularSTD/CircularStd-Book.woff" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/public/conAssets/fonts/circularSTD/CircularStd-Book.woff2" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/public/conAssets/fonts/circularSTD/CircularStd-Medium.woff" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/public/conAssets/fonts/circularSTD/CircularStd-Medium.woff2" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/public/conAssets/fonts/circularSTD/stylesheet.css" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/public/conAssets/fonts/gilroy/Gilroy-Bold.woff" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/public/conAssets/fonts/gilroy/Gilroy-Bold.woff2" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/public/conAssets/fonts/gilroy/Gilroy-Heavy.woff" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/public/conAssets/fonts/gilroy/Gilroy-Heavy.woff2" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/public/conAssets/fonts/gilroy/Gilroy-Light.woff" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/public/conAssets/fonts/gilroy/Gilroy-Light.woff2" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/public/conAssets/fonts/gilroy/Gilroy-Medium.woff" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/public/conAssets/fonts/gilroy/Gilroy-Medium.woff2" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/public/conAssets/fonts/gilroy/Gilroy-Regular.woff" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/public/conAssets/fonts/gilroy/Gilroy-Regular.woff2" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/public/conAssets/fonts/gilroy/stylesheet.css" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/public/conAssets/fonts/helvetica/Helvetica-Bold.woff" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/public/conAssets/fonts/helvetica/Helvetica-Bold.woff2" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/public/conAssets/fonts/helvetica/Helvetica-Light.woff" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/public/conAssets/fonts/helvetica/Helvetica-Light.woff2" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/public/conAssets/fonts/helvetica/Helvetica-LightOblique.woff" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/public/conAssets/fonts/helvetica/Helvetica-LightOblique.woff2" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/public/conAssets/fonts/helvetica/Helvetica.woff" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/public/conAssets/fonts/helvetica/Helvetica.woff2" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/public/conAssets/fonts/helvetica/HelveticaNeue.woff" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/public/conAssets/fonts/helvetica/HelveticaNeue.woff2" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/public/conAssets/fonts/helvetica/stylesheet.css" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/public/conAssets/images/xloading.html" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/public/conAssets/img/avatar/blog-author-1.jpg" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/public/conAssets/img/avatar/blog-author-2.jpg" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/public/conAssets/img/avatar/blog-author-3.jpg" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/public/conAssets/img/avatar/blog-author-4.jpg" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/public/conAssets/img/avatar/ta-1.jpg" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/public/conAssets/img/avatar/ta-2.jpg" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/public/conAssets/img/avatar/ta-3.jpg" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/public/conAssets/img/avatar/ta-4.jpg" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/public/conAssets/img/avatar/ta-5.jpg" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/public/conAssets/img/avatar/ta-6.jpg" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/public/conAssets/img/bg/404-bg.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/public/conAssets/img/bg/about-shape-right.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/public/conAssets/img/bg/contact-page.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/public/conAssets/img/bg/funfact-bg.jpg" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/public/conAssets/img/bg/hero-shape-left.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/public/conAssets/img/bg/hero-shape-right.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/public/conAssets/img/bg/hero4-img-bg.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/public/conAssets/img/bg/rtgbg.jpg" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/public/conAssets/img/bg/testimonial-shape.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/public/conAssets/img/bg/video-section-bg.jpg" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/public/conAssets/img/bg/video-section-bg2.jpg" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/public/conAssets/img/blog/blog-1.jpg" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/public/conAssets/img/blog/blog-2.jpg" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/public/conAssets/img/blog/blog-3.jpg" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/public/conAssets/img/blog/blog-4.jpg" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/public/conAssets/img/blog/blog-5.jpg" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/public/conAssets/img/blog/blog-6.jpg" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/public/conAssets/img/blog/blog-large-1.jpg" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/public/conAssets/img/blog/blog-large-2.jpg" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/public/conAssets/img/blog/hblog3-1.jpg" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/public/conAssets/img/blog/hblog3-2.jpg" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/public/conAssets/img/blog/hblog3-3.jpg" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/public/conAssets/img/graphic/about3.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/public/conAssets/img/graphic/ip-vec-1.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/public/conAssets/img/graphic/ip-vec-2.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/public/conAssets/img/graphic/meeting-img-bg.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/public/conAssets/img/graphic/polling-img-bg.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/public/conAssets/img/graphic/set-a/g-1.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/public/conAssets/img/graphic/set-a/g-10.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/public/conAssets/img/graphic/set-a/g-11.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/public/conAssets/img/graphic/set-a/g-12.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/public/conAssets/img/graphic/set-a/g-13.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/public/conAssets/img/graphic/set-a/g-14.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/public/conAssets/img/graphic/set-a/g-2.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/public/conAssets/img/graphic/set-a/g-3.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/public/conAssets/img/graphic/set-a/g-4.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/public/conAssets/img/graphic/set-a/g-5.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/public/conAssets/img/graphic/set-a/g-6.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/public/conAssets/img/graphic/set-a/g-8.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/public/conAssets/img/graphic/set-a/g-9.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/public/conAssets/img/graphic/test-bg-1.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/public/conAssets/img/graphic/test-bg-2.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/public/conAssets/img/icons/apple-store-btn.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/public/conAssets/img/icons/bs-1.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/public/conAssets/img/icons/bs-2.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/public/conAssets/img/icons/bs-3.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/public/conAssets/img/icons/bs-4.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/public/conAssets/img/icons/bs-5.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/public/conAssets/img/icons/bs-6.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/public/conAssets/img/icons/bsi-1.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/public/conAssets/img/icons/bsi-2.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/public/conAssets/img/icons/bsi-3.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/public/conAssets/img/icons/bsi-4.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/public/conAssets/img/icons/c-icon-1.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/public/conAssets/img/icons/c-icon-2.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/public/conAssets/img/icons/c-icon-3.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/public/conAssets/img/icons/c-icon-4.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/public/conAssets/img/icons/ff-1.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/public/conAssets/img/icons/ff-2.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/public/conAssets/img/icons/ff-3.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/public/conAssets/img/icons/ff-4.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/public/conAssets/img/icons/google-play-btn.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/public/conAssets/img/icons/h4fi-1.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/public/conAssets/img/icons/h4fi-2.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/public/conAssets/img/icons/h4fi-3.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/public/conAssets/img/icons/icon-1.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/public/conAssets/img/icons/icon-2.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/public/conAssets/img/icons/icon-3.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/public/conAssets/img/icons/service-1.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/public/conAssets/img/icons/service-2.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/public/conAssets/img/icons/service-3.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/public/conAssets/img/icons/service-4.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/public/conAssets/img/icons/service-5.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/public/conAssets/img/loader.gif" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/public/conAssets/img/logo-cp.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/public/conAssets/img/logo.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/public/conAssets/img/logo3.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/public/conAssets/img/mini-logo.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/public/conAssets/img/portfolio/cw-1.jpg" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/public/conAssets/img/portfolio/cw-2.jpg" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/public/conAssets/img/portfolio/cw-3.jpg" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/public/conAssets/img/portfolio/cw-4.jpg" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/public/conAssets/img/portfolio/cw-5.jpg" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/public/conAssets/img/portfolio/cw-6.jpg" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/public/conAssets/img/portfolio/cw-7.jpg" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/public/conAssets/img/product/p-1.jpg" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/public/conAssets/img/product/p-10.jpg" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/public/conAssets/img/product/p-2.jpg" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/public/conAssets/img/product/p-3.jpg" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/public/conAssets/img/product/p-4.jpg" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/public/conAssets/img/product/p-5.jpg" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/public/conAssets/img/product/p-6.jpg" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/public/conAssets/img/product/p-7.jpg" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/public/conAssets/img/product/p-8.jpg" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/public/conAssets/img/product/p-9.jpg" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/public/conAssets/img/product/pd-1.jpg" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/public/conAssets/img/product/pd-2.jpg" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/public/conAssets/img/product/pd-3.jpg" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/public/conAssets/img/product/pd-4.jpg" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/public/conAssets/img/project/p-1.jpg" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/public/conAssets/img/project/p-10.jpg" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/public/conAssets/img/project/p-11.jpg" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/public/conAssets/img/project/p-12.jpg" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/public/conAssets/img/project/p-2.jpg" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/public/conAssets/img/project/p-3.jpg" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/public/conAssets/img/project/p-4.jpg" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/public/conAssets/img/project/p-5.jpg" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/public/conAssets/img/project/p-6.jpg" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/public/conAssets/img/project/p-7.jpg" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/public/conAssets/img/project/p-8.jpg" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/public/conAssets/img/project/p-9.jpg" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/public/conAssets/img/project/rp3-1.jpg" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/public/conAssets/img/project/rp3-2.jpg" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/public/conAssets/img/project/rp3-3.jpg" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/public/conAssets/img/project/rp3-4.jpg" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/public/conAssets/img/section-img/404.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/public/conAssets/img/section-img/about-5.jpg" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/public/conAssets/img/section-img/about-img.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/public/conAssets/img/section-img/about-p-1.jpg" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/public/conAssets/img/section-img/about-p-2.jpg" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/public/conAssets/img/section-img/about-p3-1.jpg" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/public/conAssets/img/section-img/about-p3-2.jpg" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/public/conAssets/img/section-img/about-p3-3.jpg" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/public/conAssets/img/section-img/about3-img.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/public/conAssets/img/section-img/aboutp2-1.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/public/conAssets/img/section-img/collaborationt-img.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/public/conAssets/img/section-img/contact-img2.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/public/conAssets/img/section-img/hero-5.jpg" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/public/conAssets/img/section-img/hero-img.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/public/conAssets/img/section-img/hero2-img.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/public/conAssets/img/section-img/hero3-img.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/public/conAssets/img/section-img/hero4-1.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/public/conAssets/img/section-img/hero4-2.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/public/conAssets/img/section-img/hero4-3.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/public/conAssets/img/section-img/hero4-img.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/public/conAssets/img/section-img/meetingapp-img-1.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/public/conAssets/img/section-img/meetingapp-img-2.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/public/conAssets/img/section-img/meetingapp-img-3.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/public/conAssets/img/section-img/meetingapp-img.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/public/conAssets/img/section-img/pdm-1.jpg" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/public/conAssets/img/section-img/pdm-2.jpg" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/public/conAssets/img/section-img/portfolio-details.jpg" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/public/conAssets/img/section-img/pull-img-1.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/public/conAssets/img/section-img/pull-img-2.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/public/conAssets/img/section-img/pull-img-3.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/public/conAssets/img/section-img/pull-img.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/public/conAssets/img/section-img/service-p2-img-1.jpg" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/public/conAssets/img/section-img/service-p3-img-1.jpg" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/public/conAssets/img/section-img/service-p3-img-2.jpg" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/public/conAssets/img/section-img/service-p3-img-3.jpg" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/public/conAssets/img/section-img/spl-1.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/public/conAssets/img/section-img/spl-2.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/public/conAssets/img/section-img/spl-3.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/public/conAssets/img/section-img/spl-4.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/public/conAssets/img/section-img/spl-5.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/public/conAssets/img/section-img/spl2-1.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/public/conAssets/img/section-img/spl2-2.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/public/conAssets/img/section-img/spl2-3.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/public/conAssets/img/section-img/spl2-4.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/public/conAssets/img/section-img/spl2-5.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/public/conAssets/img/section-img/testimonial3-img-1.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/public/conAssets/img/team/team-1.jpg" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/public/conAssets/img/team/team-2.jpg" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/public/conAssets/img/team/team-3.jpg" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/public/conAssets/img/team/team-4.jpg" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/public/conAssets/img/team/team-5.jpg" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/public/conAssets/img/team/team-6.jpg" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/public/conAssets/img/works/works-1.jpg" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/public/conAssets/img/works/works-2.jpg" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/public/conAssets/img/works/works-3.jpg" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/public/conAssets/img/works/works-4.jpg" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/public/conAssets/js/aos.js" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/public/conAssets/js/bootstrap.min.js" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/public/conAssets/js/countdown.js" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/public/conAssets/js/jquery-3.2.0.min.js" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/public/conAssets/js/jquery-ui.js" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/public/conAssets/js/jquery.counterup.min.js" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/public/conAssets/js/jquery.fancybox.min.js" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/public/conAssets/js/jquery.flipping_gallery.js" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/public/conAssets/js/jquery.scrollUp.js" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/public/conAssets/js/jquery.smartmenus.min.js" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/public/conAssets/js/jquery.waypoints.min.js" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/public/conAssets/js/owl.carousel.min.js" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/public/conAssets/js/shuffle.min.js" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/public/conAssets/js/theme.js" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/public/conAssets/js/wow.min.js" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/public/conAssets/js/xzoom.min.js" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/public/conAssets/slick/ajax-loader.gif" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/public/conAssets/slick/fonts/slick.eot" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/public/conAssets/slick/fonts/slick.svg" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/public/conAssets/slick/fonts/slick.ttf" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/public/conAssets/slick/fonts/slick.woff" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/public/conAssets/slick/fonts/slickd41d.eot" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/public/conAssets/slick/slick-theme.css" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/public/conAssets/slick/slick.css" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/public/conAssets/slick/slick.min.js" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/resources/views/index.blade.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/laravel-plugin.xml" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/php.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/php.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/symfony2.xml" beforeDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/LICENSE" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/config/database.php" beforeDir="false" afterPath="$PROJECT_DIR$/config/database.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/resources/views/home.blade.php" beforeDir="false" afterPath="$PROJECT_DIR$/resources/views/home.blade.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/resources/views/index.blade.php" beforeDir="false" afterPath="$PROJECT_DIR$/resources/views/index.blade.php" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/resources/views/wizard.blade.php" beforeDir="false" afterPath="$PROJECT_DIR$/resources/views/wizard.blade.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/routes/web.php" beforeDir="false" afterPath="$PROJECT_DIR$/routes/web.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/storage/framework/views/6f7ff59d7c78514864358d012e0e4b305e0eb822.php" beforeDir="false" afterPath="$PROJECT_DIR$/storage/framework/views/6f7ff59d7c78514864358d012e0e4b305e0eb822.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/storage/framework/views/982f3cf99c3a519657fbeffb4f7e70ba776619bc.php" beforeDir="false" afterPath="$PROJECT_DIR$/storage/framework/views/982f3cf99c3a519657fbeffb4f7e70ba776619bc.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/storage/framework/views/9a4c9e666f0b8b24583a29f8a1690c34e112d7e6.php" beforeDir="false" afterPath="$PROJECT_DIR$/storage/framework/views/9a4c9e666f0b8b24583a29f8a1690c34e112d7e6.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/tailwind.config.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/storage/framework/views/15a24305d64963b0d89d4685bc07169d8ade490b.php" beforeDir="false" afterPath="$PROJECT_DIR$/storage/framework/views/15a24305d64963b0d89d4685bc07169d8ade490b.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/storage/framework/views/4db8dd67f35858f5f35c8527fed8a1d043971687.php" beforeDir="false" afterPath="$PROJECT_DIR$/storage/framework/views/4db8dd67f35858f5f35c8527fed8a1d043971687.php" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
     <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
     <option name="LAST_RESOLUTION" value="IGNORE" />
   </component>
-  <component name="ComposerSettings" synchronizationState="SYNCHRONIZE">
+  <component name="ComposerSettings" doNotAsk="true" synchronizationState="SYNCHRONIZE">
     <pharConfigPath>$PROJECT_DIR$/composer.json</pharConfigPath>
     <execution />
   </component>
@@ -477,10 +187,6 @@
     <property name="vue.rearranger.settings.migration" value="true" />
   </component>
   <component name="RunManager">
-    <configuration default="true" type="ComposerRunConfigurationType" factoryName="Composer Script">
-      <option name="pathToComposerJson" value="$PROJECT_DIR$/composer.json" />
-      <method v="2" />
-    </configuration>
     <configuration name="phpunit.xml" type="PHPUnitRunConfigurationType" factoryName="PHPUnit">
       <TestRunner scope="XML" />
       <method v="2" />
@@ -495,6 +201,8 @@
       <option name="presentableId" value="Default" />
       <updated>1655665902474</updated>
       <workItem from="1655665906061" duration="17382000" />
+      <workItem from="1655903404372" duration="354000" />
+      <workItem from="1655912816701" duration="1712000" />
     </task>
     <servers />
   </component>

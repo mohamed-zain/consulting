@@ -111,6 +111,37 @@
         </div>
     </div>
 </section>
+<section class="partner-area">
+    <div class="container">
+        <div class="row">
+            <div class="col-md-12">
+                <div class="partner-logos">
+                    <ul class="plogo-list">
+                        <li class="col-lg-2">
+                            <a href="https://www.vision2030.gov.sa/ar/v2030/vrps/ntp/"><img src="<?php echo e(asset('ntp.png')); ?>" alt="Partner Logo"
+                                             data-aos="flip-up" data-aos-delay="50" data-aos-duration="1000"></a>
+                        </li>
+                        <li class="col-lg-2">
+                            <a href="https://www.vision2030.gov.sa/"><img src="<?php echo e(asset('vision2030.png')); ?>" alt="Partner Logo"
+                                             data-aos="flip-up" data-aos-delay="100" data-aos-duration="1000"></a>
+                        </li>
+                        <li class="col-lg-2">
+                            <a href="#">
+                                <img src="<?php echo e(asset('dist/img/koyellow.png')); ?>" alt="Partner Logo"
+                                             data-aos="flip-up" data-aos-delay="150" data-aos-duration="1000">
+                            </a>
+                        </li>
+                        <li class="col-lg-2">
+                        </li>
+                        <li class="col-lg-1">
+                        </li>
+
+                    </ul>
+                </div>
+            </div>
+        </div>
+    </div>
+</section>
 <section class="features-area">
     <div class="container">
         

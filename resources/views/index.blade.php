@@ -620,32 +620,32 @@
                     <ul class="tsa-list">
                         <li>
                             <div class="tsa-img">
-                                <img src="{{ asset('conAssets/img/avatar/ta-1.jpg') }}" alt="">
+                                <img src="{{ asset('logo20221.png') }}" alt="" style="height: 112px;width: 112px;">
                             </div>
                         </li>
                         <li>
                             <div class="tsa-img">
-                                <img src="{{ asset('conAssets/img/avatar/ta-2.jpg') }}" alt="">
+                                <img src="{{ asset('logo20222.png') }}" alt="" style="height: 112px;width: 112px;">
                             </div>
                         </li>
                         <li>
                             <div class="tsa-img">
-                                <img src="{{ asset('conAssets/img/avatar/ta-3.jpg') }}" alt="">
+                                <img src="{{ asset('logo20221.png') }}" alt="" style="height: 112px;width: 112px;">
                             </div>
                         </li>
                         <li>
                             <div class="tsa-img">
-                                <img src="{{ asset('conAssets/img/avatar/ta-4.jpg') }}" alt="">
+                                <img src="{{ asset('logo20222.png') }}" alt="" style="height: 112px;width: 112px;">
                             </div>
                         </li>
                         <li>
                             <div class="tsa-img">
-                                <img src="{{ asset('conAssets/img/avatar/ta-5.jpg') }}" alt="">
+                                <img src="{{ asset('logo20221.png') }}" alt="" style="height: 112px;width: 112px;">
                             </div>
                         </li>
                         <li>
                             <div class="tsa-img">
-                                <img src="{{ asset('conAssets/img/avatar/ta-6.jpg') }}" alt="">
+                                <img src="{{ asset('logo20222.png') }}" alt="" style="height: 112px;width: 112px;">
                             </div>
                         </li>
                     </ul>

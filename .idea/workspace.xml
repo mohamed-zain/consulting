@@ -4,9 +4,7 @@
     <list default="true" id="c5c1f75a-33b9-4e20-9c19-ff32ec45cd60" name="Changes" comment="">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/resources/views/index.blade.php" beforeDir="false" afterPath="$PROJECT_DIR$/resources/views/index.blade.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/resources/views/wizard.blade.php" beforeDir="false" afterPath="$PROJECT_DIR$/resources/views/wizard.blade.php" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/storage/framework/views/15a24305d64963b0d89d4685bc07169d8ade490b.php" beforeDir="false" afterPath="$PROJECT_DIR$/storage/framework/views/15a24305d64963b0d89d4685bc07169d8ade490b.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/storage/framework/views/4db8dd67f35858f5f35c8527fed8a1d043971687.php" beforeDir="false" afterPath="$PROJECT_DIR$/storage/framework/views/4db8dd67f35858f5f35c8527fed8a1d043971687.php" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -202,7 +200,8 @@
       <updated>1655665902474</updated>
       <workItem from="1655665906061" duration="17382000" />
       <workItem from="1655903404372" duration="354000" />
-      <workItem from="1655912816701" duration="1712000" />
+      <workItem from="1655912816701" duration="2329000" />
+      <workItem from="1655990565253" duration="581000" />
     </task>
     <servers />
   </component>

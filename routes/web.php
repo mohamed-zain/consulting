@@ -2,6 +2,7 @@
 
 
 use App\Http\Controllers\DocumentsCon;
+use App\Http\Controllers\PartnerJoining;
 use App\Http\Controllers\ProjectsCon;
 use App\Http\Controllers\UsersCon;
 use App\Models\Projects;
@@ -89,7 +90,8 @@ dd($countries);
 
 
 Route::get('join', function () {
-   return view('wizard');
+    $provinces = DB::table('regions')->get();
+   return view('join.wizard',compact('provinces'));
 
 });
 
@@ -133,5 +135,11 @@ Route::middleware(['auth','admin'])->group(function () {
     ]);
 
 });
+
+
+Route::post('ConsultJoinRequest', [PartnerJoining::class, 'ConsultJoinRequest'])->name('ConsultJoinRequest');
+Route::post('GetCity', [PartnerJoining::class, 'GetCity'])->name('GetCity');
+
+
 
 require __DIR__.'/auth.php';

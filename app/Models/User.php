@@ -22,7 +22,24 @@ class User extends Authenticatable implements MustVerifyEmail
         'name',
         'email',
         'password',
-        'file_code','Level','EmpiD','File_code','roll','last_login_at','device_key','is_admin','is_online','last_activity'
+        'phone',
+        'City',
+        'Office_code',
+        'OfficeType',
+        'Identity',
+        'IdentityType',
+        'roll',
+        'last_login_at',
+        'image',
+        'provinces',
+        'streetAddress',
+        'officeActivity',
+        'officeManager',
+        'OMPhone',
+        'OMEmail',
+        'EngnieeringCert',
+        'TradeCert',
+        'isActive',
     ];
 
     /**

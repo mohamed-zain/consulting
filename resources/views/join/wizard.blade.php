@@ -10,22 +10,22 @@
 
 	<meta content='width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=0' name='viewport' />
     <meta name="viewport" content="width=device-width" />
-	<meta name="csrf-token" content="<?php echo e(csrf_token()); ?>">
-	<link rel="apple-touch-icon" sizes="76x76" href="<?php echo e(asset('logo20221.png')); ?>" />
-	<link rel="icon" type="image/png" href="<?php echo e(asset('logo20222.png')); ?>" />
+	<meta name="csrf-token" content="{{ csrf_token() }}">
+	<link rel="apple-touch-icon" sizes="76x76" href="{{ asset('logo20221.png') }}" />
+	<link rel="icon" type="image/png" href="{{ asset('logo20222.png') }}" />
 	<!--     Fonts and icons     -->
 	<!-- CSS Files -->
-	<link href="<?php echo e(asset('/assets2/css/bootstrap.min.css')); ?>" rel="stylesheet" />
-	<link href="<?php echo e(asset('/assets2/css/material-bootstrap-wizard.css')); ?>" rel="stylesheet" />
+	<link href="{{ asset('/assets2/css/bootstrap.min.css') }}" rel="stylesheet" />
+	<link href="{{ asset('/assets2/css/material-bootstrap-wizard.css') }}" rel="stylesheet" />
 
 	<!-- CSS Just for demo purpose, don't include it in your project -->
-	<link href="<?php echo e(asset('/assets2/css/demo.css')); ?>" rel="stylesheet" />
-	<link href="<?php echo e(asset('/style.css')); ?>" rel="stylesheet" />
-	<link href="<?php echo e(asset('/assets/css/notify.css')); ?>" rel='stylesheet' type='text/css' />
-	<script src="<?php echo e(asset('/assets2/js/jquery-2.2.4.min.js')); ?>" type="text/javascript"></script>
-	<script src="<?php echo e(asset('/assets2/css/sweetalert-dev.js')); ?>"></script>
-	<link href="<?php echo e(asset('/assets2/css/sweetalert.css')); ?>" rel='stylesheet' type='text/css' />
-	<link href="<?php echo e(asset('/jquery-ui.custom.min.css')); ?>" rel='stylesheet' type='text/css' />
+	<link href="{{ asset('/assets2/css/demo.css') }}" rel="stylesheet" />
+	<link href="{{ asset('/style.css') }}" rel="stylesheet" />
+	<link href="{{asset('/assets/css/notify.css')}}" rel='stylesheet' type='text/css' />
+	<script src="{{ asset('/assets2/js/jquery-2.2.4.min.js') }}" type="text/javascript"></script>
+	<script src="{{asset('/assets2/css/sweetalert-dev.js')}}"></script>
+	<link href="{{asset('/assets2/css/sweetalert.css')}}" rel='stylesheet' type='text/css' />
+	<link href="{{asset('/jquery-ui.custom.min.css')}}" rel='stylesheet' type='text/css' />
 	<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/font-awesome/latest/css/font-awesome.min.css" />
 	<script type="text/javascript">
         $(window).load(function() {
@@ -82,7 +82,7 @@
 			20% { -webkit-transform: scaleY(1.0) }
 		}
 
-		@keyframes  sk-stretchdelay {
+		@keyframes sk-stretchdelay {
 			0%, 40%, 100% {
 				transform: scaleY(0.4);
 				-webkit-transform: scaleY(0.4);
@@ -94,7 +94,7 @@
 		* {
 			box-sizing: border-box;
 		}
-		@media  only screen and (max-width: 720px) {
+		@media only screen and (max-width: 720px) {
 			.logo {
 				display: none;
 			}
@@ -116,45 +116,43 @@
 	<div class="rect5"></div>
 	<p>جاري معالجة البيانات ...</p>
 </div>
-<?php if(session('message')): ?>
+@if(session('message'))
 	<div class="notify top-right do-show" data-notification-status="error" style="direction: rtl;text-align: center;">
 
 
-		<?php echo e(session('message')); ?>
-
+		{{session('message')}}
 
 
 	</div>
 
-<?php endif; ?>
-<?php if(Session::has('Flash')): ?>
+@endif
+@if(Session::has('Flash'))
 
 	<div class="notify bottom-right do-show" data-notification-status="error" style="direction: rtl;text-align: center;">
 
 
-		<?php echo e(Session::get('Flash')); ?>
-
+		{{ Session::get('Flash') }}
 
 
 	</div>
-<?php endif; ?>
-<?php if($errors->any()): ?>
+@endif
+@if ($errors->any())
 
 	<div class="notify bottom-right do-show" data-notification-status="error" style="direction: rtl;text-align: center;">
 		<ul>
-			<?php $__currentLoopData = $errors->all(); $__env->addLoop($__currentLoopData); foreach($__currentLoopData as $error): $__env->incrementLoopIndices(); $loop = $__env->getLastLoop(); ?>
-				<li><?php echo e($error); ?></li>
-			<?php endforeach; $__env->popLoop(); $loop = $__env->getLastLoop(); ?>
+			@foreach ($errors->all() as $error)
+				<li>{{ $error }}</li>
+			@endforeach
 		</ul>
 	</div>
 
-<?php endif; ?>
-	<div class="image-container set-full-height" style="background-image: url('public/slide3.jpg')">
+@endif
+	<div class="image-container set-full-height" style="background-image: url('../../../public/slide3.jpg')">
 	    <!--   Creative Tim Branding   -->
 	    <a href="https://consulting.ko-sky.com">
 	         <div class="logo-container">
 	            <div class="logo">
-	                <img src="<?php echo e(asset('logo20221.png')); ?>">
+	                <img src="{{ asset('logo20221.png') }}">
 	            </div>
 	            <div class="brand">خيرعون جدة </div>
 	        </div>
@@ -173,15 +171,14 @@
 		            <!--      Wizard container        -->
 		            <div class="wizard-container">
 		                <div class="card wizard-card" data-color="blue" id="wizard">
-						<form action="<?php echo e(route('ConsultJoinRequest')); ?>" method="POST" enctype="multipart/form-data"  id="Registrationform">
-							<?php echo e(csrf_field()); ?>
-
+						<form action="{{ route('ConsultJoinRequest') }}" method="POST" enctype="multipart/form-data"  id="Registrationform">
+							{{ csrf_field() }}
 		                <!--        You can switch " data-color="blue" "  with one of the next bright colors: "green", "orange", "red", "purple"             -->
 
 		                    	<div class="wizard-header">
 									<div class="row">
 										<div class="col-lg-2 col-md-2 col-sm-2 col-xs-2 ">
-											<img src="<?php echo e(asset('logo20221.png')); ?>" style="max-height: 80px;width: auto" class="img-responsive center logo">
+											<img src="{{ asset('logo20221.png') }}" style="max-height: 80px;width: auto" class="img-responsive center logo">
 										</div>
 										<div class="col-lg-8 col-md-8 col-sm-8 col-xs-8">
 											<h3 class="wizard-title">
@@ -190,7 +187,7 @@
 											<h5>قم بتعبئة النموذج وتأكد من صحة البيانات المدخلة</h5>
 										</div>
 										<div class="col-lg-2 col-md-2 col-sm-2 col-xs-2 ">
-											<img src="<?php echo e(asset('logo20221.png')); ?>" style="max-height: 80px;float: left!important;" class="img-responsive center logo">
+											<img src="{{ asset('logo20221.png') }}" style="max-height: 80px;float: left!important;" class="img-responsive center logo">
 										</div>
 									</div>
 
@@ -212,28 +209,18 @@
 											<div class="col-sm-4">
 												<div class="form-group label-floating">
 													<label>المنطقة</label>
-													<select name="provinces" id="provinces" class="form-control" >
-														<option value="منطقة الرياض">منطقة الرياض</option>
-														<option value="منطقة مكة المكرمة">منطقة مكة المكرمة</option>
-														<option value="منطقة المدينة المنورة">منطقة المدينة المنورة</option>
-														<option value="منطقة القصيم">منطقة القصيم</option>
-														<option value="المنطقة الشرقية">المنطقة الشرقية</option>
-														<option value="منطقة عسير">منطقة عسير</option>
-														<option value="منطقة تبوك">منطقة تبوك</option>
-														<option value="منطقة حائل">منطقة حائل</option>
-														<option value="الحدود الشمالية">الحدود الشمالية</option>
-														<option value="منطقة جازان">منطقة جازان</option>
-														<option value="منطقة نجران">منطقة نجران</option>
-														<option value="منطقة الباحة">منطقة الباحة</option>
-														<option value="منطقة الجوف">منطقة الجوف</option>
+													<select name="provinces" id="provinces" class="form-control">
+														@foreach($provinces as $province)
+														<option value="{{ $province->id }}">{{ $province->name }}</option>
+														@endforeach
 													</select>
 												</div>
 											</div>
 											<div class="col-sm-4">
 												<div class="form-group label-floating">
 													<label>  المدينة </label>
-													<select name="City" id="City" class="form-control" >
-														
+													<select name="City" id="City" class="form-control">
+
 													</select>
 												</div>
 											</div>
@@ -250,7 +237,7 @@
 											<div class="col-sm-4">
 												<div class="form-group label-floating">
 													<label>نوع الكيان</label>
-													<select name="officeType" id="officeType" class="form-control" >
+													<select name="OfficeType" id="OfficeType" class="form-control" >
 														<option value="مؤسسة">مؤسسة</option>
 														<option value="شركة">شركة</option>
 														<option value="مكتب استشاري عام">مكتب استشاري عام </option>
@@ -293,7 +280,16 @@
 												</div>
 											</div>
 											<div class="col-sm-6">
-												
+												{{--<div class="form-group label-floating">
+													<label></label>
+													<div class="choice" data-toggle="wizard-radio" rel="tooltip" title="" data-original-title="يجب ان يكون الملف بصيغة PDF">
+														<input type="file" name="type" value="House">
+														<div class="icon">
+															<i class="material-icons">تحميل</i>
+														</div>
+														<h4></h4>
+													</div>
+												</div>--}}
 
 											</div>
 										</div>
@@ -338,7 +334,27 @@
 
 											</div>
 
-											
+											{{--<div class="col-sm-4">
+												<div class="form-group label-floating">
+													<label>رقم الهويه</label>
+													<input type="text" name="neighborhood" class="form-control" >
+												</div>
+
+											</div>
+											<div class="col-sm-4">
+												<div class="form-group label-floating">
+													<label>رقم الجوال</label>
+													<input type="text" name="neighborhood" class="form-control" >
+												</div>
+
+											</div>
+											<div class="col-sm-4">
+												<div class="form-group label-floating">
+													<label>البريد الالكتروني </label>
+													<input type="email" name="neighborhood" class="form-control" >
+												</div>
+
+											</div>--}}
 										</div>
 
 		                            </div>
@@ -378,14 +394,14 @@
 
 										<h4 class="info-text">بعد استلام العميل الرد بقبول الطلب نرجوا التكرم بتزويد المكتب الإستشاري (خيرعون) بالتالي </h4>
 
-										<p>1.	تكليف الاستشاري بأوراق البلدية الرسمية للإشراف أو أي ورقة تعهدات تطلبها البلدية أو الدوائر الأخرى</p>
+										{{--<p>1.	تكليف الاستشاري بأوراق البلدية الرسمية للإشراف أو أي ورقة تعهدات تطلبها البلدية أو الدوائر الأخرى</p>
 										<p>2.	سايت بلان لا تقل مدة اصداره عن 3 اشهر</p>
 										<p>3.	سند ملكية الأرض للمالك</p>
 										<p>4.	صورة عن الهوية لصاحب القسيمة سارية المفعول</p>
 										<p>5.	صورة عن جواز السفر لصاحب القسيمة سارية المفعول</p>
 										<p>6.	صورة عن خلاصة القيد لصاحب القسيمة سارية المفعول</p>
 										<p>7.	في حالة وجود وكالة أو سند من المحكمة للوكيل عن صاحب القسيمة يتم تزويد الاستشاري بها</p>
-										<p>8.	في حالة تمويل بنك يتم تزويد الاستشاري صورة عن رقم القرض وحالته.</p>
+										<p>8.	في حالة تمويل بنك يتم تزويد الاستشاري صورة عن رقم القرض وحالته.</p>--}}
 									</div>
 		                        </div>
 	                        	<div class="wizard-footer">
@@ -431,9 +447,11 @@
     $(document).ready(function(){
 
 
+
+
  city = function(stateID,localID){
 
-    var url  = "<?php echo e(url('Getlocal')); ?>";
+    var url  = "{{url('Getlocal')}}";
 		
 	$.ajax(
         {
@@ -455,16 +473,27 @@
         
 };
 
-        $("#parent").change(function(){
+        $("#provinces").change(function(){
 
 						//console.log($('#parent').val());
-				if($('#parent').val()=='on'){
-                    $("#parent_dis").css("display", "block");
-				}else {
-                    $("#parent_dis").css("display", "none");
+			$.ajaxSetup({
+				headers: {
+					'X-CSRF-TOKEN': $('meta[name="csrf-token"]').attr('content')
 				}
+			});
 
-
+			var your_selected_value = $('#provinces').val();
+			$.ajax({
+				url: "{{url('GetCity')}}",
+				type: "POST",
+				data:{ provinces : your_selected_value},
+				success: function(data){
+					$("#City").html(data);
+				},
+				error: function(){
+					console.log("No results for " + data + ".");
+				}
+			});
 
 
 
@@ -497,32 +526,42 @@
 
         });
     });
+
     $('#btsubmit').click(function () {
 
-        var phone1 = document.getElementById("phone1").value;
-        var gender = document.getElementById("gender").value;
-        var idcard_type = document.getElementById("idcard_type").value;
-        var idcard_id = document.getElementById("idcard_id").value;
-        var nid = document.getElementById("nid").value;
-        var birthdate = document.getElementById("birthdate").value;
-        var localID = document.getElementById("localID").value;
-        var chargername = document.getElementById("chargername").value;
-        var job_place = document.getElementById("job_place").value;
+        var provinces = document.getElementById("provinces").value;
+        var streetAddress = document.getElementById("streetAddress").value;
+        var City = document.getElementById("City").value;
+        var OfficeType = document.getElementById("OfficeType").value;
+        var name = document.getElementById("name").value;
+        var Identity = document.getElementById("Identity").value;
+        var officeActivity = document.getElementById("officeActivity").value;
         var phone = document.getElementById("phone").value;
-        var profilePic = document.getElementById("wizard-picture").value;
-        var Attach0 = document.getElementById("Attach0").value;
+        var email = document.getElementById("email").value;
+        var officeManager = document.getElementById("officeManager").value;
+        var OMPhone = document.getElementById("OMPhone").value;
+        var OMEmail = document.getElementById("OMEmail").value;
+        var EngnieeringCert = document.getElementById("EngnieeringCert").value;
+        var TradeCert = document.getElementById("TradeCert").value;
 
 
 
 
-        if (gender == "") {
+        if (provinces == "") {
 
-            text = "الرجاء اختيار الجنس ";
+            text = "الرجاء اختيار المنطقة ";
             swal("عفوا!", text, "error");
             return false;
 
         }
-        if (phone1 == "") {
+        if (streetAddress == "") {
+
+            text = "الرجاء ادخال الحي والشارع ";
+            swal("عفوا!", text, "error");
+            return false;
+
+        }
+        if (phone == "") {
 
             text = "الرجاء ادخال رقم الهاتف ";
             swal("عفوا!", text, "error");
@@ -530,84 +569,93 @@
 
         }
 
-        if (isNaN(phone1)) {
+        if (isNaN(phone)) {
             text = "رجاء كتابه رقم في حقل رقم الهاتف";
             swal("عفوا!", text, "error");
             return false;
 
         }
 
-        if (idcard_type == "") {
+        if (City == "") {
 
-            text = "الرجاء اختيار نوع اثبات الشخصية ";
+            text = "الرجاء اختيار المدينة ";
             swal("عفوا!", text, "error");
             return false;
 
         }
 
-        if (idcard_id == "") {
+        if (OfficeType == "") {
 
-            text = "الرجاء كتابة رقم اثبات الشخصية ";
+            text = "الرجاء اختيار نوع الكيان ";
             swal("عفوا!", text, "error");
             return false;
 
         }
-        if (nid == "") {
+        if (name == "") {
 
-            text = "الرجاء اختيار الجنسية ";
+            text = "الرجاء كتابة اسم الكيان ";
             swal("عفوا!", text, "error");
             return false;
 
         }
-        if (birthdate == "") {
+        if (Identity == "") {
 
-            text = "الرجاء اختيار تاريخ الميلاد ";
+            text = "الرجاء كتابة رقم السجل التجاري ";
             swal("عفوا!", text, "error");
             return false;
 
         }
-        if (localID == "") {
+        if (officeActivity == "") {
 
-            text = "الرجاء اختيار المحلية ";
+            text = "الرجاء اختيار نوع النشاط التجاري ";
             swal("عفوا!", text, "error");
             return false;
 
         }
-        if (chargername == "") {
+        if (email == "") {
 
-            text = "الرجاء كتابة اسم ولي الأمر ";
+            text = "الرجاء كتابة البريد الرسمي للكيان ";
             swal("عفوا!", text, "error");
             return false;
 
         }
-        if (job_place == "") {
+        if (officeManager == "") {
 
-            text = "الرجاء كتابة مكان عمل ولي الامر ";
+            text = "الرجاء كتابة مدير المكتب المفوض ";
             swal("عفوا!", text, "error");
             return false;
 
         }
-        if (phone == "") {
+        if (OMPhone == "") {
 
-            text = "الرجاء كتابة  رقم هاتف ولي الامر ";
+            text = "الرجاء كتابة  رقم هاتف مدير المكتب ";
             swal("عفوا!", text, "error");
             return false;
 
         }
-        if (profilePic == "") {
+        if (OMEmail == "") {
 
-            text = "الرجاء ارفاق الصورة الشخصية ";
+            text = "الرجاء كتابة ايميل مدير المكتب ";
             swal("عفوا!", text, "error");
             return false;
 
         }
-        if (Attach0 == "") {
+        if (EngnieeringCert == "") {
 
-            text = "الرجاء ارفاق اثبات الشخصية ";
+            text = "الرجاء ارفاق شهادة الهيئة الهندسية ";
             swal("عفوا!", text, "error");
             return false;
 
         }
+        if (TradeCert == "") {
+
+            text = "الرجاء ارفاق الرخصة التجارية ";
+            swal("عفوا!", text, "error");
+            return false;
+
+        }
+
+
         $( "#Registrationform" ).on( "submit", function( event ) {
             event.preventDefault();
             $.ajaxSetup({
@@ -629,22 +677,12 @@
                 cache:false,
                 contentType: false,
                 processData: false,
-
                 success  : function(data) {
 
-                    if (data.status === 2){
-                        swal("عفوا", "لقد قمت بتسجيل بياناتك سابقا , يرجي الانتظار ...", "error");
-                        setTimeout(function(){
-
-                            window.location.href = "http://ereg.neelain.edu.sd/Complete/"+"444";
-                        }, 3000);
-					}else {
-                        swal("شكرا", "تم ارسال بياناتك بنجاح , يرجي الانتظار ...", "success");
-                        setTimeout(function(){
-
-                            window.location.href = "http://ereg.neelain.edu.sd/Complete/"+"555";
-                        }, 3000);
-					}
+					swal("شكرا", "تم ارسال بياناتك بنجاح , سيتم التواصل معك قريبا ...", "success");
+					setTimeout(function(){
+						window.location.href = 'https://consulting.ko-sky.com';
+					}, 3000);
                     //console.log(data);
 
                 },
@@ -653,28 +691,27 @@
                 }
 
             });
-            $("#Appintsend").trigger("reset");
+            //$("#Appintsend").trigger("reset");
 
         });
 
     });
 </script>
 
-<script src="<?php echo e(asset('jquery-confirm.js')); ?>" type="text/javascript"></script>
-<script src="<?php echo e(asset('jquery-ui.custom.min.js')); ?>" type="text/javascript"></script>
-<script src="<?php echo e(asset('assets2/js/bootstrap.min.js')); ?>" type="text/javascript"></script>
+<script src="{{ asset('jquery-confirm.js') }}" type="text/javascript"></script>
+<script src="{{ asset('jquery-ui.custom.min.js') }}" type="text/javascript"></script>
+<script src="{{ asset('assets2/js/bootstrap.min.js') }}" type="text/javascript"></script>
 
-<script src="<?php echo e(asset('assets2/js/jquery.bootstrap.js')); ?>" type="text/javascript"></script>
+<script src="{{ asset('assets2/js/jquery.bootstrap.js') }}" type="text/javascript"></script>
 
 <!--  Plugin for the Wizard -->
-<script src="<?php echo e(asset('assets2/js/material-bootstrap-wizard.js')); ?>"></script>
+<script src="{{ asset('assets2/js/material-bootstrap-wizard.js') }}"></script>
 
 <!--  More information about jquery.validate here: http://jqueryvalidation.org/	 -->
-<script src="<?php echo e(asset('assets2/js/jquery.validate.min.js')); ?>"></script>
+<script src="{{ asset('assets2/js/jquery.validate.min.js') }}"></script>
 
 </body>
 	<!--   Core JS Files   -->
 
 
 </html>
-<?php /**PATH /Applications/MAMP/htdocs/cons/resources/views/wizard.blade.php ENDPATH**/ ?>

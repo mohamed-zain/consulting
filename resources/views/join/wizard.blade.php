@@ -211,7 +211,7 @@
 													<label>المنطقة</label>
 													<select name="provinces" id="provinces" class="form-control">
 														@foreach($provinces as $province)
-														<option value="{{ $province->id }}">{{ $province->name }}</option>
+														<option value="{{ $province->id }}">{{ $province->Rname }}</option>
 														@endforeach
 													</select>
 												</div>

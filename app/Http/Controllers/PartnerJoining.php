@@ -31,9 +31,10 @@ class PartnerJoining extends Controller
             'OfficeType' => 'required|max:255',
         ]);
         $f = DB::table('users')->latest()->first();
+        $CI = DB::table('regions_cities')->where('id',$request->City)->first();
         $f2 = $f->id+1;
         //dd($f);
-        $Office_code = 'CO-'.$request->City.'-'.$f2;
+        $Office_code = 'CO-'.$CI->CCode.'-'.$f2;
         if($request->hasFile('EngnieeringCert') && $request->hasFile('TradeCert')) {
             $tms = date('Y-m-d');
             $ran = mt_rand(10000, 99999);

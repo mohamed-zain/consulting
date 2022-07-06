@@ -3,7 +3,6 @@
   <component name="ChangeListManager">
     <list default="true" id="c5c1f75a-33b9-4e20-9c19-ff32ec45cd60" name="Changes" comment="">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/Http/Controllers/PartnerJoining.php" beforeDir="false" afterPath="$PROJECT_DIR$/app/Http/Controllers/PartnerJoining.php" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/resources/views/join/wizard.blade.php" beforeDir="false" afterPath="$PROJECT_DIR$/resources/views/join/wizard.blade.php" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
@@ -221,7 +220,9 @@
       <workItem from="1656845319167" duration="8270000" />
       <workItem from="1656935323137" duration="3916000" />
       <workItem from="1656941673950" duration="931000" />
-      <workItem from="1656952200134" duration="689000" />
+      <workItem from="1656952200134" duration="1320000" />
+      <workItem from="1657025952828" duration="1901000" />
+      <workItem from="1657102349008" duration="546000" />
     </task>
     <servers />
   </component>

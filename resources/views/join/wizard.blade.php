@@ -238,21 +238,18 @@
 												<div class="form-group label-floating">
 													<label>نوع الكيان</label>
 													<select name="OfficeType" id="OfficeType" class="form-control" >
-														<option value="مؤسسة">مؤسسة</option>
-														<option value="شركة">شركة</option>
-														<option value="مكتب استشاري عام">مكتب استشاري عام </option>
-														<option value="مكتب استشاري متخصص">مكتب استشاري متخصص</option>
-														<option value="مجموعة">مجموعة</option>
-
+														<option value="1">مؤسسة</option>
+														<option value="2">شركة</option>
+														<option value="3">مكتب استشاري عام </option>
+														<option value="4">مكتب استشاري متخصص</option>
+														<option value="5">مجموعة</option>
 													</select>
 												</div>
-
 											</div>
 											<div class="col-sm-4">
 												<div class="form-group label-floating">
 													<label>اسم الكيان كما في السجل التجاري</label>
 													<input type="text" name="name" class="form-control"  id="name">
-
 												</div>
 											</div>
 											<div class="col-sm-4">
